@@ -30,93 +30,62 @@
     <p>Aprenda a versionar seus projetos e enviar para a nuvem.</p>
 </section>
 
-<main class="lista-container">
+<main class="conteudo">
 
-    <!-- BLOCO 1 -->
-    <h2 class="categoria">📌 Conceitos básicos</h2>
-    <ul class="lista">
-        <li>
-            <a href="#">
-                <h3>O que é Git?</h3>
-                <p>Sistema de controle de versão para projetos.</p>
-            </a>
-        </li>
+    <h2>📌 O que é Git e GitHub?</h2>
+    <p>
+        O Git é um sistema de controle de versão que permite acompanhar mudanças em arquivos ao longo do tempo.
+        Já o GitHub é uma plataforma online onde você pode armazenar e compartilhar seus projetos que utilizam Git.
+    </p>
 
-        <li>
-            <a href="#">
-                <h3>O que é GitHub?</h3>
-                <p>Plataforma para armazenar projetos com Git.</p>
-            </a>
-        </li>
-    </ul>
+    <h2>🚀 Criando um repositório</h2>
+    <p>
+        Primeiro, acesse o site do GitHub e crie um novo repositório. Defina um nome para o projeto e evite marcar
+        opções automáticas como README ou .gitignore neste primeiro momento.
+    </p>
 
-    <!-- BLOCO 2 -->
-    <h2 class="categoria">🚀 Criando um repositório</h2>
-    <ul class="lista">
-        <li>
-            <a href="#">
-                <h3>Criar repositório no GitHub</h3>
-                <p>Configuração inicial do projeto online.</p>
-            </a>
-        </li>
+    <h2>💻 Inicializando o projeto</h2>
+    <p>No terminal, dentro da pasta do seu projeto, execute:</p>
 
-        <li>
-            <a href="#">
-                <h3>Conectar projeto local</h3>
-                <p>Ligando sua máquina ao repositório remoto.</p>
-            </a>
-        </li>
-    </ul>
+    <pre><code>git init</code></pre>
 
-    <!-- BLOCO 3 -->
-    <h2 class="categoria">💻 Comandos essenciais</h2>
-    <ul class="lista">
-        <li>
-            <a href="#">
-                <h3>git init</h3>
-                <p>Inicializa o Git no projeto.</p>
-            </a>
-        </li>
+    <p>
+        Esse comando inicia o Git no seu projeto, permitindo o controle de versões.
+    </p>
 
-        <li>
-            <a href="#">
-                <h3>git add .</h3>
-                <p>Adiciona arquivos para versionamento.</p>
-            </a>
-        </li>
+    <h2>📂 Adicionando arquivos</h2>
+    <p>Para adicionar todos os arquivos do projeto ao controle de versão:</p>
 
-        <li>
-            <a href="#">
-                <h3>git commit</h3>
-                <p>Salva uma versão do projeto.</p>
-            </a>
-        </li>
+    <pre><code>git add .</code></pre>
 
-        <li>
-            <a href="#">
-                <h3>git push</h3>
-                <p>Envia o projeto para o GitHub.</p>
-            </a>
-        </li>
-    </ul>
+    <h2>📝 Criando um commit</h2>
+    <p>
+        O commit salva uma versão do seu projeto. Sempre escreva uma mensagem clara descrevendo a alteração:
+    </p>
 
-    <!-- BLOCO 4 -->
-    <h2 class="categoria">🔁 Fluxo básico</h2>
-    <ul class="lista">
-        <li>
-            <a href="#">
-                <h3>Fluxo de trabalho</h3>
-                <p>git add → commit → push.</p>
-            </a>
-        </li>
+    <pre><code>git commit -m "mensagem"</code></pre>
 
-        <li>
-            <a href="#">
-                <h3>Primeiro envio</h3>
-                <p>Configuração inicial com branch main.</p>
-            </a>
-        </li>
-    </ul>
+    <h2>🌐 Enviando para o GitHub</h2>
+    <p>
+        Após conectar seu projeto ao repositório remoto, envie os arquivos com:
+    </p>
+
+    <pre><code>git push</code></pre>
+
+    <h2>🔁 Fluxo básico do dia a dia</h2>
+    <p>
+        No uso diário, você sempre seguirá este fluxo:
+    </p>
+
+    <pre><code>
+git add .
+git commit -m "mensagem"
+git push
+    </code></pre>
+
+    <p>
+        Esse processo garante que suas alterações sejam salvas localmente e enviadas para o GitHub.
+    </p>
 
 </main>
 
