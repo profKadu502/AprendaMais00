@@ -1,0 +1,56 @@
+/* ARQUIVO: tutorial.css */
+
+.tutorial-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* SEÇÕES */
+.tutorial-container section {
+    margin-bottom: 25px;
+}
+
+/* TÍTULOS */
+.tutorial-container h2 {
+    margin-bottom: 10px;
+    color: #0d6efd;
+}
+
+/* PARÁGRAFOS */
+.tutorial-container p {
+    line-height: 1.6;
+    color: #444;
+}
+
+/* CÓDIGO */
+pre {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* LISTA */
+ul {
+    padding-left: 20px;
+}
+
+/* DICA */
+.dica {
+    background: #fff3cd;
+    padding: 15px;
+    border-left: 5px solid #ffc107;
+    border-radius: 8px;
+}
+
+/* NAVEGAÇÃO */
+.navegacao {
+    margin-top: 30px;
+}
+
+.navegacao a {
+    color: #0d6efd;
+    font-weight: 500;
+}
