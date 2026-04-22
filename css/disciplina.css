@@ -28,6 +28,7 @@
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
+    font-size: 12px;
     color: #333;
     padding: 6px 8px;
     border-radius: 6px;
@@ -445,12 +446,61 @@ blockquote cite {
 }
 
 /* CÓDIGO */
+/* ===== BASE ===== */
 pre {
     background: #1e1e1e;
-    color: #fff;
-    padding: 15px;
+    color: #d4d4d4;
+
+    padding: 16px;
     border-radius: 8px;
+
     overflow-x: auto;
+
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+
+    margin: 20px 0;
+    border: 1px solid #2d2d2d;
+}
+
+/* separação entre blocos */
+pre + pre {
+    margin-top: 28px;
+}
+
+/* título automático */
+pre::before {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+/* ===== JAVA ===== */
+pre.java {
+    border-left: 4px solid #f89820;
+}
+pre.java::before {
+    content: "Java";
+}
+
+/* ===== C# ===== */
+pre.csharp {
+    border-left: 4px solid #68217a;
+}
+pre.csharp::before {
+    content: "C#";
+}
+
+/* ===== PSEUDOCÓDIGO ===== */
+pre.pseudo {
+    border-left: 4px solid #6c757d;
+    color: #e6e6e6;
+    font-style: italic;
+}
+pre.pseudo::before {
+    content: "Pseudocódigo";
 }
 
 /* ===== VISIBILIDADE (PADRÃO ÚNICO) ===== */
@@ -542,4 +592,40 @@ pre {
 }
 .vis-card:nth-child(3) .vis-symbol {
     color: #f9a825;
+}
+
+/* ===== GRUPO DE IMAGENS ===== */
+
+.img-group {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+
+    flex-wrap: wrap; /* quebra no mobile */
+}
+
+/* cada item */
+.img-group figure {
+    flex: 1;
+    min-width: 180px;
+    margin: 0;
+    text-align: center;
+}
+
+/* imagem */
+.img-group img {
+    width: 100%;
+    height: 140px; /* 🔥 tamanho padronizado */
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* legenda */
+.img-group figcaption {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
 }

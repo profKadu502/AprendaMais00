@@ -1,0 +1,253 @@
+<!-- 1. ARQUIVO: poo.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Programação Orientada a Objetos | Aprenda Mais</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="poo.html">Apresentação</a>
+        <a href="">Aula 01 - Introdução</a>
+        <a href="aula06.html" >Aula 06 - Instanciamento</a>
+        <a href="aula07.html" >Aula 07 - Tipos de Atributo e Método</a>
+        <a href="aula08.html">Aula 08 - Mensagem</a>
+        <a href="aula09.html">Aula 09 - UML</a>
+        <a href="aula10.html" class="active">Aula 10 - Visibilidade</a>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+        <h2>Aula 10 - Visibilidade</h2>
+
+        <h3>A visibilidade define o nível de acesso aos atributos e métodos de uma classe.</h3>
+        <p>
+            A visibilidade é um dos conceitos fundamentais da Programação Orientada a Objetos, pois define o nível de acesso aos componentes internos de uma classe, ou seja, seus atributos e métodos. Em outras palavras, a visibilidade determina quem pode acessar ou modificar determinadas partes de um objeto, sendo essencial para garantir organização, segurança e controle no desenvolvimento de sistemas.
+        </p>
+
+        <p>
+        A visibilidade pode ser representada por três níveis principais: público, privado e protegido . Esses níveis indicam o grau de acesso permitido a cada elemento da classe.
+        </p>
+
+        <ul>
+            <li>Público</li>
+            <li>Privado</li>
+            <li>Protegido</li>
+        </ul>    
+            <div class="vis-cards">
+
+                <div class="vis-card">
+                    <span class="vis-symbol">+</span>
+                    <h4>Público (public)</h4>
+                    <p>Acesso livre em todo o sistema.</p>
+                    <p class="vis-info">Pode ser acessado de qualquer lugar.</p>
+                </div>
+
+                <div class="vis-card">
+                    <span class="vis-symbol">-</span>
+                    <h4>Privado (private)</h4>
+                    <p>Acesso restrito exclusivamente à própria classe.</p>
+                    <p class="vis-info">Somente a classe atual.</p>
+                </div>
+
+                <div class="vis-card">
+                    <span class="vis-symbol">#</span>
+                    <h4>Protegido (protected)</h4>
+                    <p>Acesso na classe e em suas subclasses.</p>
+                    <p class="vis-info">Herança permitida.</p>
+                </div>
+
+            </div>
+
+        <p>
+        Uma forma simples e didática de compreender esse conceito é por meio de analogias do cotidiano. Imagine um telefone: um telefone público pode ser utilizado por qualquer pessoa; um telefone privado, como um celular pessoal, só pode ser utilizado pelo seu dono; e um telefone protegido, como o telefone de uma residência, pode ser utilizado por um grupo restrito de pessoas, como os membros da família. Essa analogia ajuda a entender como os níveis de acesso funcionam na prática.
+        </p>
+
+        <ul>
+            <li>Telefone público → acesso livre</li>
+            <li>Telefone privado → acesso restrito</li>
+            <li>Telefone protegido → acesso parcial</li>
+        </ul>
+
+        <div class="img-group">
+            <figure>
+                <img src="../imagens/como_usar_um_telefone_publico_27032_orig.jpg" alt="Telefone Público">
+                <figcaption>Telefone Público</figcaption>
+            </figure>
+                    <figure>
+                <img src="../imagens/celular.webp" alt="Telefone Público">
+                <figcaption>Smartphone (Privado) </figcaption>
+            </figure>
+                    <figure>
+                <img src="../imagens/telefone-fixo.webp" alt="Telefone Público">
+                <figcaption>Telefone Fixo</figcaption>
+            </figure>
+        </div>    
+
+        <h3>Na programação:</h3>
+
+        <p>
+        No contexto da programação, um atributo ou método definido como público pode ser acessado por qualquer outra parte do sistema. Já um atributo ou método privado só pode ser acessado dentro da própria classe, impedindo o acesso direto por outras classes. Por sua vez, o modificador protegido permite o acesso tanto pela classe quanto por suas subclasses, conceito que será aprofundado com o estudo de herança.
+        </p>
+        <p>
+            Além de definir o acesso, a visibilidade também influencia diretamente no uso dos objetos. Ao criar um objeto a partir de uma classe, apenas os atributos e métodos públicos podem ser acessados diretamente. Elementos privados ou protegidos não podem ser manipulados diretamente fora da classe, exigindo o uso de métodos específicos para acesso ou modificação, o que reforça o princípio do encapsulamento.
+        </p>
+        <p>
+            Para ilustrar esse comportamento, considere uma classe com diferentes níveis de visibilidade. Ao tentar acessar atributos públicos, o acesso será permitido normalmente. No entanto, ao tentar acessar atributos privados ou protegidos diretamente, o sistema não permitirá essa ação, pois ela viola as regras de acesso definidas pela classe. Isso demonstra que a visibilidade atua como um mecanismo de controle, impedindo acessos indevidos e protegendo o funcionamento interno do objeto.
+        </p>
+
+
+        <p>
+            Outro exemplo importante apresentado é o de um controle remoto. O usuário pode interagir com os botões externos do controle (parte pública), mas não tem acesso direto aos componentes internos, como circuitos eletrônicos (parte privada). Há ainda elementos que fazem a comunicação entre o controle e a televisão, que podem ser entendidos como protegidos, pois não são acessíveis ao usuário comum, mas são essenciais para o funcionamento do sistema.
+        </p>
+
+        <figure>
+            <img src="../imagens/visibilidade.png" alt="exemplo-visibilidade">
+            <figcaption>Exemplo de Visibilidade UML</figcaption>
+        </figure>
+
+
+
+        <h2>Por quê a visibilidade é tão importante?</h2>
+        <p>
+        Compreender a visibilidade é essencial para o desenvolvimento orientado a objetos, pois ela não apenas define quem pode acessar o quê, mas também contribui para a construção de sistemas mais seguros, organizados e fáceis de manter. Esse conceito será ainda mais aprofundado com o estudo de encapsulamento e herança, que utilizam diretamente os modificadores de acesso para estruturar o comportamento dos objetos.
+        </p>
+        <ul>
+            <li><strong>Segurança</strong></li>
+            <p>
+                 Impede que dados críticos (como saldo bancário) sejam alterados diretamente de fora da classe, evitando estados inválidos ou inconsistentes.
+
+            </p>
+            <li><strong>Organização</strong></li>
+            <p>
+                Define claramente o que é interno (implementação) e o que é externo (interface pública), tornando o código mais limpo e fácil de manter.
+
+            </p>
+            <li><strong>Prevençao de Falhas</strong></li>
+            <p>
+                Restringe o acesso a partes sensíveis do código, reduzindo drasticamente a chance de bugs causados por uso incorreto de atributos internos.
+
+            </p>
+            <li><strong>Encapsulamento</strong></li>
+            <p>
+                É a base do encapsulamento em POO — um dos 4 pilares fundamentais. Controlar a visibilidade é controlar o contrato da classe com o mundo.
+
+            </p>
+        </ul>
+
+
+        <!-- REFERÊNCIAS -->
+        <section class="referencias">
+    <h3>Referências</h3>
+
+    <ul>
+
+        <li>
+            CARVALHO, Thiago Leite. 
+            <em>Orientação a Objetos</em>. 
+            São Paulo: Casa do Código, 2024.
+        </li>
+
+        <li>
+            GUANABARA, Gustavo. 
+            <em>Curso de Programação Orientada a Objetos</em>. 
+            YouTube, Curso em Vídeo. 
+            Disponível em: 
+            <a href="https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY" target="_blank">
+                https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY
+            </a>. 
+            Acesso em: 22 abr. 2026.
+        </li>
+
+    </ul>
+</section>
+
+    </main>
+
+    <!-- SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <figure class="video-item">
+                    <a href="" target="_blank" class="video-thumb">
+                        <img src="" alt="POO explicação">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>Introdução à Programação Orientada a Objetos</figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+        <div class="extra-card">
+            <h4>📄 Material</h4>
+            <p>Plano de ensino da disciplina.</p>
+            <a href="#" class="btn-extra">Abrir</a>
+        </div>
+
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+
+            <ul class="links-list">
+                <li><a href="https://www.w3schools.com/java/" target="_blank">W3Schools - Java</a></li>
+                <li><a href="https://docs.oracle.com/javase/tutorial/" target="_blank">Oracle Java Docs</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos" target="_blank">POO - Wikipédia</a></li>
+                <li><a href="https://www.codelerity.com/netbeans/" target="_blank">Netbeans Apache</a></li>
+            </ul>
+        </div>
+
+    </aside>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -33,148 +33,51 @@
     <aside class="sidebar">
         <a href="poo.html">Apresentação</a>
         <a href="">Aula 01 - Introdução</a>
-        <a href="aula06.html" class="active">Aula 06 - Instanciamento</a>
+        <a href="aula06.html" >Aula 06 - Instanciamento</a>
         <a href="aula07.html" >Aula 07 - Tipos de Atributo e Método</a>
-        <a href="aula08.html">Aula 08 - Mensagem</a>
-        <a href="aula09.html" >Aula 09 - UML</a>
+        <a href="aula08.html" class="active">Aula 08 - Mensagem</a>
+        <a href="aula09.html">Aula 09 - UML</a>
         <a href="aula10.html">Aula 10 - Visibilidade</a>
     </aside>
 
     <!-- CONTEÚDO -->
     <main class="content">
-
-        <h2>Aula 06 - Instanciamento</h2>
-
-
-        <h3>Instanciamento</h3>
-
-        <p>
-            Instanciar é pegar uma classe e gerar um objeto a partir dela.
-        </p>
-
-        <p>
-            Não transformamos uma classe em um objeto. Geramos um objeto a partir de uma classe.
-        </p>
-
-        <h3>Adicionando Atributos e Chamando Métodos</h3>
-
-        <h4>Adicionando atributos</h4>
-
-        <pre class="pseudo">
-c1 = nova Caneta
-c1.cor="Azul”
-c1.ponta=0.5
-c1.tampada=falso
-        </pre>
-
-        <p>C1 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-
-        <h4>Chamando um método</h4>
-
-        <pre class="pseudo">
-c1 = nova Caneta
-c1.cor="Azul”
-c1.ponta=0.5
-c1.tampada=falso
-c1.rabiscar()
-        </pre>
-
-        <p>C1 = NOME DO OBJETO</p>
-        <p>RABISCAR() = MÉTODO</p>
-
-        <p>
-            Vamos continuar adicionando atributos no objeto
-        </p>
-
-        <p>
-            Após definir cor, ponta e tampada, podemos também chamar um método do objeto.
-        </p>
-
-        <h4>Atributo</h4>
-
-        <p>
-            Armazena um valor no objeto.
-            Ex: c1.cor="Azul"
-        </p>
-
-        <h4>Método</h4>
-
-        <p>
-            Executa uma ação no objeto.
-            Ex: c1.rabiscar()
-        </p>
-
-        <figure>
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Programação em equipe">
-            <figcaption>Objetos executando ações em sistemas reais</figcaption>
-        </figure>
-
-        <h3>Múltiplos Objetos da Mesma Classe</h3>
-
-        <p>
-            Podemos ter mais de um objeto da mesma classe coexistindo juntos:
-        </p>
-
-        <h4>Objeto c1 — Caneta Azul</h4>
-
-        <pre class="pseudo">
-c1 = nova Caneta
-c1.cor="Azul”
-c1.ponta=0.5
-c1.tampada=falso
-c1.rabiscar()
-        </pre>
-
-        <p>C1 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-        <p>RABISCAR() = MÉTODO</p>
-
-        <h4>Objeto c2 — Caneta Vermelha</h4>
-
-        <pre>
-c2 = nova Caneta
-c2.cor="Vermelho”
-c2.ponta=1.0
-c2.tampada=falso
-c2.tampar()
-        </pre>
-
-        <p>C2 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-        <p>TAMPAR() = MÉTODO</p>
-
-        <figure>
-            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="Vários códigos">
-            <figcaption>Múltiplos objetos coexistindo em um sistema</figcaption>
-        </figure>
-
-        <h3>Resumo: Classe vs. Objeto</h3>
-
-        <h4>Classe</h4>
-        <p>
-            Define os atributos e métodos comuns que serão compartilhados por um objeto.
-        </p>
-
-        <h4>Objeto</h4>
-        <p>
-            É uma instância de uma classe.
-        </p>
-
-        <p>Classe define atributos e métodos compartilhados.</p>
-        <p>Instanciar é o processo que cria uma instância da classe.</p>
-        <p>Objeto é a instância concreta com valores específicos.</p>
-
+        <h2>Aula 08 - Mensagem</h2>
         <blockquote>
             <p>
-                Instanciar é pegar uma classe e gerar um objeto a partir dela.
-                Não transformamos uma classe em um objeto — geramos um objeto a partir de uma classe.
+                Mensagem é o processo de ativação de um método de um objeto. Isto ocorre quando uma requisição (chamada) a esse método é
+            realizada, assim disparando a execução de seu comportamento descrito por sua classe. Pode também ser direcionada diretamente à
+            classe, caso a requisição seja a um método estático.
             </p>
-            <cite></cite>
+             <cite>
+            CARVALHO, Thiago Leite. <em>Orientação a Objetos</em>. São Paulo: Casa do Código, 2024, p. 82.
+            </cite>
         </blockquote>
+
+        <p>
+        Entendemos agora que, quando requisitamos que um comportamento de um método seja executado, passamos uma mensagem a este método. As mensagens podem ser trocadas entre os métodos dos objetos/classes. As trocas de mensagem ocorrem de forma livre e constante durante a execução de um sistema e assim os objetos/classes poderão executar suas tarefas. Se durante a execução de um sistema for detectado que certos métodos nunca terão mensagens passadas a eles, vale a pena refletir sobre a real necessidade de sua existência.
+        </p>
+
+        <pre class="java">
+        //Java
+        Pessoa pessoa = new Pessoa();
+        pessoa.falar();
+        Pessoa.andar();
+        </pre>
+        
+        <pre class="csharp">
+        //C#
+        Pessoa pessoa = new Pessoa();
+        pessoa.Falar();
+        Pessoa.Andar();
+        </pre>
+
+        <p>
+            Para métodos de instância colocamos o objeto. Neste exemplo usamos um objeto representado pela variável pessoa do tipo Pessoa e o método de instância falar ( ). 
+No caso de métodos estáticos, coloca-se a classe. Usamos neste caso a classe Pessoa e o método estático andar ( ). 
+        </p>
+       
+       
 
         <!-- REFERÊNCIAS -->
         <section class="referencias">
