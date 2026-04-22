@@ -101,47 +101,89 @@
     background: #0b5ed7;
 }
 
-/* TIPOGRAFIA */
+/* TIPOGRAFIA ACADÊMICA */
 
-.content h2 {
-    margin-bottom: 18px;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.3;
-    color: #111;
-}
-
-.content h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #0d6efd;
-    letter-spacing: 0.3px;
-}
-
-.content h4 {
-    margin-top: 18px;
-    margin-bottom: 6px;
-    font-weight: 600;
+.content {
     font-size: 16px;
+    line-height: 1.8;
+    color: #2b2b2b;
+}
+
+/* TÍTULO PRINCIPAL */
+.content h2 {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 30px;
+
+    color: #111;
+
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 8px;
+}
+
+/* SUBTÍTULO */
+.content h3 {
+    margin-top: 35px;
+    margin-bottom: 12px;
+
+    font-weight: 600;
+    font-size: 22px;
+
+    color: #1a1a1a;
+
+    position: relative;
+    padding-left: 12px;
+}
+
+/* detalhe lateral (acadêmico elegante) */
+.content h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 18px;
+    width: 4px;
+    background: #0d6efd;
+    border-radius: 2px;
+}
+
+/* TÍTULO MENOR */
+.content h4 {
+    margin-top: 22px;
+    margin-bottom: 6px;
+
+    font-weight: 600;
+    font-size: 17px;
+
     color: #444;
 }
 
+/* PARÁGRAFOS */
 .content p {
-    margin: 12px 0;
-    line-height: 1.7;
+    margin: 14px 0;
+
+    line-height: 1.8;
     text-align: justify;
-    color: #333;
+
+    text-indent: 2em; /* 🔥 recuo de parágrafo acadêmico */
 }
 
+/* evita recuo no primeiro parágrafo após título */
+.content h2 + p,
+.content h3 + p,
+.content h4 + p {
+    text-indent: 0;
+}
+
+/* LISTAS */
 .content ul {
-    margin: 12px 0 18px 22px;
+    margin: 14px 0 20px 30px;
 }
 
 .content ul li {
-    margin-bottom: 6px;
-    line-height: 1.6;
+    margin-bottom: 8px;
+    line-height: 1.7;
 }
 
 /* IMAGENS */
@@ -149,10 +191,12 @@
     width: 100%;
     max-height: 380px;
     object-fit: cover;
-    border-radius: 12px;
-    margin: 20px 0;
+
+    border-radius: 10px;
+
+    margin: 25px 0;
+
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* evita bug de hover em mobile */
@@ -175,25 +219,81 @@
     margin-top: 6px;
 }
 
-/* CITAÇÃO */
+/* CITAÇÃO ESTILO DESTACADO */
+
 blockquote {
-    margin: 20px 0;
-    padding: 15px 20px;
-    border-left: 4px solid #0d6efd;
-    background: #f8f9fa;
-    font-style: italic;
-    font-size: 14px;
-    border-radius: 6px;
-    text-align: justify;
+    margin: 25px 0;
+    padding: 20px 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: relative;
 }
 
+/* TEXTO DA CITAÇÃO */
+blockquote p {
+    font-size: 12px;
+    line-height: 1.6;
+    font-style: italic;
+    color: #222;
+    margin: 0;
+}
+
+/* ASPAS DECORATIVAS */
+blockquote p::before {
+    content: "“";
+    font-size: 40px;
+    color: #0d6efd;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+blockquote p::after {
+    content: "”";
+    font-size: 40px;
+    color: #0d6efd;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+/* AUTOR */
 blockquote cite {
     display: block;
-    margin-top: 10px;
-    font-size: 12px;
+    margin-top: 15px;
+    font-size: 10px;
     color: #555;
     font-style: normal;
     text-align: right;
+}
+
+/* REFERÊNCIAS */
+
+.referencias {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* título mais discreto */
+.referencias h3 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* lista */
+.referencias ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.referencias li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: #555;
 }
 
 /* 🎥 VÍDEOS */
@@ -351,4 +451,95 @@ pre {
     padding: 15px;
     border-radius: 8px;
     overflow-x: auto;
+}
+
+/* ===== VISIBILIDADE (PADRÃO ÚNICO) ===== */
+
+.vis-cards {
+    display: flex;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* CARD BASE */
+.vis-card {
+    flex: 1;
+    min-width: 230px;
+
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+
+    border: 1px solid #eee;
+    border-top: 4px solid #0d6efd;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vis-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+/* SÍMBOLO */
+.vis-symbol {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    color: #0d6efd;
+}
+
+/* TÍTULO */
+.vis-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* TEXTO */
+.vis-card p {
+    text-indent: 0 !important;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* TEXTO EXTRA */
+.vis-card .vis-info {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 6px;
+    color: #777;
+}
+
+/* ===== CARDS COM VARIAÇÃO AUTOMÁTICA ===== */
+
+/* 1º card */
+.vis-card:nth-child(1) {
+    border-top-color: #2e7d32;
+}
+.vis-card:nth-child(1) .vis-symbol {
+    color: #2e7d32;
+}
+
+/* 2º card */
+.vis-card:nth-child(2) {
+    border-top-color: #c62828;
+}
+.vis-card:nth-child(2) .vis-symbol {
+    color: #c62828;
+}
+
+/* 3º card */
+.vis-card:nth-child(3) {
+    border-top-color: #f9a825;
+}
+.vis-card:nth-child(3) .vis-symbol {
+    color: #f9a825;
 }
