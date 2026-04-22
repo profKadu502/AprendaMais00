@@ -1,0 +1,205 @@
+<!-- 1. ARQUIVO: aula01.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aula 04 - O Buzzer</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- 🔹 SIDEBAR -->
+    <aside class="sidebar">
+        <a href="robotica.html">Apresentação</a>
+        <a href="aula01.html" class="active">Aula 01 - O que é Robótica</a>
+        <a href="aula04.html" class="active">Aula 04 - O Buzzer</a>
+
+    </aside>
+
+    <!-- 🔹 CONTEÚDO -->
+    
+    <main class="content">
+
+    <h2>Funcionamento do Buzzer</h2>
+
+    <p>
+        O buzzer é um componente eletrônico amplamente utilizado em projetos com microcontroladores, como o Arduino, sendo responsável pela emissão de sons. Seu funcionamento baseia-se na conversão de sinais elétricos em vibrações mecânicas, que produzem ondas sonoras audíveis ao ouvido humano. Esse dispositivo é bastante empregado em sistemas de alerta, sinalização e também em aplicações educacionais, como a produção de sons e músicas.
+    </p>
+
+    <figure>
+        <img src="https://png.pngtree.com/background/20240828/original/pngtree-arduino-piezo-buzzer-module-component-module-technology-components-photo-picture-image_10268547.jpg" alt="Buzzer eletrônico">
+        <figcaption>Buzzer (componente eletrônico utilizado para emissão de som)</figcaption>
+    </figure>
+
+    <figure>
+        <img src="../imagens/buzzer1.png">
+        <figcaption>Buzzer (componente eletrônico utilizado para emissão de som)</figcaption>
+    </figure>
+
+    <h3>Configuração no Arduino</h3>
+
+    <p>
+        No contexto da programação com Arduino, o buzzer é controlado por meio de um pino digital previamente definido no código. Inicialmente, declara-se uma variável que associa o buzzer a um determinado pino da placa. Em seguida, na função <strong>setup()</strong>, esse pino é configurado como saída (<strong>OUTPUT</strong>), permitindo que o microcontrolador envie sinais elétricos ao dispositivo.
+    </p>
+
+    <figure>
+        <img src="../imagens/buzzer-conexao.png">
+        <figcaption>Configuraçao do Buzzer</figcaption>
+    </figure>
+
+    <h3>Geração de Som</h3>
+
+    <p>
+        A geração de som ocorre na função <strong>loop()</strong>, que é executada continuamente. Para isso, utiliza-se a função <strong>tone()</strong>, responsável por produzir um sinal elétrico em determinada frequência, medida em Hertz (Hz). Essa frequência define a altura do som emitido, ou seja, se ele será mais grave ou mais agudo.
+    </p>
+
+    <p>
+        Além disso, é possível controlar a duração do som utilizando intervalos de tempo definidos em milissegundos, geralmente com o uso da função <strong>delay()</strong>.
+    </p>
+
+    <h3>Controle do Som</h3>
+
+    <p>
+        Para interromper a emissão sonora, utiliza-se a função <strong>noTone()</strong>, que desativa o sinal enviado ao buzzer. Dessa forma, é possível alternar entre momentos de som e silêncio, criando sequências sonoras organizadas.
+    </p>
+
+    <h3>Aplicação Musical</h3>
+
+    <p>
+        Um aspecto importante do uso do buzzer é sua aplicação na reprodução de notas musicais. Cada nota corresponde a uma frequência específica, o que permite combinar diferentes valores para formar melodias simples.
+    </p>
+
+    <p>
+        As notas musicais são representadas por letras (Dó, Ré, Mi, Fá, Sol, Lá, Si), facilitando a construção de sequências musicais no código. Ao ajustar as frequências e os tempos de execução, é possível compor músicas utilizando apenas o buzzer e o Arduino.
+    </p>
+        <div class="info-box info">
+        <strong>Vamos Fazer música?</strong>
+        Cada nota musical possui sua própria frequência, e por isso podemos combinar diferentes notas para formar músicas simples com a buzina!
+        </div>
+    
+        <h3>O Código</h3>
+
+        <p>
+            Abaixo está um exemplo simples de código para acionar o buzzer no Arduino:
+        </p>
+
+        <pre class="code-block"><code>
+        // Define o pino do buzzer
+        int buzzer = 8;
+
+        void setup() {
+            pinMode(buzzer, OUTPUT); // Configura o pino como saída
+        }
+
+        void loop() {
+            tone(buzzer, 1000); // Emite som de 1000 Hz
+            delay(1000);        // Aguarda 1 segundo
+
+            noTone(buzzer);     // Para o som
+            delay(1000);        // Aguarda 1 segundo
+        }
+        </code></pre>
+
+    <h3>Importância no Aprendizado</h3>
+
+    <p>
+        Assim, o buzzer não apenas desempenha funções práticas em sistemas eletrônicos, mas também constitui uma ferramenta didática relevante para o ensino de conceitos fundamentais de programação, eletrônica e lógica, permitindo a integração entre teoria e prática por meio de atividades interativas.
+    </p>
+
+        <div class="info-box info">
+        <strong>💡 Dica:</strong>
+        Utilize o buzzer para testar rapidamente saídas digitais do Arduino.
+        </div>
+
+        <div class="info-box warning">
+            <strong>⚠ Atenção:</strong>
+            Frequências muito altas podem não ser audíveis ao ouvido humano.
+        </div>
+
+        <div class="info-box important">
+            <strong>📌 Importante:</strong>
+            Sempre configure o pino do buzzer como OUTPUT no setup().
+        </div>
+
+</main>
+
+    
+    <!-- 🔥 SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <h3>Extras</h3>
+
+        <!-- 🎥 VÍDEOS -->
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <figure class="video-item">
+                    <a href="https://youtu.be/uoxtAXN2tnI?si=mhNELqSNfQ4uoa40" target="_blank" class="video-thumb">
+                        <img src="https://img.youtube.com/vi/uoxtAXN2tnI/hqdefault.jpg">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>Você está PERDENDO AUDIÇÃO e eu VOU PROVAR!</figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+        <!-- 🔗 LINKS -->
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+            <ul class="links-list">
+                <li><a href="https://www.arduino.cc" target="_blank">Arduino Oficial</a></li>
+                <li><a href="https://www.tinkercad.com" target="_blank">Tinkercad</a></li>
+                <li><a href="https://education.lego.com" target="_blank">LEGO Education</a></li>
+            </ul>
+        </div>
+
+    </aside>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

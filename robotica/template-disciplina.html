@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 🔹 ALTERAR: nome da disciplina -->
+<!-- 🔹 ALTERAR -->
 <title>Nome da Disciplina | Aprenda Mais</title>
 
 <link rel="stylesheet" href="../css/style.css">
@@ -19,7 +19,6 @@
     <h1>Aprenda Mais</h1>
     <div class="menu-toggle">☰</div>
 
-    <!-- 🔹 MENU GLOBAL (não mexer, reaproveitar) -->
     <nav>
         <a href="../index.html">Início</a>
         <a href="../disciplinas.html">Disciplinas</a>
@@ -31,61 +30,116 @@
 
 <div class="container">
 
-    <!-- 🔹 SIDEBAR DA DISCIPLINA -->
+    <!-- 🔹 SIDEBAR ESQUERDA -->
     <aside class="sidebar">
-
-        <!-- 🔹 ALTERAR LINKS CONFORME A DISCIPLINA -->
         <a href="index.html" class="active">Apresentação</a>
         <a href="aula01.html">Aula 01</a>
         <a href="aula02.html">Aula 02</a>
         <a href="aula03.html">Aula 03</a>
-
     </aside>
 
-    <!-- 🔹 CONTEÚDO PRINCIPAL -->
+    <!-- 🔹 CONTEÚDO -->
     <main class="content">
 
-        <!-- 🔹 ALTERAR TÍTULO -->
         <h2>Título da Página</h2>
 
-        <!-- 🔹 IMAGEM PADRÃO (opcional mas recomendado) -->
         <figure>
             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Imagem da disciplina">
             <figcaption>Descrição da imagem</figcaption>
         </figure>
 
-        <!-- 🔹 TEXTO INICIAL -->
         <p>
-            Escreva aqui a introdução da disciplina ou da aula. 
-            Esse espaço deve conter a explicação principal do conteúdo.
+            Escreva aqui a introdução da disciplina ou da aula.
         </p>
 
-        <!-- 🔹 SUBTÍTULO -->
         <h3>Seção do Conteúdo</h3>
 
         <p>
             Desenvolva o conteúdo da aula aqui.
         </p>
 
-        <!-- 🔹 LISTA (opcional) -->
         <ul>
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
         </ul>
 
-        <!-- 🔹 SEGUNDA IMAGEM (opcional) -->
         <figure>
             <img src="https://images.unsplash.com/photo-1581091870622-1e7c5b2a3f5b" alt="Exemplo visual">
             <figcaption>Exemplo ilustrativo</figcaption>
         </figure>
 
-        <!-- 🔹 FINALIZAÇÃO -->
         <p>
             Conclusão ou orientação final da aula.
         </p>
 
+        <blockquote>
+            Exemplo de citação ou definição importante.
+            <cite>Fonte da citação</cite>
+        </blockquote>
+
     </main>
+
+    <!-- 🔥 SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <!-- 🎥 VÍDEOS -->
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <!-- 🔹 TEMPLATE DE VÍDEO -->
+                <figure class="video-item">
+                    <a href="https://www.youtube.com/watch?v=ID_DO_VIDEO" target="_blank" class="video-thumb">
+                        <img src="https://img.youtube.com/vi/ID_DO_VIDEO/hqdefault.jpg" alt="Título do vídeo">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>
+                        Título ou descrição do vídeo
+                    </figcaption>
+                </figure>
+
+                <!-- 🔹 DUPLIQUE PARA MAIS VÍDEOS -->
+
+            </div>
+        </div>
+
+        <!-- 📄 MATERIAL -->
+        <div class="extra-card">
+            <h4>📄 Material</h4>
+            <p>Resumo da aula em PDF.</p>
+            <a href="#" target="_blank" class="btn-extra">Abrir</a>
+        </div>
+
+       <!-- LINKS -->    
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+
+            <ul class="links-list">
+
+                <li>
+                    <a href="https://www.tecmundo.com.br" target="_blank">
+                        TecMundo — notícias de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.w3schools.com" target="_blank">
+                        W3Schools — tutoriais de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://pt.wikipedia.org/wiki/Hardware" target="_blank">
+                        Wikipédia — Hardware
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </aside>
 
 </div>
 
