@@ -52,6 +52,12 @@ nav a {
 }
 
 /* CARDS */
+.card-link {
+    text-decoration: none; /* remove sublinhado */
+    color: inherit;        /* mantém cor do texto do card */
+    display: block;        /* garante comportamento de bloco */
+}
+
 .disciplinas {
     padding: 40px 20px;
 }
