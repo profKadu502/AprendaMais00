@@ -48,6 +48,7 @@
     flex: 1;
     padding: 25px;
     min-width: 0;
+    max-width: 850px; /* 🔥 controle de leitura */
 }
 
 /* SIDEBAR DIREITA */
@@ -121,7 +122,7 @@
 .content h4 {
     margin-top: 18px;
     margin-bottom: 6px;
-    font-weight: 600; /* 🔥 corrigido (800 era exagero) */
+    font-weight: 600;
     font-size: 16px;
     color: #444;
 }
@@ -153,9 +154,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.content img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+/* evita bug de hover em mobile */
+@media (hover: hover) {
+    .content img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
 }
 
 /* FIGURAS */
@@ -165,7 +169,7 @@
 
 .content figcaption {
     font-size: 13px;
-    color: #666; /* 🔥 corrigido (azul estava exagerado) */
+    color: #666;
     text-align: center;
     margin-top: 6px;
 }
@@ -177,7 +181,7 @@ blockquote {
     border-left: 4px solid #0d6efd;
     background: #f8f9fa;
     font-style: italic;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 6px;
     text-align: justify;
 }
@@ -185,16 +189,13 @@ blockquote {
 blockquote cite {
     display: block;
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 12px;
     color: #555;
     font-style: normal;
     text-align: right;
 }
 
-/* ========================= */
-/* 🎥 MULTI VÍDEOS (NOVO) */
-/* ========================= */
-
+/* 🎥 VÍDEOS */
 .video-list {
     display: flex;
     flex-direction: column;
@@ -213,9 +214,10 @@ blockquote cite {
 .video-thumb img {
     width: 100%;
     border-radius: 8px;
+    display: block; /* 🔥 remove espaço extra */
 }
 
-/* botão play */
+/* PLAY BUTTON */
 .play-button {
     position: absolute;
     top: 50%;
@@ -235,7 +237,7 @@ blockquote cite {
     background: rgba(0,0,0,0.8);
 }
 
-/* legenda do vídeo */
+/* LEGENDA */
 .video-item figcaption {
     font-size: 13px;
     color: #555;
@@ -243,19 +245,7 @@ blockquote cite {
     text-align: center;
 }
 
-/* 📱 TABLET */
-@media (max-width: 1024px) {
-
-    .extras-sidebar {
-        display: none;
-    }
-
-    .content {
-        max-width: 100%;
-    }
-}
-
-/* LISTA DE LINKS ÚTEIS */
+/* LINKS */
 .links-list {
     list-style: none;
     padding-left: 0;
@@ -275,6 +265,46 @@ blockquote cite {
 
 .links-list a:hover {
     text-decoration: underline;
+}
+
+/* CAIXAS */
+.info-box {
+    padding: 14px 16px;
+    margin: 18px 0;
+    border-radius: 10px;
+    border-left: 5px solid;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.info-box.info {
+    background: #e9f3ff;
+    border-color: #0d6efd;
+    color: #084298;
+}
+
+.info-box.warning {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #664d03;
+}
+
+.info-box.important {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #842029;
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 📱 TABLET */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .extras-sidebar {
+        display: none;
+    }
 }
 
 /* 📱 MOBILE */
@@ -299,6 +329,7 @@ blockquote cite {
 
     .content {
         padding: 15px;
+        max-width: 100%;
     }
 
     .content img {
@@ -306,69 +337,17 @@ blockquote cite {
     }
 
     .extras-sidebar {
-        display: block;
         width: 100%;
         border-left: none;
         border-top: 1px solid #ddd;
     }
 }
 
-/* CAIXAS DE INFORMAÇÃO */
-
-.info-box {
-    padding: 14px 16px;
-    margin: 18px 0;
-    border-radius: 10px;
-    border-left: 5px solid;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-/* TIPOS */
-
-.info-box.info {
-    background: #e9f3ff;
-    border-color: #0d6efd;
-    color: #084298;
-}
-
-.info-box.warning {
-    background: #fff3cd;
-    border-color: #ffc107;
-    color: #664d03;
-}
-
-.info-box.important {
-    background: #f8d7da;
-    border-color: #dc3545;
-    color: #842029;
-}
-
-/* Ícone + texto alinhado */
-.info-box strong {
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* BLOCO DE CÓDIGO */
-
-.code-block {
+/* CÓDIGO */
+pre {
     background: #1e1e1e;
-    color: #dcdcdc;
-
+    color: #fff;
     padding: 15px;
-    border-radius: 10px;
-
+    border-radius: 8px;
     overflow-x: auto;
-
-    font-family: Consolas, monospace;
-    font-size: 14px;
-    line-height: 1.5;
-
-    margin: 20px 0;
-}
-
-/* opcional: destaque leve ao passar o mouse */
-.code-block:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
