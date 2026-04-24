@@ -1,0 +1,152 @@
+<!-- 1. ARQUIVO: template-disciplina.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 🔹 ALTERAR -->
+<title>Nome da Disciplina | Aprenda Mais</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- 🔹 SIDEBAR ESQUERDA -->
+    <aside class="sidebar">
+        <a href="informatica-basica.html" >Apresentação</a>
+        <a href="aula01.html">Aula 01</a>
+
+        <a href="referencias-ib.html" class="active">Referências</a>
+       
+    </aside>
+
+    <!-- 🔹 CONTEÚDO -->
+    <main class="content">
+            <!-- REFERÊNCIAS -->
+            <section class="referencias">
+            <h2>Referências</h2>
+
+            <ul>
+
+            <li>
+                VELLOSO, Fernando de Castro. 
+                <em>Informática: conceitos básicos</em>. 
+                8. ed. Rio de Janeiro: Elsevier, 2011.
+            </li>
+
+            <li>
+                CASTRO, Moisés A. de. 
+                <em>Introdução à Informática básica: Curso Ebook Profissional</em>. 
+                Kindle Edition.
+            </li>
+
+             </ul>
+            </section>     
+    </main>
+
+
+    <!-- 🔥 SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <!-- 🎥 VÍDEOS -->
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <!-- 🔹 TEMPLATE DE VÍDEO -->
+                <figure class="video-item">
+                    <a href="https://www.youtube.com/watch?v=ID_DO_VIDEO" target="_blank" class="video-thumb">
+                        <img src="https://img.youtube.com/vi/ID_DO_VIDEO/hqdefault.jpg" alt="Título do vídeo">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>
+                        Título ou descrição do vídeo
+                    </figcaption>
+                </figure>
+
+                <!-- 🔹 DUPLIQUE PARA MAIS VÍDEOS -->
+
+            </div>
+        </div>
+
+        <!-- 📄 MATERIAL -->
+        <div class="extra-card">
+            <h4>📄 Material</h4>
+            <p>Resumo da aula em PDF.</p>
+            <a href="#" target="_blank" class="btn-extra">Abrir</a>
+        </div>
+
+       <!-- LINKS -->    
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+
+            <ul class="links-list">
+
+                <li>
+                    <a href="https://www.tecmundo.com.br" target="_blank">
+                        TecMundo — notícias de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.w3schools.com" target="_blank">
+                        W3Schools — tutoriais de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://pt.wikipedia.org/wiki/Hardware" target="_blank">
+                        Wikipédia — Hardware
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </aside>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

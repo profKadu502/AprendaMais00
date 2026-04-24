@@ -31,12 +31,12 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-        <a href="poo.html">Apresentação</a>
+        <a href="poo.html" class="active">Apresentação</a>
         <a href="">Aula 01 - Introdução</a>
         <a href="aula06.html" >Aula 06 - Instanciamento</a>
         <a href="aula07.html" >Aula 07 - Tipos de Atributo e Método</a>
-        <a href="aula08.html" class="active">Aula 08 - Mensagem</a>
-        <a href="aula09.html">Aula 09 - UML</a>
+        <a href="aula08.html">Aula 08 - Mensagem</a>
+        <a href="aula09.html" >Aula 09 - UML</a>
         <a href="aula10.html">Aula 10 - Visibilidade</a>
 
         <a href="referencias.html">Referências</a>
@@ -44,43 +44,32 @@
 
     <!-- CONTEÚDO -->
     <main class="content">
-        <h2>Aula 08 - Mensagem</h2>
-        <blockquote>
-            <p>
-                Mensagem é o processo de ativação de um método de um objeto. Isto ocorre quando uma requisição (chamada) a esse método é
-            realizada, assim disparando a execução de seu comportamento descrito por sua classe. Pode também ser direcionada diretamente à
-            classe, caso a requisição seja a um método estático.
-            </p>
-             <cite>
-            CARVALHO, Thiago Leite. <em>Orientação a Objetos</em>. São Paulo: Casa do Código, 2024, p. 82.
-            </cite>
-        </blockquote>
 
-        <p>
-        Entendemos agora que, quando requisitamos que um comportamento de um método seja executado, passamos uma mensagem a este método. As mensagens podem ser trocadas entre os métodos dos objetos/classes. As trocas de mensagem ocorrem de forma livre e constante durante a execução de um sistema e assim os objetos/classes poderão executar suas tarefas. Se durante a execução de um sistema for detectado que certos métodos nunca terão mensagens passadas a eles, vale a pena refletir sobre a real necessidade de sua existência.
-        </p>
+        <!-- REFERÊNCIAS -->
+        <section class="referencias">
+    <h2>Referências</h2>
 
-        <pre class="java">
-        //Java
-        Pessoa pessoa = new Pessoa();
-        pessoa.falar();
-        Pessoa.andar();
-        </pre>
-        
-        <pre class="csharp">
-        //C#
-        Pessoa pessoa = new Pessoa();
-        pessoa.Falar();
-        Pessoa.Andar();
-        </pre>
+    <ul>
 
-        <p>
-            Para métodos de instância colocamos o objeto. Neste exemplo usamos um objeto representado pela variável pessoa do tipo Pessoa e o método de instância falar ( ). 
-No caso de métodos estáticos, coloca-se a classe. Usamos neste caso a classe Pessoa e o método estático andar ( ). 
-        </p>
-       
-       
+        <li>
+            CARVALHO, Thiago Leite. 
+            <em>Orientação a Objetos</em>. 
+            São Paulo: Casa do Código, 2024.
+        </li>
 
+        <li>
+            GUANABARA, Gustavo. 
+            <em>Curso de Programação Orientada a Objetos</em>. 
+            YouTube, Curso em Vídeo. 
+            Disponível em: 
+            <a href="https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY" target="_blank">
+                https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY
+            </a>. 
+            Acesso em: 22 abr. 2026.
+        </li>
+
+    </ul>
+</section>
 
     </main>
 
@@ -118,6 +107,7 @@ No caso de métodos estáticos, coloca-se a classe. Usamos neste caso a classe P
                 <li><a href="https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos" target="_blank">POO - Wikipédia</a></li>
                 <li><a href="https://www.codelerity.com/netbeans/" target="_blank">Netbeans Apache</a></li>
             </ul>
+            
         </div>
 
     </aside>
