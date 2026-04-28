@@ -1,0 +1,377 @@
+<!-- ARQUIVO: praticando-poo.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Praticando POO com Java | Aprenda Mais</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header id="topo">
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="poo.html" >Apresentação</a>
+        <a href="">Aula 01 - Introdução</a>
+        <a href="aula06.html" >Aula 06 - Instanciamento</a>
+        <a href="aula07.html" >Aula 07 - Tipos de Atributo e Método</a>
+        <a href="aula08.html">Aula 08 - Mensagem</a>
+        <a href="aula09.html">Aula 09 - UML</a>
+        <a href="aula10.html" >Aula 10 - Visibilidade</a>
+        <a href="praticando.html" class="active">Praticando POO com Java</a>
+
+        <a href="referencias.html">Referências</a>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+
+    <h2>Praticando POO com Java (NetBeans)</h2>
+
+    <p>
+        Nesta página, iremos aplicar na prática os conceitos de Programação Orientada a Objetos (POO)
+        utilizando a linguagem Java. O foco será sair da teoria e entender como esses conceitos são
+        utilizados no desenvolvimento de programas reais.
+    </p>
+
+    <p>
+        Para isso, utilizaremos uma ferramenta chamada <strong>IDE (Integrated Development Environment)</strong>,
+        ou Ambiente de Desenvolvimento Integrado. Uma IDE é um software que reúne, em um único lugar,
+        recursos essenciais para o desenvolvimento de programas, como:
+    </p>
+
+    <ul>
+        <li>Editor de código</li>
+        <li>Compilador</li>
+        <li>Organização de arquivos do projeto</li>
+        <li>Ferramentas de execução e depuração</li>
+    </ul>
+
+    <p>
+        Existem diversas IDEs disponíveis para programação em Java, como IntelliJ IDEA, Eclipse e <a href="https://www.codelerity.com/netbeans/" title="Download do NetBeans">NetBeans</a>
+        Cada uma possui suas características e o aluno tem total liberdade para utilizar aquela com a qual
+        se sentir mais confortável.
+    </p>
+
+    <p>
+        No entanto, ao longo desta página, utilizaremos o <strong><a href="https://www.codelerity.com/netbeans/" title="Download do NetBeans">NetBeans</a></strong> como referência.
+        Isso ocorre porque ele apresenta algumas vantagens importantes, especialmente para quem está
+        iniciando na programação:
+    </p>
+
+    <ul>
+        <li>Interface simples e organizada</li>
+        <li>Criação automática da estrutura do projeto</li>
+        <li>Facilidade na execução de programas Java</li>
+        <li>Boa integração com recursos educacionais</li>
+    </ul>
+
+    <p>
+        Dessa forma, o NetBeans permite que o aluno foque no que realmente importa neste momento:
+        <strong>compreender os conceitos de Programação Orientada a Objetos</strong>, sem se preocupar
+        excessivamente com configurações técnicas mais avançadas.
+    </p>
+
+    <p>
+        Ao final desta prática, você será capaz de criar classes, instanciar objetos e entender como
+        esses elementos se relacionam dentro de um programa Java.
+    </p>
+
+        <!-- TÓPICO 1 -->
+        <h3 id="topico1">1. Criando um projeto no NetBeans</h3>
+
+        <p>
+            O primeiro passo é criar um projeto na IDE NetBeans.
+        </p>
+
+        <ul>
+            <li>File → New Project</li>
+            <li>Java Application</li>
+            <li>Nome do projeto</li>
+        </ul>
+
+        <figure>
+            <img src="../imagens/netBeansNovoP.png" alt="Novo Projeto">
+            <figcaption>Criando um novo projeto</figcaption>
+        </figure>
+
+        <p>Na nova janela que abrirá selecionamos:</p>
+        <ul>
+            <li>Java</li>
+            <li>Java Application</li>
+            <li>Próximo</li>
+        </ul>
+
+        <figure>
+            <img src="../imagens/netBeansNovoP(2).png" alt="Novo Projeto2">
+            <figcaption>Criando um novo projeto</figcaption>
+        </figure> 
+        <p> Vamos dar um nome para o projeto. Vamos chamar este de "Aula02"</p>       
+        <p> Depois que você clicar em "Finalizar", o Netbeans terá criado todo o pacote.</p>
+
+        <figure>
+            <img src="../imagens/pacotecriado.png" alt="Novo pacote">
+            <figcaption>Novo pacote criado</figcaption>
+        </figure> 
+
+        <a href="#topo">⬆ Voltar ao topo</a>
+
+        <!-- TÓPICO 2 -->
+        <h3 id="topico2">2. Criando uma classe</h3>
+
+        <p>
+            Uma classe é a estrutura básica da Programação Orientada a Objetos, responsável por definir
+            como um determinado elemento será representado no programa. Nela são organizados os dados
+            (atributos) e as operações (métodos), formando uma unidade lógica que descreve o comportamento
+            e as características de um objeto.
+        </p>
+
+        <p>
+            Em Java, a criação de uma classe é feita utilizando a palavra-chave <strong>class</strong>,
+            seguida de sua definição. É a partir dessa estrutura que construiremos os elementos que serão
+            utilizados na prática ao longo desta atividade.
+        </p>
+        <p>
+            Partimos agora para a criação da classe Java na IDE. Na verdade o que vamos fazer agora é criar a classe "Caneta" como vimos nas primeiras aulas com seus atributos e métodos que foram exemplificados nas aulas anteriores.
+        </p>
+        <pre class="pseudo">
+            Classe Caneta
+                modelo: caractere
+                cor: caractere
+                ponta: real
+                carga: inteiro
+                tampado: lógico
+
+            Metodo rabiscar ()
+
+            FimMetodo
+
+            Metodo tampar()
+
+            FimMetodo
+
+            FimClasse
+
+        </pre>
+        <p>Para isso vamos clicar com o botão direito no pacote e seguir os passos:</p>
+        <ul>
+            <li>Novo</li>
+            <li>Classe Java</li>
+        </ul>
+        <p>Damos um nome à classe observando que no Java utilizamos para a classe o CamelCase, ou seja, se for um nome composto, iniciamos a segunda palavra com inicial maiúscula e sem espaços. Mas neste exemplo o nome da classe será "Caneta".</p>
+        <p>Agora temos a classe caneta criada.</p>
+
+        <figure>
+            <img src="../imagens/claseCaneta.png" alt="Nova classe">
+            <figcaption>Classe Caneta criada</figcaption>
+        </figure> 
+        <p>Agora vamos criar os atributos e métodos da classe Caneta. Criamos os atributos lembrando de especificar o tipo de de dado cada um deles.</p>
+        <p>Na criação dos métodos iniciamos com a palavra void (que significa sem retorno), lembrando de colocar parênteses para cada método criado.</p>
+        <pre class="java">
+            package aula02;
+            public class Caneta {
+                /* Atributos */
+                String modelo;
+                String cor;
+                float ponta;
+                int carga;
+                boolean tampada;
+
+
+                /* Métodos */
+                void rabiscar(){
+
+                }
+
+                void tampar (){
+
+                }
+
+                void destampar (){
+
+                }
+            }
+        </pre>
+        <p>
+            A partir de agora já temos nossa classe Caneta e podemos utilizar ela dentro do pacote. 
+        </p>
+        
+
+        <a href="#topo">⬆ Voltar ao topo</a>
+
+        <!-- TÓPICO 3 -->
+        <h3 id="topico3">3. Instanciando objetos</h3>
+
+        <p>
+            Objetos são instâncias de uma classe.Para que um objeto seja criado temos que, primeiro ter criado a classe. Utilizamos a denominação instanciar para dizer que criamos um objeto. 
+        </p>
+        <p> 
+            Podemos usar a classe principal que foi criada automaticamente pelo Netbeans para, dentro dela instanciar um objeto (Caneta). 
+        </p>
+        <pre class="java">
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+
+                }
+            }
+        </pre>
+
+        <figure>
+            <img src="../imagens/novoObjeto.png" alt="classe principal">
+            <figcaption>Arquivo da classe principal do projeto</figcaption>
+        </figure> 
+
+        <p>
+            Instanciamos um objeto definindo que a classe recebe o objeto e o objeto é um novo objeto dentro da classe.
+        </p>
+        <pre class="pseudo">
+        Caneta c1 = new Caneta();
+        </pre>
+        <p> 
+            Em Java temos:
+        </p>
+        <pre class="java">
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                }
+            }
+        </pre>
+        <p>
+            Agora temos o objeto c1 que é um objeto caneta instanciado. 
+        </p>
+
+        <a href="#topo">⬆ Voltar ao topo</a>
+
+         <!-- TÓPICO 3 -->
+        <h3 id="topico4">4. Atribuindo valores aos objetos</h3>
+        <p> 
+            Depois que o objeto é instanciado podemos dar valores aos atributos. No nosso exemplo temos a caneta com os atributos modelo, cor, ponta e tampada que recebe um valor booleano. Fazemos estas alterações também dentro da classe principal.
+        </p>
+
+        <pre class="java">
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.cor = "Azul";
+                    c1.ponta = 0.5f;
+                    c1.tampada = false;
+                }
+            }
+        </pre>
+
+        <p> 
+            A estrutura de cada elemento é esta:
+        </p>
+
+                    <div class="vis-cards">
+
+                <div class="vis-card">
+                    <h4>c1</h4>
+                    <p>Nome do objeto que acabamos de criar.</p>
+                </div>
+
+                <div class="vis-card">
+                    <h4>.cor</h4>
+                    <p>Nome do atributo escolhido para alterar o valor.</p>
+                </div>
+
+                <div class="vis-card">
+                    <h4>"Azul"</h4>
+                    <p>Valor dado ao atributo.</p>
+                    <p class="vis-info">O atributo está entre "" aspas porque é uma String.</p>
+                </div>
+
+            </div>
+
+
+        <a href="#topo">⬆ Voltar ao topo</a>
+
+    </main>
+
+  <!-- SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <!-- ÍNDICE -->
+        <div class="indice">
+            <h3>Conteúdos desta página</h3>
+
+            <div class="indice-links">
+                <a href="#topico1">1. Criando um projeto</a>
+                <a href="#topico2">2. Criando uma classe</a>
+                <a href="#topico3">3. Instanciando objetos</a>
+                <a href="#topico4">4. Atribuindo valores aos objetos</a>
+            </div>
+        </div>
+
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <figure class="video-item">
+                    <a href="" target="_blank" class="video-thumb">
+                        <img src="" alt="POO explicação">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>Introdução à Programação Orientada a Objetos</figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+        <div class="extra-card">
+            <h4>📄 Material</h4>
+            <p>Plano de ensino da disciplina.</p>
+            <a href="#" class="btn-extra">Abrir</a>
+        </div>
+
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+
+            <ul class="links-list">
+                <li><a href="https://www.w3schools.com/java/" target="_blank">W3Schools - Java</a></li>
+                <li><a href="https://docs.oracle.com/javase/tutorial/" target="_blank">Oracle Java Docs</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos" target="_blank">POO - Wikipédia</a></li>
+                <li><a href="https://www.codelerity.com/netbeans/" target="_blank">Netbeans Apache</a></li>
+            </ul>
+            
+        </div>
+
+    </aside>
+
+</div>
+
+<footer>
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

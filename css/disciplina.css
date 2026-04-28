@@ -1,11 +1,11 @@
 /* 1. ARQUIVO: disciplina.css */
 
-/* RESET */
+/* 1. RESET */
 * {
     box-sizing: border-box;
 }
 
-/* LAYOUT */
+/* 2. LAYOUT */
 .container {
     display: flex;
     gap: 20px;
@@ -15,7 +15,7 @@
     padding: 0 10px;
 }
 
-/* SIDEBAR ESQUERDA */
+/* 3. SIDEBAR ESQUERDA */
 .sidebar {
     width: 250px;
     flex-shrink: 0;
@@ -44,15 +44,15 @@
     color: white;
 }
 
-/* CONTEÚDO */
+/* 4. CONTEÚDO */
 .content {
     flex: 1;
     padding: 25px;
     min-width: 0;
-    max-width: 850px; /* 🔥 controle de leitura */
+    max-width: 850px;
 }
 
-/* SIDEBAR DIREITA */
+/* 5. SIDEBAR DIREITA */
 .extras-sidebar {
     width: 260px;
     flex-shrink: 0;
@@ -65,7 +65,7 @@
     margin-bottom: 15px;
 }
 
-/* CARDS */
+/* 6. CARDS */
 .extra-card {
     background: white;
     padding: 14px;
@@ -85,8 +85,7 @@
     margin-bottom: 10px;
 }
 
-
-/* BOTÃO */
+/* 7. BOTÃO */
 .btn-extra {
     display: inline-block;
     margin-top: 8px;
@@ -102,42 +101,35 @@
     background: #0b5ed7;
 }
 
-/* TIPOGRAFIA ACADÊMICA */
-
+/* 8. TIPOGRAFIA BASE */
 .content {
     font-size: 16px;
     line-height: 1.8;
     color: #2b2b2b;
 }
 
-/* TÍTULO PRINCIPAL */
+/* 9. TÍTULO PRINCIPAL */
 .content h2 {
     margin-bottom: 20px;
-
     font-weight: 700;
     font-size: 30px;
-
     color: #111;
-
     border-bottom: 2px solid #e5e5e5;
     padding-bottom: 8px;
 }
 
-/* SUBTÍTULO */
+/* 10. SUBTÍTULO */
 .content h3 {
     margin-top: 35px;
     margin-bottom: 12px;
-
     font-weight: 600;
     font-size: 22px;
-
     color: #1a1a1a;
-
     position: relative;
     padding-left: 12px;
 }
 
-/* detalhe lateral (acadêmico elegante) */
+/* 11. DETALHE H3 */
 .content h3::before {
     content: "";
     position: absolute;
@@ -149,35 +141,31 @@
     border-radius: 2px;
 }
 
-/* TÍTULO MENOR */
+/* 12. TÍTULO MENOR */
 .content h4 {
     margin-top: 22px;
     margin-bottom: 6px;
-
     font-weight: 600;
     font-size: 17px;
-
     color: #444;
 }
 
-/* PARÁGRAFOS */
+/* 13. PARÁGRAFOS */
 .content p {
     margin: 14px 0;
-
     line-height: 1.8;
     text-align: justify;
-
-    text-indent: 2em; /* 🔥 recuo de parágrafo acadêmico */
+    text-indent: 2em;
 }
 
-/* evita recuo no primeiro parágrafo após título */
+/* 14. EXCEÇÃO DE RECUO */
 .content h2 + p,
 .content h3 + p,
 .content h4 + p {
     text-indent: 0;
 }
 
-/* LISTAS */
+/* 15. LISTAS */
 .content ul {
     margin: 14px 0 20px 30px;
 }
@@ -187,20 +175,17 @@
     line-height: 1.7;
 }
 
-/* IMAGENS */
+/* 16. IMAGENS */
 .content img {
     width: 100%;
     max-height: 380px;
     object-fit: cover;
-
     border-radius: 10px;
-
     margin: 25px 0;
-
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* evita bug de hover em mobile */
+/* 17. HOVER IMAGEM */
 @media (hover: hover) {
     .content img:hover {
         transform: scale(1.02);
@@ -208,7 +193,7 @@
     }
 }
 
-/* FIGURAS */
+/* 18. FIGURAS */
 .content figure {
     margin: 20px 0;
 }
@@ -220,8 +205,7 @@
     margin-top: 6px;
 }
 
-/* CITAÇÃO ESTILO DESTACADO */
-
+/* 19. BLOCO DE CITAÇÃO */
 blockquote {
     margin: 25px 0;
     padding: 20px 25px;
@@ -231,7 +215,7 @@ blockquote {
     position: relative;
 }
 
-/* TEXTO DA CITAÇÃO */
+/* 20. TEXTO CITAÇÃO */
 blockquote p {
     font-size: 12px;
     line-height: 1.6;
@@ -240,7 +224,7 @@ blockquote p {
     margin: 0;
 }
 
-/* ASPAS DECORATIVAS */
+/* 21. ASPAS */
 blockquote p::before {
     content: "“";
     font-size: 40px;
@@ -259,32 +243,27 @@ blockquote p::after {
     right: 10px;
 }
 
-/* AUTOR */
+/* 22. AUTOR */
 blockquote cite {
     display: block;
     margin-top: 15px;
     font-size: 10px;
     color: #555;
-    font-style: normal;
     text-align: right;
 }
 
-/* REFERÊNCIAS */
-
+/* 23. REFERÊNCIAS */
 .referencias {
     margin-top: 50px;
     padding-top: 20px;
     border-top: 1px solid #ddd;
 }
 
-/* título mais discreto */
 .referencias h3 {
     font-size: 18px;
-    color: #444;
     margin-bottom: 10px;
 }
 
-/* lista */
 .referencias ul {
     list-style: none;
     padding-left: 0;
@@ -292,12 +271,10 @@ blockquote cite {
 
 .referencias li {
     font-size: 14px;
-    line-height: 1.6;
     margin-bottom: 8px;
-    color: #555;
 }
 
-/* 🎥 VÍDEOS */
+/* 24. VÍDEOS */
 .video-list {
     display: flex;
     flex-direction: column;
@@ -316,38 +293,23 @@ blockquote cite {
 .video-thumb img {
     width: 100%;
     border-radius: 8px;
-    display: block; /* 🔥 remove espaço extra */
+    display: block;
 }
 
-/* PLAY BUTTON */
+/* 25. PLAY */
 .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     background: rgba(0,0,0,0.6);
     color: white;
-    
     padding: 10px 14px;
     border-radius: 50%;
     font-size: 18px;
-    transition: background 0.2s ease;
 }
 
-.video-thumb:hover .play-button {
-    background: rgba(0,0,0,0.8);
-}
-
-/* LEGENDA */
-.video-item figcaption {
-    font-size: 13px;
-    color: #555;
-    margin-top: 5px;
-    text-align: center;
-}
-
-/* LINKS */
+/* 26. LINKS */
 .links-list {
     list-style: none;
     padding-left: 0;
@@ -361,55 +323,33 @@ blockquote cite {
 .links-list a {
     text-decoration: none;
     color: #0d6efd;
-    font-size: 14px;
-    line-height: 1.4;
 }
 
 .links-list a:hover {
     text-decoration: underline;
 }
 
-/* CAIXAS */
+/* 27. CAIXAS */
 .info-box {
     padding: 14px 16px;
     margin: 18px 0;
     border-radius: 10px;
     border-left: 5px solid;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.info-box.info {
-    background: #e9f3ff;
-    border-color: #0d6efd;
-    color: #084298;
-}
-
-.info-box.warning {
-    background: #fff3cd;
-    border-color: #ffc107;
-    color: #664d03;
 }
 
 .info-box.important {
     background: #f8d7da;
     border-color: #dc3545;
-    color: #842029;
 }
 
-.info-box strong {
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* 📱 TABLET */
+/* 28. TABLET */
 @media (max-width: 1024px) and (min-width: 769px) {
     .extras-sidebar {
         display: none;
     }
 }
 
-/* 📱 MOBILE */
+/* 29. MOBILE */
 @media (max-width: 768px) {
 
     .container {
@@ -445,31 +385,28 @@ blockquote cite {
     }
 }
 
-/* CÓDIGO */
-/* ===== BASE ===== */
+/* 30. CÓDIGO */
 pre {
     background: #1e1e1e;
     color: #d4d4d4;
-
     padding: 16px;
     border-radius: 8px;
-
     overflow-x: auto;
+    font-family: monospace;
 
-    font-family: "Courier New", monospace;
+    /* 🔧 melhorias */
     font-size: 14px;
     line-height: 1.5;
-
     margin: 20px 0;
     border: 1px solid #2d2d2d;
 }
 
-/* separação entre blocos */
+/* 🔧 separação entre blocos consecutivos */
 pre + pre {
-    margin-top: 28px;
+    margin-top: 30px;
 }
 
-/* título automático */
+/* 🔧 rótulo automático */
 pre::before {
     display: block;
     font-size: 12px;
@@ -479,32 +416,34 @@ pre::before {
 
 /* ===== JAVA ===== */
 pre.java {
-    border-left: 4px solid #f89820;
+    border:  4px solid #f89820;
 }
+
 pre.java::before {
     content: "Java";
 }
 
 /* ===== C# ===== */
 pre.csharp {
-    border-left: 4px solid #68217a;
+    border: 4px solid #68217a;
 }
+
 pre.csharp::before {
     content: "C#";
 }
 
 /* ===== PSEUDOCÓDIGO ===== */
 pre.pseudo {
-    border-left: 4px solid #6c757d;
+    border: 4px solid #6c757d;
     color: #e6e6e6;
     font-style: italic;
 }
+
 pre.pseudo::before {
     content: "Pseudocódigo";
 }
 
-/* ===== VISIBILIDADE (PADRÃO ÚNICO) ===== */
-
+/* 31. VIS CARDS */
 .vis-cards {
     display: flex;
     gap: 16px;
@@ -512,7 +451,7 @@ pre.pseudo::before {
     flex-wrap: wrap;
 }
 
-/* CARD BASE */
+/* 32. CARD BASE */
 .vis-card {
     flex: 1;
     min-width: 230px;
@@ -529,12 +468,13 @@ pre.pseudo::before {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* 🔧 HOVER RESTAURADO */
 .vis-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
-/* SÍMBOLO */
+/* 🔧 SÍMBOLO (+ - #) */
 .vis-symbol {
     font-size: 22px;
     font-weight: bold;
@@ -543,89 +483,159 @@ pre.pseudo::before {
     color: #0d6efd;
 }
 
-/* TÍTULO */
+/* 🔧 TÍTULO DO CARD */
 .vis-card h4 {
     margin: 0 0 6px 0;
     font-size: 16px;
     font-weight: 600;
     color: #222;
+    text-align: center;
 }
 
-/* TEXTO */
+/* 🔧 TEXTO */
 .vis-card p {
     text-indent: 0 !important;
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
     color: #555;
+    text-align: center;
 }
 
-/* TEXTO EXTRA */
+/* 🔧 TEXTO EXTRA */
 .vis-card .vis-info {
     font-size: 12px;
-    font-weight: 600;
     margin-top: 6px;
     color: #777;
+    text-align: center;
 }
 
-/* ===== CARDS COM VARIAÇÃO AUTOMÁTICA ===== */
+/* 🔥 CORES DIFERENTES AUTOMÁTICAS */
 
-/* 1º card */
+/* Público (1º) */
 .vis-card:nth-child(1) {
-    border-top-color: #2e7d32;
+    border-color: #2e7d32;;
 }
 .vis-card:nth-child(1) .vis-symbol {
     color: #2e7d32;
 }
 
-/* 2º card */
+/* Privado (2º) */
 .vis-card:nth-child(2) {
-    border-top-color: #c62828;
+    border-color: #c62828;
 }
 .vis-card:nth-child(2) .vis-symbol {
     color: #c62828;
 }
 
-/* 3º card */
+/* Protegido (3º) */
 .vis-card:nth-child(3) {
-    border-top-color: #f9a825;
+    border-color: #f9a825;
 }
 .vis-card:nth-child(3) .vis-symbol {
     color: #f9a825;
 }
 
-/* ===== GRUPO DE IMAGENS ===== */
+/* 32. CARD BASE */
+.vis-card {
+    flex: 1;
+    min-width: 230px;
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    border-top: 4px solid #0d6efd;
+}
 
+/* 33. IMG GROUP */
 .img-group {
     display: flex;
     gap: 15px;
     margin: 20px 0;
-
-    flex-wrap: wrap; /* quebra no mobile */
+    flex-wrap: wrap;
 }
 
-/* cada item */
+/* 34. IMG ITEM */
 .img-group figure {
     flex: 1;
     min-width: 180px;
-    margin: 0;
-    text-align: center;
 }
 
-/* imagem */
+/* 35. IMG */
 .img-group img {
-    width: 100%;
-    height: 140px; /* 🔥 tamanho padronizado */
+    height: 140px;
     object-fit: cover;
-
-    border-radius: 8px;
-
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
-/* legenda */
-.img-group figcaption {
-    font-size: 13px;
-    color: #666;
-    margin-top: 6px;
+/* 36. BLOCO DO ÍNDICE */
+.indice {
+    margin: 30px 0;
+    padding: 20px;
+
+    background: linear-gradient(135deg, #f8f9fa, #eef4ff);
+    border-radius: 14px;
+
+    border: 1px solid #e3e7ef;
+}
+
+/* 37. TÍTULO */
+.indice h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+/* 38. LISTA DE LINKS */
+.indice-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 39. LINK ESTILO MODERNO */
+.indice-links a {
+    position: relative;
+    display: block;
+
+    padding: 12px 16px;
+    border-radius: 10px;
+
+    background: white;
+    border: 1px solid #e0e4ec;
+
+    text-decoration: none;
+    font-size: 10px;
+    color: #333;
+
+    transition: all 0.25s ease;
+}
+
+/* 🔥 BARRA LATERAL (DETALHE MODERNO) */
+.indice-links a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+
+    background: #0d6efd;
+    border-radius: 10px 0 0 10px;
+
+    opacity: 0.6;
+}
+
+/* 40. HOVER */
+.indice-links a:hover {
+    background: #0d6efd;
+    color: white;
+
+    transform: translateX(5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* 🔥 HOVER NA BARRA */
+.indice-links a:hover::before {
+    background: white;
+    opacity: 1;
 }

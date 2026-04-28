@@ -44,7 +44,7 @@
 
     <!-- CONTEÚDO -->
     <main class="content">
-        <h2>Aula 10 - Visibilidade</h2>
+        <h2>Aula 10 - Visibilidade (Modificadores de Acesso)</h2>
 
         <h3>A visibilidade define o nível de acesso aos atributos e métodos de uma classe.</h3>
         <p>
@@ -132,7 +132,34 @@
             <figcaption>Exemplo de Visibilidade UML</figcaption>
         </figure>
 
+        <h4> Público (Public) +</h4>
+        <ul>
+            <li>Acesso: É a visibilidade menos restritiva. Membros públicos são acessíveis de qualquer lugar, independentemente de haver relacionamento de herança ou pacotes entre as classes.</li>
+            <li>Finalidade: É utilizada para definir a API da classe, ou seja, o conjunto de serviços e operações que ela disponibiliza para o resto do sistema.</li>
+            <li>Cuidado: Tornar tudo público é uma má prática, pois expõe a complexidade interna e permite manipulações que podem ferir a lógica do negócio. Geralmente, apenas os métodos devem ser públicos.</li>
+        </ul>
 
+        <h4>Privado (Private) - </h4>
+        <ul>
+            <li>Acesso: É a visibilidade mais restritiva. Membros definidos como privados só podem ser manipulados dentro da própria classe onde foram criados.</li>
+            <li>Finalidade: É fundamental para o encapsulamento, pois permite "blindar" o estado interno do objeto contra acessos indevidos e garantir a segurança dos dados.</li>
+            <li>Regra de Ouro: Via de regra, todo atributo deve ser definido como privado.</li>
+        </ul>
+
+        <h4>Protegido (Protected) #</h4>
+        <ul>
+            <li>Acesso: É considerada a visibilidade intermediária. Permite que atributos e métodos sejam manipulados apenas na classe original e nas classes que herdam dela (subclasses)</li>
+            <li>Uso: Classes que não fazem parte da hierarquia de herança (como uma classe Paciente em relação a Funcionario) não conseguem acessar membros protegidos diretamente</li>
+        </ul>
+
+                <div class="info-box important">
+            <strong>📌 Diferenças entre Linguagens (Java vs. C#)</strong>
+            Algumas particularidades técnicas:
+            <ul>
+                <li>C#: Caso você não especifique explicitamente a visibilidade de um atributo, a linguagem assume por padrão que ele é private.</li>
+                <li>Java: A definição de membros privados deve ser sempre explícita. Além disso, Java possui a visibilidade default (acesso dentro do mesmo pacote), que não faz parte da teoria pura de POO, mas é um recurso da linguagem.</li>
+            </ul>    
+        </div>
 
         <h2>Por quê a visibilidade é tão importante?</h2>
         <p>
