@@ -316,15 +316,23 @@
                 <figcaption>O resultado da execução</figcaption>
             </figure> 
             <p>
-                Vemos a mensagem: "Construído com sucesso" mas sem nenhum resultado visual. Vamos criar um novo método que irá mostrar o estado do objeto para que tenhamos um resultado mais satisfatório.
+                Vemos a mensagem: "Construído com sucesso" mas sem nenhum resultado visual. Vamos criar um novo método que irá mostrar o estado do objeto para que tenhamos um resultado mais satisfatório. Mas antes, temos que fazer uma chamada para o método dentro do arquivo com a classe principal para que o método status passe a funcionar.
             </p>
+            <figure>
+                <img src="../imagens/chamada-para-o-método.png" alt="chamada">
+                <figcaption>Chamada para o método status</figcaption>
+            </figure> 
+            <p>
+                Esta foi a chamada para o método status. Uma característica que difere o método dos atributos são os parênteses que devem ser inseridos mesmo que o método não tenha nenhum parâmetro. Abaixo iremos incluir parâmetros para o método status. 
+            </p>
+
             <pre class="java">
                 void status(){
                     System.out.print ("Uma caneta " + this.cor);
                 }
             </pre>
             <p>
-                O "this" é uma autoreferência. Desta forma, quem chamou o método status será substituído por "this".
+                O "this" é uma autoreferência. Desta forma, quem chamou o método status será substituído por "this". O "this" é o nome do objeto que chamou. Sempre que quiser modificar algum atributo dentro da própria classe utilize a palavra "this". 
             </p>
             <p> 
                 Vamos acrescentar mais detalhes de atributos do nosso objeto e executar novamente:
@@ -339,6 +347,82 @@
                 <img src="../imagens/resultadodaExecucao.png" alt="executandoNovamente">
                 <figcaption>Executando novamente</figcaption>
             </figure> 
+            <h4>Vamos acrescentar mais atributos?</h4>
+            <pre class="java">
+                void status() {
+                    System.out.println ("Modelo: " + this.modelo);
+                    System.out.println ("Uma caneta " + this.cor);
+                    System.out.println ("Ponta:" + this.ponta);
+                    System.out.println ("Carga: " + this.carga);
+                    System.out.println ("Está tampada? " this.tampada);
+                }
+            </pre>
+            <h4>Trabalhando com os métodos</h4>
+            <p>
+                Agora vamos definir os parâmetros para os métodos tampar e destampar. Na classe Aula02 vamos alterar o atributo tampada para que ele se torne um método:
+            </p>
+            <pre class="java">
+                package Aula02;
+                public class Aula02 {
+                    public static void main (String[] args){
+                        Caneta c1 = new Caneta();
+                        c1.cor = "Azul";
+                        c1.ponta = 0.5f;
+                        c1.tampar (); //antes estava assim: c1.tampada = false;
+                        c1.status ();
+                    }
+                }
+            </pre>
+            <pre class="java">
+                void tampar(){
+                    this.tampada = true;
+                }
+
+                void destampar() {
+                    this.tampada = false;
+                }
+            </pre>
+            <p>
+                Vamos definir alguns parâmetros para o método rabiscar e veremos agora algumas interações interessantes. 
+            </p>
+            <p>
+                Para rabiscar com uma caneta primeiro devemos observar se ela está destampada, senão você não poderá rabicar. Vamos então definir isto no nosso código. Lembre-se de chamar o método rabiscar() na classe principal.    
+            </p>
+            <pre class="java">
+                void rabiscar(){
+                    if (this.tampada==true){
+                        System.out.println("ERRO! Não posso rabiscar!");
+                    } else {
+                        System.out.println ("Estou rabiscando");
+                    }
+                }
+            </pre>
+            <p>
+                Quando executamos nosso código percebemos que ele retornou uma mensagem de erro. O motivo desta mensagem foi exatamente o que definimos anteriormente. Se a caneta estiver tampada a mensagem de erro será exibida. Senão a mensagem que será mostrada será a seguinte: "Estou rabiscando."
+            </p>
+            <p>
+                Para corrigir isto devemos chamar o método destampar ao invés do método tampar como estava antes.
+            </p>
+            <p>
+                Vamos criar um novo objeto e fazer alguns testes com novos valores de atributos agora. Mantenha os valores atuais do objeto c1 e trabalhe apenas com os atributos do novo objeto.
+            </p>
+            <pre class="java">
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.cor = "Azul";
+                    c1.ponta = 0.5f;
+                    c1.tampar();
+
+                    Caneta c2 = new Caneta();
+                    c2.modelo = "Bic";
+                    c2.cor = "preta";
+                    c2.destampar();
+                    c2.rabiscar();
+                }
+            }
+        </pre>
 
 
         <a href="#topo">⬆ Voltar ao topo</a>
@@ -358,40 +442,6 @@
                 <a href="#topico3">3. Instanciando objetos</a>
                 <a href="#topico4">4. Atribuindo valores aos objetos</a>
             </div>
-        </div>
-
-        <div class="extra-card">
-            <h4>🎥 Vídeos</h4>
-
-            <div class="video-list">
-
-                <figure class="video-item">
-                    <a href="" target="_blank" class="video-thumb">
-                        <img src="" alt="POO explicação">
-                        <span class="play-button">▶</span>
-                    </a>
-                    <figcaption>Introdução à Programação Orientada a Objetos</figcaption>
-                </figure>
-
-            </div>
-        </div>
-
-        <div class="extra-card">
-            <h4>📄 Material</h4>
-            <p>Plano de ensino da disciplina.</p>
-            <a href="#" class="btn-extra">Abrir</a>
-        </div>
-
-        <div class="extra-card">
-            <h4>🔗 Links úteis</h4>
-
-            <ul class="links-list">
-                <li><a href="https://www.w3schools.com/java/" target="_blank">W3Schools - Java</a></li>
-                <li><a href="https://docs.oracle.com/javase/tutorial/" target="_blank">Oracle Java Docs</a></li>
-                <li><a href="https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos" target="_blank">POO - Wikipédia</a></li>
-                <li><a href="https://www.codelerity.com/netbeans/" target="_blank">Netbeans Apache</a></li>
-            </ul>
-            
         </div>
 
     </aside>
