@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/disciplina.css">
+<link rel="stylesheet" href="../css/sidebar.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -306,6 +307,38 @@
                 </div>
 
             </div>
+            <p>
+                Se executarmos agora teremos o seguinte resultado:
+            </p>
+
+            <figure>
+                <img src="../imagens/executando.png" alt="executando">
+                <figcaption>O resultado da execução</figcaption>
+            </figure> 
+            <p>
+                Vemos a mensagem: "Construído com sucesso" mas sem nenhum resultado visual. Vamos criar um novo método que irá mostrar o estado do objeto para que tenhamos um resultado mais satisfatório.
+            </p>
+            <pre class="java">
+                void status(){
+                    System.out.print ("Uma caneta " + this.cor);
+                }
+            </pre>
+            <p>
+                O "this" é uma autoreferência. Desta forma, quem chamou o método status será substituído por "this".
+            </p>
+            <p> 
+                Vamos acrescentar mais detalhes de atributos do nosso objeto e executar novamente:
+            </p>
+            <pre class="java">
+                void status(){
+                    System.out.print ("Uma caneta " + this.cor);
+                    System.out.println (" está tampada? " + this.tampada);
+                }
+            </pre>
+            <figure>
+                <img src="../imagens/resultadodaExecucao.png" alt="executandoNovamente">
+                <figcaption>Executando novamente</figcaption>
+            </figure> 
 
 
         <a href="#topo">⬆ Voltar ao topo</a>
