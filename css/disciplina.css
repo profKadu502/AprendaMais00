@@ -75,6 +75,10 @@
     text-align: justify;
     text-indent: 2em;
 }
+strong {
+    font-weight: 1000;
+    font-size: 17px;
+}
 
 /* 5.1 EXCEÇÃO */
 .content h2 + p,
@@ -270,4 +274,34 @@ pre.pseudo::before {
     .content img {
         max-height: 250px;
     }
+}
+
+/* 15. TABELAS */
+table {
+    width: auto;              /* 👈 não ocupa mais 100% */
+    max-width: 600px;         /* 👈 limite opcional */
+    border-collapse: collapse;
+    margin: 20px auto;        /* 👈 centraliza */
+    font-size: 0.85rem;       /* 👈 texto menor */
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 5px 8px;         /* 👈 menos espaço interno */
+    text-align: center;
+}
+
+/* Cabeçalho */
+th {
+    background-color: #5a3e2b;
+    color: #fff;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(odd) {
+    background-color: #d2b48c;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5e6d3;
 }

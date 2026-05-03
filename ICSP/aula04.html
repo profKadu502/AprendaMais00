@@ -1,0 +1,345 @@
+<!-- 1. ARQUIVO: hardware.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aula 04 | Aprenda Mais</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/components.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <a href="icst.html" >Apresentação</a>
+        <a href="aula03-hardware.html" >Aula 03 - Hardware</a>
+        <a href="aula04.html" class="active">Aula 04 - O Processador</a>
+        <a href="aula05.html">Aula 05 - A memória RAM</a>
+        <a href="referencias.html" >Referências</a>
+    </aside>
+
+    <main class="content">
+
+        <h2>Aula 04 - O Processador</h2>
+
+        <p>
+            Componente principal do computador, o processador ou UCP <i>(Central Process Unity)</i> que em português seria traduzido para Unidade Central de Processamento é o componente mais importante do computador também sendo chamado de "o cérebro do computador". Segundo TORRES (2013), se o computador fosse um carro, o processador seria o motor.
+        </p>
+        <figure>
+            <img src="https://s2-techtudo.glbimg.com/HkK-EOIeBys8J5v8hiq0onWhcpA=/0x0:695x463/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/V/o/VRLU2iTgAJXPsvZhh3bQ/2015-10-07-processador-da-intel-alcancou-altissima-velocidade.png" alt="Processador">
+            <figcaption>Processador</figcaption>
+        </figure>
+        <p> 
+            Como podemos ver na imagem acima o processador é uma peça quadrada com pinos ou contatos em sua prte inferior. O processador é instalado diretamente na placa-mãe e necessita de um sistema de refrigeração instalado acima dele, também é necessário colocar um pouco de pasta térmica durante sua instalação, porém algumas placas já trazem o processador soldado diretamenta à sua estrutura.
+        </p>
+        <p>
+            Os processadores mais comuns atualmente são AMD e Intel com vários modelos diferentes. 
+        </p>
+            <figure>
+                <img src="https://w7.pngwing.com/pngs/566/176/png-transparent-lga-1156-motherboard-cpu-socket-asus-atx-lga-775-electronic-device-computer-hardware-asus.png" alt="placa-mae">
+                <figcaption>placa-mae</figcaption>
+            </figure>
+
+
+        <div class="img-group">
+            <figure>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxZ3_23rx5WTFh6sTZkARbqRaMrwr58PIjyw&s" alt="desenho do soquete">
+                <figcaption>soquete de CPU</figcaption>
+            </figure>
+                    <figure>
+                <img src="../imagens/soquete-cpu.jpeg" alt="Soquete da CPU">
+                <figcaption>Soquete da CPU </figcaption>
+            </figure>
+                    <figure>
+                <img src="../imagens/soquete-e-cpu.jpg" alt="soquete e CPU">
+                <figcaption>CPU sendo colocada no soquete</figcaption>
+            </figure>
+        </div>    
+        <h3>A "difícil" tafefa de escolher um processador para seu PC</h3>
+        <p>
+            Escolher um processador é quase como escolher um carro (rsrsrs). É uma tarefa quase tão complicada quanto discutir política ou futebol no Brasil. Muitos são fãns de marca A ou B e discutirão de maneira ferrênea para defender seu preferido. Mas vamos tentar falar dos processadores sem puxar sardinha para nenhum deles.
+        </p>
+        <p>
+            Primeiramente precisamos saber quais tarefas você irá desenvolver com seu computador e qual o orçamento será utilizado para isto. 
+        </p>
+        <p>
+            De uma maneira bastante simplória, poderíamos fazer a seguinte recomendação:
+        </p>
+        <ul>
+            <li>
+                <strong>Processadores de entrada: </strong>são voltados a usuários que não precisem de muito poder de processamento. Por exemplo, navegação da internet, acesso a e-mails e uso de pacote de escritório. Exemplos de processadores nesta categoria incluem o Celerom, Pentium (renomeado a partir de 2024 para simplesmente "Intel Processor") e Core i3/Core 3, no lado da Intel, e os processadores Athlon, série A e Ryzen 3, no lado da AMD.</li>
+            <li>
+                <strong>Processadores intermediários: </strong>voltados a usuários que requerem mais poder de processamento, para jogos e edição de imagens, por exemplo. Exemplos de processadores nesta categoria incluem o Ryzen 5, da AMD, e o Core i5/Core 5, da intel.
+            </li>
+            <li>
+                <strong>Processadores topo de linha:</strong> voltados a usuários profissionais em áreas como edição de vídeo o renderização de imagens tridimensionais. Mesmo a jogadores sérios é recomendado processadores intermediários. Exemplos: Ryzen 7 e Ryzen 9, da AMD, e Core i7/Core 7, core i9/Core 9 e Xeon família E, da Intel, embora este último seja originalmente voltado a servidores e estações de trabalho de entrada. 
+            </li>
+            <li>
+                <strong>Processadores topo de linha superiores:</strong> voltados a usuários profissionais que requerem ainda mais poder de processamento. Este seguimento é também conhecido como HEDT <i>(High-End DeskTop)</i> Uma das características deferenciadas desses processadores é o acesso à memória RAM em quatro canais. Exemplos: Ryzen Threadripper, da AMD, e o Core i9 série X, da Intel, sendo que já existiram modelos do Core i7 neste seguimento. 
+            </li>
+            <li>
+                <strong>Processadores para estações de trabalho de alto desempenho: </strong>para desempenho ainda maior em aplicações profissionais com modelagem 3D, renderização e simulações científicas. Os processadores Ryzen Threadripper PRO da AMD, que suportam oito canais de memória e os modelos Xeon da família W da Intel que também aceitam oito canais são exemplos neste seguimento.
+            </li>
+            <li>
+                <strong>Processadores para servidores:</strong> nesta categoria estão atualmente os processadores EPYC, da AMD, E Xeon, da Intel. Como ocorre com os computadores de mesa, o mercado de servidores é dividido em diversas categorias. Embora originalmente voltados a servidores e estações de trabalho, utilizam o mesmo soquete voltado a computadores de mesa e, com isto, muitos usuários têm utilizado processadores desta categoria na montagem de computadores de mesa de alto desempenho.
+            </li>
+        <h3>Um pouco da história dos processadores</h3>
+        <p>
+            Como pudemos observar nas aulas anteriores o microprocessador não esteve presente no início da computação. Falaremos aqui em ordem cronológica sobre os principais processadores do início da computação.
+        </p>    
+        <p>
+            <strong>Intel 4004 (1971):</strong> O primeiro microprocessador comercial, com 4 bit e capacidade limitada.
+        </p>
+        <p>
+            <strong>Intel 8086 (1978):</strong> Introduziu a arquitetura x86, que se tornou o padrão para PCs. 
+        </p>
+        </ul>
+            <h4>Avanços significativos</h4>
+            <p>
+                <strong>Processadores multi-core:</strong> A intodução de múltiplos núcleos dentro de uma única CPU permite o processamento paralelo, aumentando a eficiência e o desempenho.
+            </p>
+            <p>
+                <strong>Tecnologia de 64 bits:</strong> Permite maior capacidade de memória e processamento mais eficiente em comparação com processsadores de 32 bits.
+            </p>
+        
+        <h3>Características Técnicas</h3>
+        <h4>Núcleo de Processamento</h4>
+        <p>
+            A maioria dos processadores existentes hoje no mercado possui mais de um núcleo de processamento, isto é, internamente, eles têm mais de um processador. Em inglês, núcleo se chama <i>core</i>, desta forma processadores com dois, quatro, seis e oito núcleos são chamados <i>dual core, quad-core, six-core e eight-core</i>. Pode-se aproveitar o potencial oferecido por processadores com muitos núcleos rodando programas que reconheçam e usem estes núcleos adicionais. São exemplos destes programas os que trabalham com renderizaçao de imagens tridimensionais, ediçao de vídeo e alguns jogos.
+        </p>
+        <p>
+            Para as tarefas bem básicas do computador como navegaçao da Internet e uso de ferramentas de escritório, é um exagero utilizar um processador com muitos núcleos pois este trabalho poderá ser bem realizado utilizando-se apenas um núcleo. Neste caso, a utilização de diversos núcleos deixará os núcleos adicionais ociosos.
+        </p>
+        <p>
+            Para se trabalhar profissionalmente com edição de vídeo, áudio e renderização de modelos tridimensionais é importnate utilizar um processador com o maior número de núcleos e obviamente selecionar um processador que tenha a tecnologia Hyper-Threading (Intel) ou Simultaneos Multhreading (SMT, AMD).
+        </p>
+        <p> 
+            Em resumo, nem sempre você precisa de um processador com muitos núcleos ou do modelo mais caro do mercado. O ideal é pensar não só no custo-benefício, mas também no seu orçamento e, principalmente, no que você realmente vai fazer com o computador. Clique no link a seguir e saiba mais: <a href="https://www.youtube.com/watch?v=BFEwkwhNcNY&t=4s" alt="Mais núcleos, maior desempenho?" target="_blank">https://www.youtube.com/watch?v=BFEwkwhNcNY&t=4s</a>
+        </p>
+         <div class="info-box explicacao">
+            <strong>Hyper-Threading (Intel) e Simultaneous Multithreading (SMT, AMD):</strong>
+            <p>
+                Alguns processadores possuem estas recnologias que simulam dois processadores pornúcleo de processamento. Assim, um processador com quatro núcleos de processsamento e que tenha uma destas tecnologias é reconhecido como tendo oito núcleos pelo sistema opeacional e programas. Importante notar que esses processadores adicionais "simulados" não têm o mesmo desempenho de núcleos de processadores "reais". 
+            </p>
+        </div>
+
+        <h4>Soquete</h4>
+        <p>
+            O soquete é o tipo de conexão física que o processador possui com a palca-mãe. Esta caracterísitca é muito importante para que está montando um computador. 
+        </p>
+        <p>
+            Os soquetes que estão atualmente disponíveis para computadores Desktop são:
+        </p>
+        <h5> Para processadores AMD:</h5>
+            <ul>
+                <li>
+                    <storng>Soquete AM4:</storng> usado por processadores AMD que suprotam dois canais de memória DDR4.
+                </li>
+                <li>
+                    <strong>Soquete AM5:</strong> usado por processadores AMD que suportam dois canais de memória DDR5.
+                </li>
+                <li>
+                    <strong>Soquete sTR4:</strong> usado pelos processaores Ryzen Threadripper séries 1000 e 2000, que suportam quatro canais de memória DDR4.
+                </li>
+                <li>
+                    <strong>Soquete sTRX4:</strong> usado pelos processadores Ryzen Threadripper série 3000, que suportam quatro canais de memória DDR4. Apesar de ser fisicamente idêntico ao soque sTR4, processaores voltados ao soquete sTR4 não funcionam no soquet sTRX4 e vice-versa.
+                </li>
+                <li>
+                    <strong>Soquete sTR5:</strong> usado pelos processadores Ryzen Threadripper séries 7000 e 9000, que suprotam quatro canais memória DDR6, e pelos processadores Ryzen Threadripper PRO séries 7000 e 9000, compatíveis com até oi canais de memória DDR5 (a placa mãe, no entanto, pode apresentar conexão para apenas quatro canais de memória.)
+                </li>
+                <li>
+                    <strong>Soquete sWRW8:</strong> usado pelos processadores Ryzen Threadripper PRO séries 3000 e 5000, suportando oito canais de memória DDR4.
+                </li>
+
+            </ul>
+            <h5>Para processadores Intel:</h5>
+            <ul>
+                <li>
+                    <strong>Soquete LGA1151:</strong> usado pelos processadores Core i de sexta, sétima, oitava e nona geração (docinomes Sylake, Kaby Lake e Coffe lake) e modelos dos processaores Celeron, Pentium e Xeon família E derivados destas gerações. 
+                </li>
+                <li>
+                    <strong>Soquete LGA1200:</strong> usado pelos processadores Core i de 10ª e 11ª geração, codinomes Comet Lake e Rocket Lake. Há processadores Celeron, Pentium e Xeon famílias E e W que também podem ser encontrados para esse soquete. Processaores baseados nesse soquete suportam dois canais de memória.
+                </li>
+                <li>
+                    <strong>Soquete LGA1700:</strong> utilizado pelos processadores Core i de 12ª, 13ª e 14ª geração, codinomes Comet Lake e Rocket Lake. Há processadores Celeron, Pentium e Xeon famílias E e W que também podem ser encontrados para esse soquete. Processadores baseados nesse soquete suportam dois canais de memória.
+                </li>
+                <li>
+                    <strong>Soquete LGA1851:</strong> utilizado pelos processadores Core Ultra série 2, codinome Arrow Lake. Não foram lanácos processadores Core série 1 para computadores de mesa.
+                </li>
+                <li>
+                    <strong>Soquete LGA2066:</strong> usado pelos processadores Core i7 e Core i9 de sexta, sétima e décima geração séria X, codinomes Skylake-X, Kaby Lake-X e Cascade Lake-X, além de modelos do Xeon família W. Tais processadores apresentam controlador de memória de quatro canais.
+                </li>
+            </ul>
+        
+            <h4>Clock interno:</h4>
+            <p>
+                Também conhecido simplesmente como clock, é o número de ciclos por segundo (frquência) de um sinal de sincronismo usado dento do processador, atualmente medido na casa dos GHz (gigahertz). 
+            </p>
+            <H4>Overclock dinâmico:</H4>
+            <p>
+                Alguns processadores, tanto da AMD quanto da Intel, podem aumentar seus clocks automaticamente acima do clock padrão quando o processador "sente" que o usuário está pedindo maior poder de processamento. Esta característica é chamada Core Performance Boost (CPB) ou (Turbo Core, em processadores mais antigos), no lado da AMD, e Turbo Boost, no lado da Intel. Processadores dotados desta tecnologia são divulgados com dois clocks, um clock máximo e um clok padrão, que é usado na maior parte do tempo. 
+            </p>
+            <h4>Clock base:</h4>
+            <p>
+                O clock interdo do processador é obtido multiplicando-se um clock base de menor frquência.
+            </p>
+            <h4>Memória cache:</h4>
+            <p>
+                É uma memória ultrarrápida localizada dentro do processador e pode ser dividia em três níveis: L1, L2 e L3 (nem todos os processadores possuem memória cache L3). Quanto mais memória cache o processador tiver, mais rápido ele será - pelo menos, em teoria.
+            </p>
+        <h3>Escolhendo um processador</h3>
+        <p>
+            Como a maioria dos processadores atuais já vem com <strong>Controlador de Vídeo integrado</strong> se você estiver montando um computador que não será usado para rodar jogos ou edição de imagens e vídoes poderá usar um dos mais comuns que estão no mercado.  Ter o Controlador de Vídeo Integrado significa que o processador é responsável por gerar as informaçãooes de vídeo.
+        </p>
+        <p>
+           No caso de máquinas para edição de vídeo e de imagens, você deverá verificar se os programas de edição que você utilizará são compatíveis com uma técnica chamada GPGPU ou aceleraçÃo de GPU, na qual o processador de vídeo da placa de vídeo (GPU) é utilizado para renderizar vídeos e imagens. Por exemplo, o Photoshop, o Premiere e o Vegas são programas de ediçao que utilizam esta técnica. A renderizaçao é bem mais rápida quando usamos o processador de vídeo em vez do processador principal e, portanto, neste caso, vale a pena investir na placa de vídeo mais poderosa que couber em seu orçamento, pois você diminuirá consideravelmente o tempo necessário para gerar os arquivos finais do seu trabalho.
+        </p>
+        <p>
+            Até o ano de 2010, não existim processadores com controlador de vídeo integrado no mercado. Para construir computadores de entrada mais baratos, sem a necessidade da utilizaçao de uma placa de vídeo avulsa, os fabricantes integravam um controlador de vídeo na placa-mãe, embutido no <i>chipset</i> ou em um chip adicional. As placas-mãe contendo um controlador de vídeo integrado eram classficadas como "vídeo on-board" (literalmente, "vídeo na placa", no caso da placa-mãe).
+        </p>
+        <p>
+            Atualmente, como estamos discutindo, o controlador de vídeo, quando existente, está presente dentro do processador, e não mais de um chip na placa-mãe. Desta forma, o uso da expressão "vídeo on-board", neste contexto, está errado, visto o processador não ser uma placa; o termo correto é <strong>"vídeo integrado"</strong>.
+        </p>
+        <p>
+            Outro equívoco bastante comum é dizer que processadores com controlador de vídeo integrado têm "placa de vídeo integrada". A incorreção está no fato de o controlador de vídeo ser um circuito eletrônico dentro do processador, e não uma placa. Infelizmente, essa terminologia incorreta é utilizada na versão em português do site de alguns fabricantes.
+        </p>
+        <p>
+            Vamos discutir um pouco sobre a montagem de computadores "de entrada"para jogos. A geração de imagens tridimensionais em tempo real em jogos é feita em várias etapas, e o que os fabricantes de chips gráficos fazem, a cada nova geração, é colocar no processador gráfico (o chip da placa de vídeo) etapas que antes eram feitas pelo processador da máquina.
+        </p>
+        <p>
+            Antigamente, portanto, o desempenho de jogos estava intimamente ligado a qual processador você tinha instalado em sua máquina. Atualmente, isso não é mais verdade, mas esta noção (desatualizada) de que você precisa de um processador "poderoso" para rodar jogos ainda persiste no mercado.
+        </p>
+        <p>
+            Via de regra, um computador intermediário ou topo de linha para jogos, você obterá um maior desempenho se, em vez de usar um processador caro, usar um mais barato (desque que não seja um processador de entrada inferior ao Core i3/Core 3 ou ao Ryzen 3) e usar a diferença de preço para comprar uma placa de vídeo mais carac (e poderosa) do que a que você havia originalmente planejado. 
+        </p>
+
+    </main>
+
+    <!-- 🔥 NOVA SIDEBAR DIREITA (EXTRAS) -->
+    <aside class="extras-sidebar">
+
+<div class="extra-card">
+    <h4>🎥 Vídeos</h4>
+
+    <div class="video-list">
+
+            <!-- CARD VÍDEOS -->
+    <div class="extra-card">
+        <h4>🎥 Vídeos</h4>
+
+        <div class="video-list">
+
+            <figure class="video-item">
+                <a href="https://www.youtube.com/watch?v=GRuTNQlLxrU" target="_blank" class="video-thumb">
+                    <img src="https://img.youtube.com/vi/GRuTNQlLxrU/hqdefault.jpg" alt="Processador">
+                    <span class="play-button">▶</span>
+                </a>
+                <figcaption>
+                    O que é um processador e qual a sua função?
+                </figcaption>
+            </figure>
+
+            <figure class="video-item">
+                <a href="https://www.youtube.com/watch?v=0TV0uB0gQwQ" target="_blank" class="video-thumb">
+                    <img src="https://img.youtube.com/vi/0TV0uB0gQwQ/hqdefault.jpg" alt="Hardware">
+                    <span class="play-button">▶</span>
+                </a>
+                <figcaption>
+                    COMO FUNCIONA O PROCESSADOR DO PC? - EPISÓDIO 2
+                </figcaption>
+            </figure>
+            <figure class="video-item">
+                <a href="https://www.youtube.com/watch?v=yKVjdCGTt6o" target="_blank" class="video-thumb">
+                    <img src="https://img.youtube.com/vi/yKVjdCGTt6o/hqdefault.jpg" alt="Vídeo sobre gargalo de hardware">
+                    <span class="play-button">▶</span>
+                </a>
+                <figcaption>
+                    O QUE É GARGALO NO PC? (CPU vs GPU explicado)
+                </figcaption>
+            </figure>
+
+        </div>
+</div>
+
+</div>
+
+        <div class="extra-card">
+            <h4>📄 PDF</h4>
+            <p>Resumo da aula</p>
+            <a href="#" class="btn-extra">Abrir</a>
+        </div>
+
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+
+            <ul class="links-list">
+
+                <li>
+                    <a href="https://www.tecmundo.com.br" target="_blank">
+                        TecMundo — notícias de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.w3schools.com" target="_blank">
+                        W3Schools — tutoriais de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://pt.wikipedia.org/wiki/Hardware" target="_blank">
+                        Wikipédia — Hardware
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+ 
+    </aside>
+
+<!-- FIM  NOVA SIDEBAR DIREITA (EXTRAS) -->
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aula 01 | Análise e Projeto de Sistemas</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/components.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="aps.html">Apresentação</a>
+        <a href="aula01.html" class="active">Aula 01 - A Natureza do Software</a>
+        <a href="aula02.html">Aula 02</a>
+        <a href="aula03.html">Aula 03</a>
+        <a href="aps-referencias.html">Referências</a>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+
+<h2>Aula 02 — Modelos de Processo de Software</h2>
+
+<p>
+O desenvolvimento de software é uma atividade complexa que envolve múltiplas etapas, profissionais e decisões técnicas.
+Para garantir organização, qualidade e previsibilidade, utilizam-se modelos de processo de software.
+</p>
+
+<!-- INTRODUÇÃO -->
+<h3>O que é um Modelo de Processo?</h3>
+
+<p>
+Um modelo de processo de software é uma representação organizada das atividades necessárias para desenvolver um sistema.
+Ele define como o desenvolvimento deve ser conduzido.
+</p>
+
+<ul>
+    <li>Especificação de requisitos</li>
+    <li>Projeto do sistema</li>
+    <li>Implementação</li>
+    <li>Testes</li>
+    <li>Manutenção</li>
+</ul>
+
+<div class="info-box explicaçao">
+<strong>📘 Conceito:</strong>
+Um modelo de processo organiza as etapas do desenvolvimento de software, definindo como e quando cada atividade deve ser realizada.
+</div>
+
+<!-- CLASSIFICAÇÃO -->
+<h3>Classificação dos Modelos</h3>
+
+<p>Os modelos de processo são divididos em duas categorias principais:</p>
+
+<ul>
+    <li><strong>Modelos Tradicionais:</strong> planejamento rígido e etapas bem definidas</li>
+    <li><strong>Modelos Ágeis:</strong> flexibilidade e adaptação constante</li>
+</ul>
+
+<!-- CASCATA -->
+<h3>Modelo Cascata (Waterfall)</h3>
+
+<p>
+O modelo cascata é um modelo tradicional onde o desenvolvimento ocorre de forma sequencial.
+Cada etapa deve ser concluída antes da próxima iniciar.
+</p>
+    <figure>
+        <img src="https://anapaulamota.me/wp-content/uploads/2015/12/waterfallmodel.jpg?w=1098&h=618" alt="cascata">
+        <figcaption>Modelo Cascata</figcaption>
+    </figure>
+<ul>
+    <li>Requisitos</li>
+    <li>Projeto</li>
+    <li>Implementação</li>
+    <li>Testes</li>
+    <li>Manutenção</li>
+</ul>
+
+<div class="info-box important">
+<strong>📌 Importante:</strong>
+No modelo cascata, mudanças são difíceis de aplicar após o início do desenvolvimento.
+</div>
+
+<!-- INCREMENTAL -->
+<h3>Modelo Incremental</h3>
+
+<p>
+O sistema é desenvolvido em partes chamadas incrementos, permitindo entregas progressivas.
+</p>
+    <figure>
+        <img src="../imagens/modelo-incremental.png">
+        <figcaption>Modelo Incremental</figcaption>
+    </figure>
+<ul>
+    <li>Entrega parcial de funcionalidades</li>
+    <li>Evolução contínua</li>
+    <li>Feedback mais rápido</li>
+</ul>
+
+
+
+<!-- ESPIRAL -->
+<h3>Modelo Espiral</h3>
+
+<p>
+O modelo espiral combina desenvolvimento iterativo com análise de riscos.
+Cada ciclo envolve planejamento, análise, desenvolvimento e avaliação.
+</p>
+    <figure>
+        <img src="../imagens/modelo-espiral.png" alt="espiral">
+        <figcaption>Modelo Espiral</figcaption>
+    </figure>
+<ul>
+    <li>Planejamento</li>
+    <li>Análise de riscos</li>
+    <li>Desenvolvimento</li>
+    <li>Avaliação</li>
+</ul>
+
+<div class="info-box warning">
+<strong>⚠ Atenção:</strong>
+O modelo espiral é mais complexo e geralmente utilizado em projetos de grande porte.
+</div>
+
+<!-- ÁGEIS -->
+<h3>Modelos Ágeis</h3>
+
+<p>
+Os métodos ágeis representam uma abordagem de desenvolvimento de software que combina uma filosofia específica com um conjunto de princípios práticos, visando a satisfação do cliente e a entrega rápida de sistemas funcionais
+. Diferente dos modelos tradicionais, eles se baseiam no desenvolvimento incremental, no qual o software é produzido em pequenas versões (incrementos) disponibilizadas em intervalos curtos, geralmente a cada duas ou três semanas.
+</p>
+<p>
+    A base dessa abordagem é o Manifesto para o Desenvolvimento Ágil de Software, que estabelece quatro valores fundamentais: indivíduos e interações mais que processos e ferramentas; software em funcionamento mais que documentação abrangente; colaboração com o cliente mais que negociação de contratos; e respostas a mudanças mais que seguir um plano.
+</p>
+<p>
+    Os principais princípios que regem os métodos ágeis incluem:
+</p>
+<ul>
+    <li>Envolvimento do cliente: O cliente deve estar intimamente envolvido para priorizar requisitos e avaliar as iterações do sistema
+</li>
+    <li>Aceitação de mudanças: Mudanças nos requisitos são bem-vindas, mesmo em fases tardias do projeto, para proporcionar vantagem competitiva ao cliente</li>
+    <li>Foco no cliente</li>
+    <li>Entrega frequente: O foco é entregar software operacional regularmente, preferindo intervalos de tempo mais curtos</li>
+    <li>Simplicidade: Busca-se a arte de maximizar o volume de trabalho não realizado, focando no que é essencial para as necessidades atuais.</li>
+    <li>Pessoas acima de processos: Reconhece-se que as habilidades da equipe são fundamentais, permitindo que os membros desenvolvam suas próprias formas de trabalhar sem processos rígidos.</li>
+</ul>
+<p>
+    As equipes de desenvolvimento ágil são caracterizadas por serem pequenas, altamente motivadas e, acima de tudo, auto-organizadas
+. Elas possuem autonomia para planejar e tomar decisões técnicas, preferindo a comunicação informal e presencial em vez de reuniões formais e documentos escritos
+. O progresso é medido principalmente pelo software em funcionamento entregue ao cliente
+</p>
+<p>
+    Diversos modelos de processos seguem essa filosofia, sendo os mais proeminentes o Extreme Programming (XP) e o Scrum
+. Outras abordagens incluem o Desenvolvimento de Software Adaptativo (ASD), o Método de Desenvolvimento de Sistemas Dinâmicos (DSDM), a família Crystal, o Desenvolvimento Dirigido a Funcionalidades (FDD) e a Modelagem Ágil (AM)
+</p>
+<p>
+    Enquanto os modelos convencionais (dirigidos a planos) enfatizam a ordem, a consistência e a documentação detalhada antes da implementação, os métodos ágeis tratam a especificação, o projeto e a construção de forma intercalada, permitindo que o sistema evolua conforme o conhecimento sobre o problema aumenta
+. Essa flexibilidade é particularmente útil em ambientes de negócios que mudam rapidamente, onde requisitos não podem ser totalmente previstos no início do projeto.
+</p>
+
+<figure>
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Equipe ágil">
+    <figcaption>Equipe trabalhando com metodologias ágeis</figcaption>
+</figure>
+
+<!-- SCRUM -->
+<h3>Scrum</h3>
+
+<p>
+O Scrum organiza o trabalho em ciclos chamados Sprints, com entregas rápidas e frequentes.
+</p>
+
+<ul>
+    <li>Product Backlog</li>
+    <li>Sprint Backlog</li>
+    <li>Reuniões diárias</li>
+</ul>
+
+<!-- KANBAN -->
+<h3>Kanban</h3>
+
+<p>
+O Kanban utiliza quadros visuais para acompanhar o fluxo de tarefas.
+</p>
+
+<ul>
+    <li>To Do</li>
+    <li>Doing</li>
+    <li>Done</li>
+</ul>
+
+<figure>
+    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71" alt="Quadro Kanban">
+    <figcaption>Exemplo de quadro Kanban</figcaption>
+</figure>
+
+<!-- COMPARAÇÃO -->
+<h3>Comparação entre Modelos</h3>
+
+<ul>
+    <li>Cascata: rígido e sequencial</li>
+    <li>Incremental: evolutivo</li>
+    <li>Espiral: focado em riscos</li>
+    <li>Ágil: flexível e adaptativo</li>
+</ul>
+
+<!-- ESCOLHA -->
+<h3>Como escolher um modelo?</h3>
+
+<p>
+A escolha depende de fatores como:
+</p>
+
+<ul>
+    <li>Clareza dos requisitos</li>
+    <li>Complexidade do sistema</li>
+    <li>Prazo</li>
+    <li>Experiência da equipe</li>
+</ul>
+
+<!-- CONCLUSÃO -->
+<h3>Conclusão</h3>
+
+<p>
+Os modelos de processo são fundamentais para organizar o desenvolvimento de software.
+Cada modelo possui vantagens e limitações, sendo necessário escolher o mais adequado para cada projeto.
+</p>
+
+<div class="info-box info">
+<strong>💡 Dica:</strong>
+Na prática, muitos projetos utilizam modelos híbridos combinando abordagens tradicionais e ágeis.
+</div>
+
+</main>
+
+
+
+
+    <!-- SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <figure class="video-item">
+                    <a href="#" target="_blank" class="video-thumb">
+                        <img src="#">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>Introdução à Engenharia de Software</figcaption>
+                </figure>
+
+                <figure class="video-item">
+                    <a href="#" target="_blank" class="video-thumb">
+                        <img src="#">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>Conceitos básicos de software</figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+        <div class="extra-card">
+            <h4>📄 Material</h4>
+            <p>Resumo da aula em PDF.</p>
+            <a href="#" class="btn-extra">Abrir</a>
+        </div>
+
+    </aside>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

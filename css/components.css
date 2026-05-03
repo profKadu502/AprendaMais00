@@ -1,0 +1,88 @@
+/* 1. ARQUIVO: components.css */
+
+
+/* 1. INFO BOX BASE */
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 14px 16px;
+    margin: 18px 0;
+
+    border-radius: 10px;
+    border-left: 5px solid;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    background: #f9f9f9;
+}
+
+
+/* 1.1 TEXTO */
+.info-box strong {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+
+/* 1.2 ÍCONE AUTOMÁTICO */
+.info-box::before {
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+
+/* 2. INFO (AZUL) */
+.info-box.info {
+    background: #e9f3ff;
+    border-color: #0d6efd;
+    color: #084298;
+}
+
+.info-box.info::before {
+    content: "💡";
+}
+
+
+/* 3. WARNING (AMARELO) */
+.info-box.warning {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #664d03;
+}
+
+.info-box.warning::before {
+    content: "⚠";
+}
+
+
+/* 4. IMPORTANT (VERMELHO SUAVE) */
+.info-box.important {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #842029;
+}
+
+.info-box.important::before {
+    content: "📌";
+}
+
+
+/* 5. EXPLICAÇÃO (NEUTRO MODERNO) */
+.info-box.explicacao {
+    background: #ffffff;
+    border: 1px solid #7a7676;
+    border-left: 5px solid #444;
+    color: #222;
+    border-radius: 15px;
+    text-align: justify;
+}
+
+
+/* 5.1 ÍCONE */
+.info-box.explicacao::before {
+    content: "📘";
+}

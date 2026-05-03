@@ -1,0 +1,268 @@
+<!-- 1. ARQUIVO: hardware.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aula 05 | Aprenda Mais</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/components.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <a href="icst.html" >Apresentação</a>
+        <a href="aula03-hardware.html" >Aula 03 - Hardware</a>
+        <a href="aula04.html" >Aula 04 - O Processador</a>
+         <a href="aula05.html" class="active">Aula 05 - A memória RAM</a>
+
+        <a href="referencias.html" >Referências</a>
+    </aside>
+
+    <main class="content">
+
+        <h2>Aula 05 - A memória RAM</h2>
+        <p>
+            Impressindível para uso em todos os computador, a memória RAM <i>(Random Acess Memory)</i> ou Memória de Acesso Aleatório é uma forma de memória volátil usada pelo processador para armazenar dados temporários e instruções enquanto o computador está em funcionamento. É chamada de volátil porque perde seus dados quando o computador é desligado. A RAM também é chamada de memória principal ou primária.
+        </p>
+        <p>
+            É vendido em pequenas placas chamadas "módulos"ou "pentes". Muitas vezes para o obter maior desempenho possível será preciso comprar um número par de módulos de memória, para que se possa habilitar o módulo de operação de dois canais, o que em teoria dobra o desempenho no acesso à memória. Assim, se você quiser ter um computador com 8 GB de memória, teoricamente obterá maior desempenho se comprar dois módulos de memória de 4 GB do que um único módulo de 8 GB.
+        </p>
+        <figure>
+            <img src="https://www.boqnews.com/wp-content/uploads/2026/01/ChatGPT-Image-29-de-jan.-de-2026-12_16_09-e1769699810362.jpg" alt="Memória RAM">
+            <figcaption>Memmória RAM</figcaption>
+        </figure>
+        <p>
+            A capacidade de uma memória RAM é medida em gigabytes (GB) ou em terabytes (TB). A quantidade de RAM afeta a capacidade do sistema de executar múltiplos aplicativos simultaneamente. O sistema é afetado pela velocidade da RAM, quanto mais memória tiver, mais tarefas poderão ser executadas, especialmente em tarefas que exisgem muitos recursos, como edição de vídeo e jogos.
+        </p>
+        <h3>Tipos de RAM</h3>
+        <ul>
+            <li>
+                <strong>DRAM <I>(Dynamic RAM)</I>:</strong> O tipo mais comum de RAM em computadores e dispositivos móveis. Armazena cada bit de dados em um capacitor, que precisa ser periodicamente recarregado para manter os dados.
+            </li>
+            <li>
+                <strong>SRAM <i>(Static RAM)</i>:</strong> Mais cara do que a dram, não precisa ser recarregada constantemente. Geralmente usada em cache de processadores.
+            </li>
+            <li>
+                <strong>DDR<I>Double Data Rate</I>:</strong>Uma evoluçao da DRAM que transfere dados na borda de subida e descida do ciclo de clock. Variantes incluem DDR3, DDR4 e DDR5, com cada geração oferecendo melhorias em velocidade e eficiência.
+            </li>
+        </ul>
+        <h3>Tecnologia</h3>
+        <p>
+            Há atualmente três tecnologias de memória disponíveis, incompatíveis entre si, DDR3 (utilizada por processadores mais antigos), DDR4 e DDR5. Você deverá comprar módulos de memória de tecnologia compatível com a sua placa-mãe e processador. Você não pode instalar módulos DDR5 em uma placa-mãe que só aceita módulos DDR4 e vice-versa. 
+        </p>
+        <p>
+            Os módulos de memória utilizados por cada tecnologia são fisicamente incompatíveis, ou seja, não há como encaixar um módulo de memória DD5 em uma placa-mãe com soquete DDR4.
+        </p>
+        <p>
+            Portanto, a escolha pela tecnologia se dá pela compatibilidade e não uma escolha de qual é a melhor ou mais moderna. Note que a compatibilidade descrita só se refere aos módulos de memória a serem intalados na placa-mãe, e não em relação à tecnologia de memória utilizada na placa de vídeo. Muitos usuários têm a impressão equivocada que uma placa de vídeo com memória GDDR5 não funcionará em placas-mãe que não suportem memórias DDR5. Isto não faz qualquer sentido. Veja o vídeo: <a href="https://www.youtube.com/watch?v=3z7Yz0ExgSI&t=6s" alt="Posso instalar placa de vídeo DDR3 ou GDDR5 em placa-mãe DDR4?" target="_blank">https://www.youtube.com/watch?v=3z7Yz0ExgSI&t=6s</a>
+        </p>
+        <h3>Formato Físico</h3>
+        <p>
+            Computadores de mesa usam módulos de memória em um formato chamado DIMM. Este tipo de memória é encontrado em computadores Desktop, computadores portáteis por necessitarem de peças com menor tamanho, usam módulos de memória chamados SODIMM, que são menores. 
+        </p>
+        <p>
+            O formato físico dos módulos de memória é retangular, mas o número de contados disponíveis e a localização de uma ranhura nos módulos de memória e de um pino delimitador nos soquetes variam de acordo com a tecnologia da memória, de modo que é impossível encaixar um módulo de memória DDR3 em um soquete voltado a memórias DDR4 ou vice-versa. 
+        </p>
+
+
+            <figure>
+                <img src="../imagens/ddr3dim.png">
+                <figcaption>Diferença física entre os módulos de memória (DDR3 DIMM) </figcaption>
+            </figure>
+            <figure>
+                <img src="../imagens/ddr4dim.png">
+                <figcaption>Diferença física entre os módulos de memória (DDR4 DIMM) </figcaption>
+            </figure>
+            <figure>
+                <img src="../imagens/DDR5 DIM.png">
+                <figcaption>Diferença física entre os módulos de memória (DDR5 DIMM) </figcaption>
+            </figure>
+       
+        <table>
+    <thead>
+        <tr>
+            <th>Memória</th>
+            <th>Módulo</th>
+            <th>Número de Contatos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DDR</td>
+            <td>DIMM</td>
+            <td>184</td>
+        </tr>
+        <tr>
+            <td>DDR2</td>
+            <td>DIMM</td>
+            <td>240</td>
+        </tr>
+        <tr>
+            <td>DDR3</td>
+            <td>DIMM</td>
+            <td>240</td>
+        </tr>
+        <tr>
+            <td>DDR4</td>
+            <td>DIMM</td>
+            <td>288</td>
+        </tr>
+        <tr>
+            <td>DDR5</td>
+            <td>DIMM</td>
+            <td>288</td>
+        </tr>
+        <tr>
+            <td>DDR3</td>
+            <td>SODIMM</td>
+            <td>204</td>
+        </tr>
+            <tr>
+            <td>DDR4</td>
+            <td>SODIMM</td>
+            <td>260</td>
+        </tr>
+        <tr>
+            <td>DDR4</td>
+            <td>SODIMM</td>
+            <td>262</td>
+        </tr>
+    </tbody>
+</table>
+    <p>
+        É importante entender que a velocidade rotulada de uma memória <i>não é</i> a velocidade com que ela trabalhará: trata-se da velocidade máxima que o fabricante testou, certificou e garante que a memória funcionará. A velocidade com que a memória funcionará na prática dependerá do processador e da placa-mãe. 
+    </p>
+    <p>
+        Atualmente, o circuito controlador de memória está embutido entro do processador, e cada processador tem um limite oficial da velocidade máxima de memória suportada.
+    </p>
+    <p>
+        Você pode consultar diretamente no site do fabricante do processador, na lista de especificações técnicas do processador que você escolheu para o seu computador, para saber qual é a velocidade máxima suportada. Você deverá também consultar a compatibilidade da placa-mãe com os módulos de memória pretendidos. 
+    </p>
+    <p>
+        Links para consulta:
+        <ul>
+            <li>
+                <a href="https://www.amd.com/pt/products/specifications/processors.html" alt="especificacoes tecnicas AMD" target="_blank">AMD</a>
+                </li>
+            <li>
+                <a href="https://www.intel.com.br/content/www/br/pt/ark.html#@Processors" alt="especificacoes tecnicas Intel" target="_blank">Intel
+            </li>
+        </ul>
+    </p>
+    </main>
+
+<!-- 🔥 SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+
+        <!-- 🎥 VÍDEO -->
+        <div class="extra-card">
+            <h4>🎥 Vídeo</h4>
+
+            <figure class="video-item">
+            <a href="https://www.youtube.com/watch?v=BdkyideQi1Q" target="_blank" class="video-thumb">
+                <img src="https://img.youtube.com/vi/BdkyideQi1Q/hqdefault.jpg" alt="Memória RAM">
+                <span class="play-button">▶</span>
+            </a>
+            <figcaption>
+                O que é memória RAM e como ela funciona?
+            </figcaption>
+        </figure>
+
+        <figure class="video-item">
+            <a href="https://www.youtube.com/watch?v=TgsDOwWVg9g" target="_blank" class="video-thumb">
+                <img src="https://img.youtube.com/vi/TgsDOwWVg9g/hqdefault.jpg" alt="Armazenamento HD e SSD">
+                <span class="play-button">▶</span>
+            </a>
+            <figcaption>
+                Diferença entre HD e SSD (armazenamento)
+            </figcaption>
+        </figure>
+
+        <!-- 📄 PDF -->
+        <div class="extra-card">
+            <h4>📄 Plano da Disciplina</h4>
+            <p>Documento completo com conteúdos e avaliação.</p>
+            <a href="#" class="btn-extra">Abrir</a>
+        </div>
+
+        <!-- LINKS -->    
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+
+            <ul class="links-list">
+
+                <li>
+                    <a href="https://www.tecmundo.com.br" target="_blank">
+                        TecMundo — notícias de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.w3schools.com" target="_blank">
+                        W3Schools — tutoriais de tecnologia
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://pt.wikipedia.org/wiki/Hardware" target="_blank">
+                        Wikipédia — Hardware
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </aside>
+
+</div>
+ 
+    </aside>
+
+<!-- FIM  NOVA SIDEBAR DIREITA (EXTRAS) -->
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
