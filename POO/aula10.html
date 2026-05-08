@@ -39,6 +39,7 @@
         <a href="aula08.html">Aula 08 - Mensagem</a>
         <a href="aula09.html">Aula 09 - UML</a>
         <a href="aula10.html" class="active">Aula 10 - Visibilidade</a>
+        <a href="aula11.html">Aula 11 - Métodos Especiais</a>
         <a href="praticando.html">Praticando POO com Java</a>
 
         <a href="referencias.html">Referências</a>
@@ -129,10 +130,30 @@
             Outro exemplo importante apresentado é o de um controle remoto. O usuário pode interagir com os botões externos do controle (parte pública), mas não tem acesso direto aos componentes internos, como circuitos eletrônicos (parte privada). Há ainda elementos que fazem a comunicação entre o controle e a televisão, que podem ser entendidos como protegidos, pois não são acessíveis ao usuário comum, mas são essenciais para o funcionamento do sistema.
         </p>
 
-        <figure>
-            <img src="../imagens/visibilidade.png" alt="exemplo-visibilidade">
-            <figcaption>Exemplo de Visibilidade UML</figcaption>
-        </figure>
+                <table class="table-sem-fundo">
+            <tr>
+                <th >Caneta</th>
+            </tr>
+            <tr>
+                <td >
+                    + modelo<br>
+                    + cor<br>
+                    - ponta<br>
+                    # carga<br>
+                    # tampada
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    + escrever()<br>
+                    + rabiscar()<br>
+                    + pintar()<br>
+                    - tampar()<br>
+                    - destampar()
+                </td>
+            </tr>
+        </table>
+
 
         <h4> Público (Public) +</h4>
         <ul>

@@ -40,6 +40,7 @@
         <a href="aula09.html">Aula 09 - UML</a>
         <a href="aula10.html" >Aula 10 - Visibilidade</a>
         <a href="praticando.html" class="active">Praticando POO com Java</a>
+        <a href="aula11.html">Aula 11 - Métodos Especiais</a>
 
         <a href="referencias.html">Referências</a>
     </aside>
@@ -266,7 +267,7 @@
 
         <a href="#topo">⬆ Voltar ao topo</a>
 
-         <!-- TÓPICO 3 -->
+         <!-- TÓPICO 4 -->
         <h3 id="topico4">4. Atribuindo valores aos objetos</h3>
         <p> 
             Depois que o objeto é instanciado podemos dar valores aos atributos. No nosso exemplo temos a caneta com os atributos modelo, cor, ponta e tampada que recebe um valor booleano. Fazemos estas alterações também dentro da classe principal.
@@ -422,10 +423,244 @@
                     c2.rabiscar();
                 }
             }
-        </pre>
+            </pre>
 
 
         <a href="#topo">⬆ Voltar ao topo</a>
+
+          <!-- TÓPICO 5 -->
+        <h3 id="topico5">5. Definindo a Visibilidade</h3>
+        <p>
+            Para aproveitarmos o que foi feito anteriormente vamos copiar o nosso projeto anterior. 
+        </p>
+        <ul>
+            <li>Vamos clicar com o botão direito no nome do projeto "Aula02". </li>
+            <li>Clicar em copiar</li>
+        </ul>
+        <p>
+            Quando a nova janela for aberta alteramos o nome do projeto para aula03. Ao abrir veremos que o projeto inteiro estará lá mantendo o nome do pacote Aula02. Vamos então apagar os atributos e métodos no projeto principal e manter somente o método status (). 
+        </p>
+         <figure>
+            <img src="../imagens/pacote.png" alt="pacote">
+            <figcaption>Exemplo</figcaption>
+        </figure> 
+            <pre class="java">
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.status();
+                }
+            }
+            </pre>
+        
+        <p>
+            Se executarmos o que temos agora veremos que será mostrada uma tela com os resultados todos zerados pois os valores dos atributos  foram todos apagados. 
+        </p>
+        <p>
+            O que vamos fazer agora é definir os atributos como públicos, privados ou protegidos de acordo com o que foi definido na aula.
+        </p>
+
+        <table class="table-sem-fundo">
+            <tr>
+                <th >Caneta</th>
+            </tr>
+            <tr>
+                <td >
+                    + modelo<br>
+                    + cor<br>
+                    - ponta<br>
+                    # carga<br>
+                    # tampada
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    + escrever()<br>
+                    + rabiscar()<br>
+                    + pintar()<br>
+                    - tampar()<br>
+                    - destampar()
+                </td>
+            </tr>
+        </table>
+
+            <pre class="pseudo">
+            Classe Caneta
+            publico modelo: Caractere
+            publico cor: Caractere
+            privado ponta: Real 
+            protegido carga: Inteiro 
+            protegido tampada: Logico 
+                publico Metodo escrever()
+
+                        FimMetodo
+                privado Metodo rabiscar()
+
+                        FimMetodo
+                FimClasse
+            </pre>
+        
+        <p>
+            A partir daqui vamos definir o Netbeans a visibilidade dos nossos atributos e métodos dentro da classe Caneta. Como já temos os atributos e métodos definidos no arquivo da classe Caneta só é necessário inserir o tipo de visibilidade de cada um deles. 
+        </p>
+        <h4>O que acontece se eu esquecer de definir a visibilidade?</h4>
+        <p>
+            A visibilidade padrão do Java, quando nenhum modificador de acesso é explicitamente definido, é a visibilidade default (também conhecida como visibilidade de pacote ou pública para pacote). Em contraste com o Java, no C# a visibilidade padrão para atributos (caso não seja especificada) é a private. No Java, para que um membro seja privado, é obrigatório estipular isso de forma explícita através da palavra reservada private
+        </p>
+        <a href="#topo">⬆ Voltar ao topo</a>
+
+         <!-- TÓPICO 6 -->
+        <h3 id="topico6">6. Alterando atributos</h3>
+        <p>
+            Iremos tratar agora da alteração dos atributos e métodos, veremos onde será possível fazer estas alterações e onde não é possível.
+        </p>
+        <p>
+            Na nossa classe principal havíamos apagado o código que tínhamos anteriormente e deixamos apenas a criação do objeto Caneta e o método status(). Vamos tentar fazer uma alteraçao no atributo "modelo" que está com a visibilidade pública.
+        </p>
+        <pre class="java">
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    <mark>c1.modelo = "Bic Cristal"</mark>    
+                    c1.status();
+                }
+            }
+        </pre>
+            <p>
+                Vamos agora testar se será possível fazer a alteração. Clique no botão executar e perceba que agora o modelo da caneta foi alterado. Isso acontece porque a visibilidade do atributo modelo foi definido como público.
+            </p>
+            <p>
+                Alteraremos agora o atributo "ponta".
+            </p>
+        <pre class="java">
+            <code>
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.modelo = "Bic Cristal";
+                    <mark>c1.cor = "Azul"</mark>    
+                    c1.status();
+                }
+            }
+            </code>
+        </pre>
+        <p>
+            Podemos perceber que o atributo cor também pode ser alterado sem nenhum problema. Vamos agora tentar alterar o atributo ponta.
+        </p>
+        <pre class="java">
+            <code>
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.modelo = "Bic Cristal";
+                    c1.cor = "Azul";
+                    <mark>c1.ponta = 0.5f;</mark>    
+                    c1.status();
+                }
+            }
+            </code>
+        </pre>
+        <p>
+            Quando tentamos modificar o atributo ponta o próprio Netbeans já mostra uma mensagem de errro. Um ícone com uma lâmpada e uma exclamação em vermelho aparecem ao lado da linha do atributo. Isto acontece porque o atributo ponta possui acesso privado dentro da classe Caneta. Esta mensagem aparece ao lado do código quando posicionamos o cursor em cima do ícone. Mas se clicarmos em "Executar" o Netbeans irá mostrar outra mensagem de erro dizendo que: "Um ou mais projetos foram compilados com erros."
+        </p>
+        <p>
+            Vamos comentar a linha com o atributo ponta, já que deu erro e depois trabalhar com outros atributos: carga e tampada, os dois são protegidos. Quando chamamos estes atributos o programa mostra uma "chave" pois são protegidos, mas permite a utilização dos mesmos. 
+        </p>
+
+        <pre class="java">
+            <code>
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.modelo = "Bic Cristal";
+                    c1.cor = "Azul";
+                    <span class="comentario">//c1.ponta = 0.5f;</span>
+                    
+                    <mark>c1.carga = 80;</mark>
+                    <mark>c1.tampada = true;</mark>
+                    c1.status();
+
+                }
+            }
+            </code>
+        </pre>
+        <p>
+            Se observarmos bem, o método que estamos executando (o main) está dentro de uma classe que está utilizando a classe Caneta. Por isso é permitido alterar o atributo protegido. Salvando e executando veremos o resultado.
+        </p>
+        <p>
+            Em resumo no método main não podemos alterar os atributos e métodos privados. Vamos fazer um outro teste alterando o método rabiscar.
+        </p>
+        <pre class="java">
+            <code>
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.modelo = "Bic Cristal";
+                    c1.cor = "Azul";
+                    <span class="comentario">//c1.ponta = 0.5f;</span>
+                    
+                    c1.carga = 80;
+                    c1.tampada = true;
+                    <mark>c1.rabiscar();</mark>
+                    c1.status();
+
+                }
+            }
+            </code>
+        </pre>
+        <p>
+            Não poderemos trabalhar com o método rabiscar porque ele é privado, o Netbeans não permitirá utilizar um método privado fora da classe. Mas vamos alterar a visibilidade no código da classe para poder utilizar. Vamos alterar também a visibilidade dos métodos tampar e destampar.
+        </p>
+        <p>
+            Após isto vamos chamar na classe main o método destampar:
+        </p>
+        <pre class="java">
+            <code>
+            package Aula02;
+            public class Aula02 {
+                public static void main (String[] args){
+                    Caneta c1 = new Caneta();
+                    c1.modelo = "Bic Cristal";
+                    c1.cor = "Azul";
+                    <span class="comentario">//c1.ponta = 0.5f;</span>
+                    
+                    c1.carga = 80;
+                    <span class="comentario">//c1.tampada = false;</span>
+                    <mark>c1.destampar();</mark>
+                    c1.status();
+
+                }
+            }
+            </code>
+        </pre>
+        <h4>Compreendendo as diferenças de visibilidade</h4>
+        <p>
+            Agora que testamos podemos ter uma compreensão melhor, ou não, das diferenças de visibilidade dos atributos e métodos. 
+        </p>
+        <p>
+            Vamos fazer uma comparação, suponhamos que você está em um supermercado fazendo compras. O atendente de caixa está na sua frente "passando" os produtos que você comprou. O valor da sua compra foi R$ 85,00 e você deu R$ 100,00 para o atendente que lhe devouveu R$ 15,00 como troco.
+        </p>
+        <p>
+            Nesta situação podemos entender o seguinte: o seu troco estava na gaveta do caixa, mas você não pode abrir a gaveta e pegar seu troco, isto deve ser feito pelo atendente de caixa. O seu acesso ao caixa é privado, você não pode acessar o caixa, apenas o atendente pode fazer isso e entre você e o atendente existe o acesso público. 
+        </p>
+        <figure>
+            <img src="../imagens/netBeansNovoP.png" alt="Novo Projeto">
+            <figcaption>Criando um novo projeto</figcaption>
+        </figure>
+
+        <a href="#topo">⬆ Voltar ao topo</a>
+
+                 <!-- TÓPICO  
+        <h3 id="topico0">0. ##</h3>
+
+                <a href="#topo">⬆ Voltar ao topo</a>-->
+                 
 
     </main>
 
@@ -441,7 +676,12 @@
                 <a href="#topico2">2. Criando uma classe</a>
                 <a href="#topico3">3. Instanciando objetos</a>
                 <a href="#topico4">4. Atribuindo valores aos objetos</a>
+                <a href="#topico5">5. Definindo a Visibilidade</a>
+                <a href="#topico6">6. Alterando atributos</a>
             </div>
+
+
+            
         </div>
 
     </aside>

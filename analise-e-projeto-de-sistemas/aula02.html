@@ -33,8 +33,8 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <a href="aps.html">Apresentação</a>
-        <a href="aula01.html" class="active">Aula 01 - A Natureza do Software</a>
-        <a href="aula02.html">Aula 02</a>
+        <a href="aula01.html" >Aula 01 - A Natureza do Software</a>
+        <a href="aula02.html" class="active">Aula 02</a>
         <a href="aula03.html">Aula 03</a>
         <a href="aps-referencias.html">Referências</a>
     </aside>
@@ -181,78 +181,290 @@ Os métodos ágeis representam uma abordagem de desenvolvimento de software que 
 . Essa flexibilidade é particularmente útil em ambientes de negócios que mudam rapidamente, onde requisitos não podem ser totalmente previstos no início do projeto.
 </p>
 
+
+
+<!-- XP -->
+<h4>1. Extreme Programming (XP)</h4>
+
+<p>
+Considerada a abordagem ágil mais amplamente utilizada, a XP foi impulsionada por Kent Beck e foca em levar boas práticas de desenvolvimento a níveis "extremos".
+</p>
+
 <figure>
-    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Equipe ágil">
-    <figcaption>Equipe trabalhando com metodologias ágeis</figcaption>
+    <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
+    <figcaption>Programação em dupla — prática comum no XP</figcaption>
 </figure>
+
+<p><strong>Valores Fundamentais:</strong> Baseia-se em cinco valores: comunicação (colaboração estreita e informal), simplicidade (projetar apenas para necessidades imediatas), feedback (proveniente do software, do cliente e da equipe), coragem (disciplina para projetar para o hoje) e respeito.</p>
+
+<p><strong>Atividades Metodológicas:</strong></p>
+
+<ul>
+    <li><strong>Planejamento:</strong> Utiliza o "jogo do planejamento" e histórias de usuários (descrições de funcionalidades escritas pelo cliente) para definir o escopo e prioridades.</li>
+
+    <li><strong>Projeto:</strong> Segue o princípio da simplicidade (KIS - Keep It Simple), utiliza cartões CRC para modelagem orientada a objetos e incentiva a refabricação (melhoria da estrutura interna do código sem alterar o comportamento externo).</li>
+
+    <li><strong>Codificação:</strong> Introduz a programação em dupla (duas pessoas em uma estação de trabalho) e a integração contínua do código.</li>
+
+    <li><strong>Testes:</strong> Enfatiza o desenvolvimento test-first (escrever testes unitários antes do código) e a automação de testes de aceitação baseados nas histórias.</li>
+</ul>
+
+<p><strong>Industrial XP (IXP):</strong> Uma variante voltada para grandes organizações que inclui práticas como avaliação imediata, retrospectivas e gerenciamento orientado a testes.</p>
 
 <!-- SCRUM -->
-<h3>Scrum</h3>
+<h4>2. Scrum</h4>
 
 <p>
-O Scrum organiza o trabalho em ciclos chamados Sprints, com entregas rápidas e frequentes.
+Concebido por Jeff Sutherland e expandido por Schwaber e Beedle, o Scrum foca mais no gerenciamento do desenvolvimento iterativo do que em técnicas específicas de programação.
 </p>
-
-<ul>
-    <li>Product Backlog</li>
-    <li>Sprint Backlog</li>
-    <li>Reuniões diárias</li>
-</ul>
-
-<!-- KANBAN -->
-<h3>Kanban</h3>
-
-<p>
-O Kanban utiliza quadros visuais para acompanhar o fluxo de tarefas.
-</p>
-
-<ul>
-    <li>To Do</li>
-    <li>Doing</li>
-    <li>Done</li>
-</ul>
 
 <figure>
-    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71" alt="Quadro Kanban">
-    <figcaption>Exemplo de quadro Kanban</figcaption>
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+    <figcaption>Equipe organizando tarefas em um ambiente Scrum</figcaption>
 </figure>
+
+<p><strong>Ciclos de Sprint:</strong> O trabalho ocorre em unidades de tempo fixas (geralmente de 2 a 4 semanas) chamadas sprints.</p>
+
+<p><strong>Artefatos e Papéis:</strong></p>
+
+<ul>
+    <li><strong>Backlog do Produto:</strong> Uma lista priorizada de requisitos que fornecem valor ao cliente.</li>
+
+    <li><strong>Reuniões Scrum:</strong> Encontros diários de 15 minutos para sincronizar atividades e identificar obstáculos.</li>
+
+    <li><strong>Scrum Master:</strong> Atua como facilitador, protegendo a equipe de distrações externas e gerenciando o backlog.</li>
+
+    <li><strong>Demonstrações:</strong> Ao final de cada sprint, o incremento de software é demonstrado ao cliente para avaliação.</li>
+</ul>
+
+<!-- ASD -->
+<h4>3. Desenvolvimento de Software Adaptativo (ASD)</h4>
+
+<p>
+Proposto por Jim Highsmith, o ASD foca na colaboração humana e na auto-organização de equipes para construir sistemas complexos.
+</p>
+
+
+<p><strong>Ciclo de Vida:</strong> Composto por três fases: especulação (planejamento adaptável de ciclos), colaboração (ênfase na confiança e comunicação) e aprendizagem.</p>
+
+<p><strong>Foco no Aprendizado:</strong> A equipe aprende através de grupos focados, revisões técnicas e "autópsias" de projetos (análises postmortems).</p>
+
+<!-- DSDM -->
+<h4>4. Método de Desenvolvimento de Sistemas Dinâmicos (DSDM)</h4>
+
+<p>
+Oferece um framework para projetos com prazos apertados, baseando-se no princípio de que 80% de um sistema pode ser entregue em 20% do tempo total.
+</p>
+
+
+
+<p><strong>Ciclo de Vida:</strong> Inclui estudo de viabilidade, estudo do negócio, iteração de modelos funcionais (protótipos), iteração de projeto e desenvolvimento, e implementação.</p>
+
+<p><strong>Flexibilidade:</strong> Permite que detalhes remanescentes sejam completados em incrementos posteriores conforme o negócio evolui.</p>
+
+<!-- CRYSTAL -->
+<h4>5. Família Crystal</h4>
+
+<p>
+Criada por Alistair Cockburn e Jim Highsmith, a família Crystal prioriza a adaptabilidade e a manobrabilidade das equipes.
+</p>
+
+
+<p><strong>Abordagem Adaptável:</strong> Não é uma metodologia única, mas um conjunto de exemplos de processos (com o mesmo "código genético") que provaram ser eficazes para diferentes tipos de projetos e ambientes.</p>
+
+<!-- FDD -->
+<h4>6. Desenvolvimento Dirigido a Funcionalidades (FDD)</h4>
+
+<p>
+Concebido originalmente por Peter Coad, foca na engenharia de software orientada a objetos para projetos de diversos portes.
+</p>
+
+
+
+<p><strong>Funcionalidade (Feature):</strong> É definida como uma função valorizada pelo cliente passível de ser implementada em duas semanas ou menos.</p>
+
+<p><strong>Atividades Metodológicas:</strong> Envolve desenvolver um modelo geral, construir uma lista de funcionalidades, planejar por funcionalidade, projetar por funcionalidade e construir por funcionalidade.</p>
+
+<!-- AM -->
+<h4>7. Modelagem Ágil (AM)</h4>
+
+<p>
+Desenvolvida por Scott Ambler, a AM é uma metodologia baseada na prática para modelagem e documentação de sistemas de forma leve e efetiva.
+</p>
+
+<figure>
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40">
+    <figcaption>Modelagem leve e eficiente de sistemas</figcaption>
+</figure>
+
+<p><strong>Princípios Únicos:</strong> Modelar com um objetivo claro, usar múltiplos modelos (diferentes perspectivas do sistema), viajar leve (manter apenas modelos essenciais) e adaptar localmente às necessidades da equipe.</p>
+
+<p><strong>Filosofia:</strong> Defende que modelos "meramente bons" são mais eficazes que modelos perfeitos que atrasam o projeto.</p>
 
 <!-- COMPARAÇÃO -->
 <h3>Comparação entre Modelos</h3>
 
-<ul>
-    <li>Cascata: rígido e sequencial</li>
-    <li>Incremental: evolutivo</li>
-    <li>Espiral: focado em riscos</li>
-    <li>Ágil: flexível e adaptativo</li>
-</ul>
-
-<!-- ESCOLHA -->
-<h3>Como escolher um modelo?</h3>
+<!-- CASCATA -->
+<h4>1. Modelo Cascata (Rigidez e Sequencialidade)</h4>
 
 <p>
-A escolha depende de fatores como:
+O modelo cascata, também conhecido como ciclo de vida clássico, sugere uma abordagem sequencial e sistemática para o desenvolvimento. Ele é o paradigma mais antigo da engenharia de software e é considerado um processo dirigido a planos, onde todas as atividades devem ser programadas antes de o trabalho começar.
 </p>
 
 <ul>
-    <li>Clareza dos requisitos</li>
-    <li>Complexidade do sistema</li>
-    <li>Prazo</li>
-    <li>Experiência da equipe</li>
+    <li><strong>Fluxo de Trabalho:</strong> Segue um fluxo linear que avança por fases distintas: definição de requisitos, projeto, implementação (codificação), integração (testes) e manutenção.</li>
+
+    <li><strong>Vantagens e Limitações:</strong> Proporciona visibilidade para os gerentes monitorarem o progresso, mas sua divisão inflexível dificulta a acomodação de mudanças de requisitos. O cliente deve ter paciência, pois uma versão funcional do software só fica disponível próximo ao final do projeto.</li>
+
+    <li><strong>Aplicação Ideal:</strong> É apropriado quando os requisitos são bem compreendidos e estáveis, como em adaptações de sistemas existentes ou quando requisitos são fixos.</li>
+</ul>
+
+<!-- INCREMENTAL -->
+<h4>2. Modelo Incremental (Evolução)</h4>
+
+<p>
+O modelo incremental é baseado na ideia de desenvolver uma implementação inicial, expô-la aos usuários e evoluí-la através de várias versões. Ele combina elementos de fluxos lineares e paralelos para produzir "incrementos" de software.
+</p>
+
+<ul>
+    <li><strong>Fluxo de Trabalho:</strong> As atividades de especificação, desenvolvimento e validação são intercaladas em vez de separadas. Cada incremento adiciona funcionalidade ao anterior, sendo o primeiro geralmente o "produto essencial".</li>
+
+    <li><strong>Vantagens e Limitações:</strong> Reduz o custo de acomodar mudanças e permite a entrega rápida de um software útil ao cliente. Entretanto, o processo pode tornar-se pouco visível para gerentes e a estrutura do sistema pode se degradar com a adição constante de novos incrementos (exigindo refatoração).</li>
+
+    <li><strong>Aplicação Ideal:</strong> Indicado para sistemas de negócios, e-commerce e quando não há pessoal disponível para uma implementação completa imediata.</li>
+</ul>
+
+<!-- ESPIRAL -->
+<h4>3. Modelo Espiral (Foco em Riscos)</h4>
+
+<p>
+Proposto por Barry Boehm, o modelo espiral é um gerador de modelos de processos dirigidos a riscos. Ele acopla a natureza iterativa da prototipação com os aspectos controlados do modelo cascata.
+</p>
+
+<ul>
+    <li><strong>Fluxo de Trabalho:</strong> O processo é representado como uma série de voltas (revoluções), onde cada volta é dividida em quatro setores: definição de objetivos, avaliação e redução de riscos, desenvolvimento/validação e planejamento.</li>
+
+    <li><strong>Vantagens e Limitações:</strong> Reconhece explicitamente o risco e o utiliza para guiar a engenharia, sendo considerado uma abordagem realista para sistemas de larga escala. No entanto, pode ser difícil convencer clientes de que essa abordagem evolucionária é controlável e exige alta especialização em análise de riscos.</li>
+
+    <li><strong>Aplicação Ideal:</strong> Projetos complexos onde a redução de riscos técnicos é primordial e o software deve evoluir ao longo do tempo.</li>
+</ul>
+
+<!-- ÁGIL -->
+<h4>4. Modelo Ágil (Flexibilidade e Adaptabilidade)</h4>
+
+<p>
+A engenharia de software ágil prioriza a satisfação do cliente, a entrega rápida de incrementos operacionais e a simplicidade. Ela se baseia no Manifesto Ágil, que valoriza indivíduos, interações e respostas a mudanças acima de planos e documentação exaustiva.
+</p>
+
+
+<ul>
+    <li><strong>Fluxo de Trabalho:</strong> Utiliza o desenvolvimento incremental com ciclos muito curtos, geralmente de duas a três semanas. As equipes são pequenas, auto-organizadas e preferem a comunicação informal e presencial.</li>
+
+    <li><strong>Vantagens e Limitações:</strong> Possui alta capacidade de resposta a ambientes de negócios fluidos e achata a curva de custo das mudanças, permitindo alterações tardias sem grande impacto financeiro. Contudo, pode ser difícil de escalar para sistemas muito grandes e depende de clientes dispostos a um envolvimento intenso e contínuo.</li>
+
+    <li><strong>Aplicação Ideal:</strong> Produtos pequenos ou médios, sistemas customizados com forte envolvimento do cliente e projetos onde os requisitos mudam rapidamente.</li>
+</ul>
+
+<!-- TABELA -->
+<h4>Resumo Comparativo</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>Característica</th>
+            <th>Cascata</th>
+            <th>Incremental</th>
+            <th>Espiral</th>
+            <th>Ágil</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Foco Principal</td>
+            <td>Estrutura e ordem</td>
+            <td>Entrega funcional rápida</td>
+            <td>Redução de riscos</td>
+            <td>Pessoas e mudanças</td>
+        </tr>
+        <tr>
+            <td>Abordagem</td>
+            <td>Dirigida a planos</td>
+            <td>Mista (planos ou ágil)</td>
+            <td>Dirigida a riscos</td>
+            <td>Flexível/Adaptável</td>
+        </tr>
+        <tr>
+            <td>Entrega</td>
+            <td>Única (final)</td>
+            <td>Múltiplas versões</td>
+            <td>Versões evolucionárias</td>
+            <td>Incrementos rápidos</td>
+        </tr>
+        <tr>
+            <td>Requisitos</td>
+            <td>Definidos no início</td>
+            <td>Evoluem por incremento</td>
+            <td>Detalhados cíclicamente</td>
+            <td>Dinâmicos e iterativos</td>
+        </tr>
+        <tr>
+            <td>Documentação</td>
+            <td>Extensa e formal</td>
+            <td>Intermediária</td>
+            <td>Pontos âncora de controle</td>
+            <td>Mínima/Informal</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- ESCOLHA -->
+<h3>Como escolher o modelo ideal</h3>
+
+<p>
+A seleção de um modelo de processo não deve ser arbitrária, mas baseada nas características específicas do projeto, da equipe e do ambiente de negócio
+. Considere os seguintes critérios para orientar sua decisão:
+</p>
+
+<ul>
+    <li>
+        <strong>Clareza e Estabilidade dos Requisitos:</strong> Se os requisitos são bem compreendidos, estáveis e dificilmente mudarão, o modelo Cascata é uma escolha eficiente
+        . Caso os requisitos sejam vagos ou emergentes, abordagens Ágeis ou de Prototipação são mais indicadas para reduzir incertezas
+        .
+    </li>
+
+    <li>
+        <strong>Porte e Complexidade do Sistema:</strong> Sistemas de larga escala e alta complexidade técnica muitas vezes exigem a análise rigorosa de riscos oferecida pelo modelo Espiral
+        . Para produtos de pequeno ou médio porte, a agilidade permite entregas mais rápidas e menor burocracia
+        .
+    </li>
+
+    <li>
+        <strong>Envolvimento do Cliente:</strong> Se o cliente está disposto e disponível para uma colaboração contínua e deseja ver incrementos funcionais rapidamente, os métodos Ágeis ou Incrementais são ideais
+        . Se a interação for limitada a marcos formais, modelos dirigidos a planos (como o Cascata) são mais comuns
+        .
+    </li>
+
+    <li>
+        <strong>Natureza do Produto:</strong> Sistemas críticos (como softwares médicos ou de aviônica) demandam processos estruturados e documentação exaustiva para garantir a confiança e proteção
+        . Já sistemas de comércio eletrônico ou WebApps beneficiam-se da flexibilidade e evolução contínua dos modelos ágeis
+        .
+    </li>
 </ul>
 
 <!-- CONCLUSÃO -->
 <h3>Conclusão</h3>
 
 <p>
-Os modelos de processo são fundamentais para organizar o desenvolvimento de software.
-Cada modelo possui vantagens e limitações, sendo necessário escolher o mais adequado para cada projeto.
+Não existe um "processo ideal"; a engenharia de software moderna reconhece que a eficácia de um modelo depende de sua adaptabilidade ao contexto organizacional e técnico
+. Frequentemente, as organizações de sucesso não aplicam um único modelo de forma dogmática, mas buscam um equilíbrio entre a agilidade necessária para responder a mudanças e a disciplina dos modelos tradicionais dirigida a planos
+.
 </p>
 
-<div class="info-box info">
-<strong>💡 Dica:</strong>
-Na prática, muitos projetos utilizam modelos híbridos combinando abordagens tradicionais e ágeis.
-</div>
+<p>
+O objetivo final de qualquer processo deve ser sempre a entrega de um software de alta qualidade que forneça valor real ao usuário, seja confiável e fácil de manter
+. Independentemente da escolha, o sucesso reside na competência das pessoas e na capacidade da equipe de evoluir o processo junto com o produto
+.
+</p>
 
 </main>
 

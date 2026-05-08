@@ -34,152 +34,49 @@
     <aside class="sidebar">
         <a href="poo.html">Apresentação</a>
         <a href="">Aula 01 - Introdução</a>
-        <a href="aula06.html" class="active">Aula 06 - Instanciamento</a>
+        <a href="aula06.html" >Aula 06 - Instanciamento</a>
         <a href="aula07.html" >Aula 07 - Tipos de Atributo e Método</a>
         <a href="aula08.html">Aula 08 - Mensagem</a>
         <a href="aula09.html">Aula 09 - UML</a>
         <a href="aula10.html" >Aula 10 - Visibilidade</a>
-        <a href="aula11.html">Aula 11 - Métodos Especiais</a>
+        <a href="aula11.html" class="active">Aula 11 - Métodos Especiais</a>
+        <a href="praticando.html">Praticando POO com Java</a>
 
-        <a href="praticando.html" >Praticando POO com Java</a>
         <a href="referencias.html">Referências</a>
     </aside>
 
     <!-- CONTEÚDO -->
     <main class="content">
+        <h2>Aula 11 - Métodos Especiais</h2>
 
-        <h2>Aula 06 - Instanciamento</h2>
-
-
-        <h3>Instanciamento</h3>
-
+        <h3>A visibilidade define o nível de acesso aos atributos e métodos de uma classe.</h3>
         <p>
-            Instanciar é pegar uma classe e gerar um objeto a partir dela.
+            Toda classe, independente de sua finalidade, possui dois métodos especiais que gerenciam o ciclo de vida do objeto: o construtor e o destrutor
+        </p>
+        <h4>Métodos Especiais Fundamentais</h4>
+        <h5>Método Construtor</h5>
+        <p>
+            O método construtor é o responsável direto pela instanciação (criação) de objetos a partir de uma classe. 
+        </p>
+        <p> 
+            Tem como função alocar o objeto na memória (heap) e serve para prover valores iniciais (estado inicial) que o objeto deve possuir no momento de sua criação. Em linguagnes como Java e C#, deve obrigatoriamente ter o mesmo nome da classe e não possui tipo de retorno, omitindo inclusive a palavra void. É possível definir múltiplos construtores em uma classe através da sobrecarga, permitindo diferentes formas de inicialização. 
+        </p>
+        <h5>Método Destrutor</h5>
+        <p>
+            O método Destrutor realiza a função inversa ao construtor, servindo para eliminar objetos da memórai quando não são mais necessários. 
+        </p>
+        <p>
+            Durante a destruição o método é responsável por liberar recursos que o objeto possa ter alocado, como portas de comunicação ou arquivos abertos.
+        </p>
+        <p> 
+            <strong>Observação:</strong> Em Java, a partir da versão 9, o uso do método finalize() (o destrutor padrão do Java) é desaconselhado (deprecated), pois erros em sua execução podem interferir no funcionamento do <i>Garbage Collector</i>. Recomenda-se o uso de alternativas como Cleaners ou a estrutura try-with-resources.
+        </p>
+        <h3>Métodos Auxiliares de Grande Utilidade (Herdados de Object)</h3>
+        <p>
+            Embora o foco estrutural recaia sobre contrututores e destrutores
         </p>
 
-        <p>
-            Não transformamos uma classe em um objeto. Geramos um objeto a partir de uma classe.
-        </p>
 
-        <h3>Adicionando Atributos e Chamando Métodos</h3>
-
-        <h4>Adicionando atributos</h4>
-
-        <pre class="pseudo">
-c1 = nova Caneta
-c1.cor="Azul”
-c1.ponta=0.5
-c1.tampada=falso
-        </pre>
-
-        <p>C1 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-
-        <h4>Chamando um método</h4>
-
-        <pre class="pseudo">
-c1 = nova Caneta
-c1.cor="Azul”
-c1.ponta=0.5
-c1.tampada=falso
-c1.rabiscar()
-        </pre>
-
-        <p>C1 = NOME DO OBJETO</p>
-        <p>RABISCAR() = MÉTODO</p>
-
-        <p>
-            Vamos continuar adicionando atributos no objeto
-        </p>
-
-        <p>
-            Após definir cor, ponta e tampada, podemos também chamar um método do objeto.
-        </p>
-
-        <h4>Atributo</h4>
-
-        <p>
-            Armazena um valor no objeto.
-            Ex: c1.cor="Azul"
-        </p>
-
-        <h4>Método</h4>
-
-        <p>
-            Executa uma ação no objeto.
-            Ex: c1.rabiscar()
-        </p>
-
-        <figure>
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Programação em equipe">
-            <figcaption>Objetos executando ações em sistemas reais</figcaption>
-        </figure>
-
-        <h3>Múltiplos Objetos da Mesma Classe</h3>
-
-        <p>
-            Podemos ter mais de um objeto da mesma classe coexistindo juntos:
-        </p>
-
-        <h4>Objeto c1 — Caneta Azul</h4>
-
-        <pre class="pseudo">
-c1 = nova Caneta
-c1.cor="Azul”
-c1.ponta=0.5
-c1.tampada=falso
-c1.rabiscar()
-        </pre>
-
-        <p>C1 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-        <p>RABISCAR() = MÉTODO</p>
-
-        <h4>Objeto c2 — Caneta Vermelha</h4>
-
-        <pre>
-c2 = nova Caneta
-c2.cor="Vermelho”
-c2.ponta=1.0
-c2.tampada=falso
-c2.tampar()
-        </pre>
-
-        <p>C2 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-        <p>TAMPAR() = MÉTODO</p>
-
-        <figure>
-            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="Vários códigos">
-            <figcaption>Múltiplos objetos coexistindo em um sistema</figcaption>
-        </figure>
-
-        <h3>Resumo: Classe vs. Objeto</h3>
-
-        <h4>Classe</h4>
-        <p>
-            Define os atributos e métodos comuns que serão compartilhados por um objeto.
-        </p>
-
-        <h4>Objeto</h4>
-        <p>
-            É uma instância de uma classe.
-        </p>
-
-        <p>Classe define atributos e métodos compartilhados.</p>
-        <p>Instanciar é o processo que cria uma instância da classe.</p>
-        <p>Objeto é a instância concreta com valores específicos.</p>
-
-        <blockquote>
-            <p>
-                Instanciar é pegar uma classe e gerar um objeto a partir dela.
-                Não transformamos uma classe em um objeto — geramos um objeto a partir de uma classe.
-            </p>
-            <cite></cite>
-        </blockquote>
 
 
     </main>
