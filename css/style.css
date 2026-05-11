@@ -1,6 +1,6 @@
 /* ARQUIVO: style.css */
 
-/* RESET */
+/* 1. RESET */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     color: #333;
 }
 
-/* HEADER */
+/* 2. HEADER */
 header {
     background: #0d6efd;
     color: white;
@@ -23,12 +23,12 @@ header {
     align-items: center;
 }
 
-/* LOGO */
+/* 3. LOGO */
 header h1 {
     font-size: 1.5rem;
 }
 
-/* MENU */
+/* 4. MENU */
 nav {
     display: flex;
 }
@@ -44,14 +44,14 @@ nav a:hover {
     opacity: 0.7;
 }
 
-/* MENU MOBILE */
+/* 5. MENU MOBILE */
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
     cursor: pointer;
 }
 
-/* HERO */
+/* 6. HERO */
 .hero {
     padding: 80px 20px;
     text-align: center;
@@ -70,7 +70,7 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* BOTÃO HERO */
+/* 7. BOTÃO HERO */
 .btn-hero {
     display: inline-block;
     margin-top: 20px;
@@ -86,7 +86,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* SEÇÕES */
+/* 8. SEÇÕES */
 .sobre, .disciplinas, .como-usar {
     padding: 50px 20px;
     max-width: 1000px;
@@ -97,7 +97,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* LISTAS */
+/* 9. LISTAS */
 .sobre ul, .como-usar ol {
     margin-top: 10px;
     padding-left: 20px;
@@ -107,7 +107,7 @@ h2 {
     margin-bottom: 5px;
 }
 
-/* CARDS */
+/* 10. CARDS */
 .card-link {
     text-decoration: none;
     color: inherit;
@@ -116,7 +116,7 @@ h2 {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
 }
 
@@ -129,7 +129,7 @@ h2 {
     position: relative;
 }
 
-/* BARRA SUPERIOR */
+/* 11. BARRA SUPERIOR */
 .card::before {
     content: "";
     position: absolute;
@@ -142,13 +142,13 @@ h2 {
     border-top-right-radius: 12px;
 }
 
-/* HOVER */
+/* 12. HOVER */
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* TEXTO */
+/* 13. TEXTO */
 .card h3 {
     color: #0d6efd;
     margin-bottom: 10px;
@@ -159,7 +159,7 @@ h2 {
     color: #555;
 }
 
-/* FOOTER */
+/* 14. FOOTER */
 footer {
     background: #1c1f26;
     color: #ccc;
@@ -183,7 +183,7 @@ footer {
     margin-top: 20px;
 }
 
-/* RESPONSIVO */
+/* 15. RESPONSIVO */
 @media (max-width: 768px) {
 
     nav {
@@ -212,4 +212,33 @@ footer {
     .footer-content {
         flex-direction: column;
     }
+}
+
+/* 16. MINIATURAS DOS CARDS */
+.card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+}
+
+.card img.thumb {
+    width: 90px;        /* tamanho padronizado */
+    height: 90px;       /* tamanho padronizado */
+    object-fit: cover;  /* evita distorção */
+    border-radius: 10px;/* formato uniforme */
+    flex-shrink: 0;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    margin: 0 0 6px 0;
+}
+
+.card p {
+    margin: 0;
 }

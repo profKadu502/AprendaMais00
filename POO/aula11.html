@@ -51,7 +51,7 @@
 
         <h3>A visibilidade define o nível de acesso aos atributos e métodos de uma classe.</h3>
         <p>
-            Toda classe, independente de sua finalidade, possui dois métodos especiais que gerenciam o ciclo de vida do objeto: o construtor e o destrutor
+            Toda classe, independente de sua finalidade, possui dois métodos especiais que gerenciam o ciclo de vida do objeto: <strong>o construtor e o destrutor.</strong>
         </p>
         <h4>Métodos Especiais Fundamentais</h4>
         <h5>Método Construtor</h5>
@@ -73,9 +73,95 @@
         </p>
         <h3>Métodos Auxiliares de Grande Utilidade (Herdados de Object)</h3>
         <p>
-            Embora o foco estrutural recaia sobre contrututores e destrutores
+            Embora o foco estrutural recaia sobre contrututores e destrutores, todas as classes herdam automaticamente da classe base Object métodos essenciais para a manipulação de dados.
         </p>
-
+        <ul>
+            <li>
+                <strong><i>equals:</i></strong>
+                Define os critérios para verificar se dois objetos são logicamente iguais, comparando seus estados internos em vez de apenas seus endereços de memória (o que o operador == faria).
+            </li>
+            <li>
+                <strong><i>hashCode:</i></strong>
+                Gera uma representação numérica baseada no estado atual do objeto. Esse código é crucial para otimizar pesquisas em estruturas de dados que utilizam tabelas de dispersão (hash tables), como mapas e conjuntos
+            </li>
+            <li>
+                <strong><i>toString:</i></strong>
+                Fornece uma representação padrão em texto do objeto. É uma alternativa mais encapsulada e amigável para exibir informações do que concatenar manualmente várias chamadas de métodos de acesso.
+            </li>
+        </ul>
+        <h3>Métodos Acessores (get e set) e Encapsulamento</h3>
+        <p>
+            Os métodos acessores são a interface pública para manipulação de dados internos protegidos.
+        </p>
+        <p>
+            Eles são métodos públicos usados para <strong>consultar (get)</strong> ou <strong>alterar(set)</strong> o valor de atributos que, por boa prática devem ser definidos como <strong>privados</strong> para garantir a ocultação da informação.
+        </p>
+        <p>
+            O uso indiscriminado desses métodos pode ferir o encapsulamento, agindo como uma "quebra de blindagem" do estado interno. Permitir que o estado seja alterado livremente de fora via <strong>set</strong> pode levar a comportamentos adversos e é comparado a programar de forma estruturada dentro da Orientação a Objetos.
+        </p>
+        <h3>"Trocando em Miúdos"</h3>
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+            </code>
+        </pre>
+        <p>
+            De acordo com o que vimos anterioremente a linha de código acima está instanciando um objeto. Desta forma sabemos que já existe uma classe chamada Estante. 
+        </p>
+        <p>
+            A estante poderá ter vários atributos: 
+        </p>
+        <ul>
+            <li>tamanho</li>
+            <li>cor</li>
+            <li>quantidadeDePrateleiras</li>
+            <li>modelo</li>
+            <li>fabricante</li>
+            <li>modelo</li>
+        </ul>
+        <p>
+            Ela também poderá ter vários métodos:
+        </p>
+        <ul>
+            <li>colocarItem ()</li>
+            <li>retirarItem ()</li>
+        </ul>
+        <p>
+            Lembre-se, quando estamos aprendendo Programação Orientada a Objeto, é imprescindível um execercício: utilizar coisas que estão ao seu redor e tentar criar atributos e métodos para estas coisas. Isto fará com que possamos exercitar os conhecimentos sobre atributos e métodos e fazer com que possamos ter mais facilidade quando formos criar classes, objetos, atributos e métodos nas atividades propostas da disciplina.
+        </p>
+        <p>
+            Bem, voltando ao nosso objeto Estante vamos fazer um exercício mental: uma pessoa chegou perto da estante e vê que tem vários documentos e livros, esta pessoa quer saber quantos dos documentos desta estante são dela. Para isso vamos criar o atributo:
+        </p>
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+                <mark>t = e.totDoc</mark>
+            </code>
+        </pre>
+        <p>
+            Aqui no exemplo a pessoa usou o atributo <i>totDoc</i> e descobriu que tem 5 documentos dele. 
+        </p>
+        <p>
+            De maneira similar outra pessoa chega utiliza o atributo <i>totDoc</i> e descobre que tem 12 documentos. 
+        </p>
+        <figure>
+            <img src="../imagens/totDoc-exemplo.png" alt="exemplo-totDoc">
+            <figcaption>Exemplo do atributo todDoc</figcaption>
+        </figure>
+        <p>
+            Até aqui tudo bem, temos duas pessoas que estão acessando a Classe Estante. Estas pessoas utilizam o atributo todDoc para saber quantos documentos naquela estante são seus. Mas você já parou para pensar se na vida real isto estaria correto? Você daria acesso da estante uma pessoa sabendo que nem todos os documentos que estão alí são dela? Vamos pensar em uma estante que contenha documentos importantes e sigilodos. Qual seria sua resposta? 
+        </p>
+        <h4>O Exemplo da Conta no Banco</h4>
+        <p>
+            Vamos usar também outro exemplo. Pense no caixa de um banco, você quer depositar um valor na sua conta. O que você vai fazer? Você dá a volta no caixa, abre a gaveta e coloca o dinheiro lá dentro? É claro que não podemos fazer isso, alguém pode chegar alí em outro momento e roubar o dinheiro. Por isso podemos criar um mecanismo de proteção. 
+        </p>
+        <p>
+            Os métodos acessores fazem exatamente isso, eles são métodos que dão acesso a determinada coisa. Estes métodos também podem ser denominados Getters. Um método acessor Getter é aquele que <i>pega</i> alguma informação. Lembrando do exemplo do banco, se você quer saber quanto dinheiro 
+        </p>
+        <!--
+        https://www.youtube.com/watch?v=g2x9oyBFSco&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY&index=9
+        5:24
+        -->
 
 
 
@@ -90,11 +176,11 @@
             <div class="video-list">
 
                 <figure class="video-item">
-                    <a href="" target="_blank" class="video-thumb">
-                        <img src="" alt="POO explicação">
+                    <a href="https://www.youtube.com/watch?v=g2x9oyBFSco&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY&index=8" target="_blank" class="video-thumb">
+                        <img src="https://img.youtube.com/vi/g2x9oyBFSco/mqdefault.jpg" alt="métodos especiais">
                         <span class="play-button">▶</span>
                     </a>
-                    <figcaption>Introdução à Programação Orientada a Objetos</figcaption>
+                    <figcaption>Curso POO Teoria #04a - Métodos Especiais</figcaption>
                 </figure>
 
             </div>
