@@ -1,0 +1,293 @@
+<!-- 1. ARQUIVO: poo.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Programação Orientada a Objetos | Aprenda Mais</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="poo.html">Apresentação</a>
+        <a href="">Aula 01 - Introdução</a>
+        <a href="aula06.html" >Aula 06 - Instanciamento</a>
+        <a href="aula07.html" >Aula 07 - Tipos de Atributo e Método</a>
+        <a href="aula08.html">Aula 08 - Mensagem</a>
+        <a href="aula09.html">Aula 09 - UML</a>
+        <a href="aula10.html" >Aula 10 - Visibilidade</a>
+        <a href="aula11.html" >Aula 11 - Métodos Especiais</a>
+        <a href="aula12.html" class="active">Aula 12 - Métodos Acessores</a>
+        <a href="praticando.html">Praticando POO com Java</a>
+
+        <a href="referencias.html">Referências</a>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+        <h2>Os Métodos Acessores</h2>
+<p>
+            Os métodos acessores são a interface pública para manipulação de dados internos protegidos.
+        </p>
+        <p>
+            Eles são métodos públicos usados para <strong>consultar (get)</strong> ou <strong>alterar(set)</strong> o valor de atributos que, por boa prática devem ser definidos como <strong>privados</strong> para garantir a ocultação da informação.
+        </p>
+        <p>
+            O uso indiscriminado desses métodos pode ferir o encapsulamento, agindo como uma "quebra de blindagem" do estado interno. Permitir que o estado seja alterado livremente de fora via <strong>set</strong> pode levar a comportamentos adversos e é comparado a programar de forma estruturada dentro da Orientação a Objetos.
+        </p>
+        <h3>O Método Get</h3>
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+            </code>
+        </pre>
+        <p>
+            De acordo com o que vimos anterioremente a linha de código acima está instanciando um objeto. Desta forma sabemos que já existe uma classe chamada Estante. 
+        </p>
+        <p>
+            A estante poderá ter vários atributos: 
+        </p>
+        <ul>
+            <li>tamanho</li>
+            <li>cor</li>
+            <li>quantidadeDePrateleiras</li>
+            <li>modelo</li>
+            <li>fabricante</li>
+            <li>modelo</li>
+        </ul>
+        <p>
+            Ela também poderá ter vários métodos:
+        </p>
+        <ul>
+            <li>colocarItem ()</li>
+            <li>retirarItem ()</li>
+        </ul>
+        <p>
+            Lembre-se, quando estamos aprendendo Programação Orientada a Objeto, é imprescindível um execercício: utilizar coisas que estão ao seu redor e tentar criar atributos e métodos para estas coisas. Isto fará com que possamos exercitar os conhecimentos sobre atributos e métodos e fazer com que possamos ter mais facilidade quando formos criar classes, objetos, atributos e métodos nas atividades propostas da disciplina.
+        </p>
+        <p>
+            Bem, voltando ao nosso objeto Estante vamos fazer um exercício mental: uma pessoa chegou perto da estante e vê que tem vários documentos e livros, esta pessoa quer saber quantos dos documentos desta estante são dela. Para isso vamos criar o atributo:
+        </p>
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+                <mark>t = e.totDoc</mark>
+            </code>
+        </pre>
+        <p>
+            Aqui no exemplo a pessoa usou o atributo <i>totDoc</i> e descobriu que tem 5 documentos dele. 
+        </p>
+        <p>
+            De maneira similar outra pessoa chega utiliza o atributo <i>totDoc</i> e descobre que tem 12 documentos. 
+        </p>
+        <figure>
+            <img src="../imagens/totDoc-exemplo.png" alt="exemplo-totDoc">
+            <figcaption>Exemplo do atributo todDoc</figcaption>
+        </figure>
+        <p>
+            Até aqui tudo bem, temos duas pessoas que estão acessando a Classe Estante. Estas pessoas utilizam o atributo todDoc para saber quantos documentos naquela estante são seus. Mas você já parou para pensar se na vida real isto estaria correto? Você daria acesso da estante uma pessoa sabendo que nem todos os documentos que estão alí são dela? Vamos pensar em uma estante que contenha documentos importantes e sigilodos. Qual seria sua resposta? 
+        </p>
+        <h3>O Exemplo da Conta no Banco</h3>
+        <p>
+            Vamos usar também outro exemplo. Pense no caixa de um banco, você quer depositar um valor na sua conta. O que você vai fazer? Você dá a volta no caixa, abre a gaveta e coloca o dinheiro lá dentro? É claro que não podemos fazer isso, alguém pode chegar alí em outro momento e roubar o dinheiro. Por isso podemos criar um mecanismo de proteção. 
+        </p>
+        <p>
+            Os <strong>métodos acessores</strong> fazem exatamente isso, eles são métodos que dão acesso a determinada coisa. Estes métodos também podem ser denominados Getters. Um método acessor Getter é aquele que <i>pega</i> alguma informação. Lembrando do exemplo do banco, se você quer saber quanto dinheiro você tem na conta, seria por exemplo get.saldo. Os métodos acessores também poderão usar o "is" mas vamos deixar isso para depois. 
+        </p>
+        <p>
+            Continuando no exemplo da estante, poderíamos dizer que com método Getter, a sigutação seria a seguinte: entre a estante e as duas pessoas do exemplo antererior seria colocada uma mesa para dificultar o acesso direto à estante. 
+        </p>
+        <p>
+            Não adiantaria apenas colocar a mesa, mas colocaríamos também uma pessoa, esta pessoa teria acesso aos documentos (assim como um atendente de caixa no supermercado). Assim, se uma das duas pessoas quizesse saber quantos documentos ele possui na estante, esta pessoa iria perguntar ao atendente. 
+        </p>
+                <figure>
+            <img src="../imagens/metodo-get-exemplo.png" alt="exemplo-totDoc">
+            <figcaption>Exemplo </figcaption>
+        </figure>
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+                t = e.getTotDoc()
+            </code>
+        </pre>
+        <p>
+            A variável "t" que é o total de documentos, recebe "e" que é o nome do objeto, ponto <mark>getTotDoc()</mark>. 
+        </p>
+        <p>
+            Desta forma não damos acesso direto ao atributo e isso garante uma segurança adicional. Se compararmos as duas formas de fazer percebemos podemos perceber uma coisa dentre as duas formas, a segunda não é mais difícil de fazer porém é bem mais segura já que a primeira permite acesso direto ao atributo.
+        </p>
+        <h4>Forma 1</h4>
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+                t = e.TotDoc
+            </code>
+        </pre>
+        <h4>Forma 2</h4>
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+                t = e.getTotDoc()
+            </code>
+        </pre>
+
+        <p>
+            Sendo assim, chegamos à conclusão de que Métodos Acessores conseguem acessar determinado atributo mantendo a segurança de acesso à ele.
+        </p>
+
+        <!--Métodos Modificadores -->
+        <h2>Métodos Modificadores (Métodos Mutantes ou Setters)</h2>
+        <p> 
+            Utilizando a mesma situação anterior, o mesmo exemplo onde temos a estatnte e uma das pessoas possui 5 documentos. Digamos que esta pessoa queira acrescentar um documento à estante.
+        </p>
+
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+                <mark>e.TotDoc = e.TotDoc + 1 </mark>
+        </pre>
+        <p>
+            Pela lógica, poderíamos utilizar esta formula e ela seria funcional. Porém, quando pensamos que a outra pessoa poderá acessar a estante e insrir também novos documentos, tendo acesso direto à estante este processo não será de forma nenhuma seguro e nem organizado.
+        </p>
+
+        <p>
+            Faremos o seguinte,como no exemplo anterior, não iremos interagir diretamente com o objeto e o atributo. Teremos um intermediários e ao invés de passar o atributo diretamente para o objeto iremos passar para o método. 
+        </p>
+
+        <pre class="pseudo">
+            <code>
+                e = nova Estante
+                <mark>e.setTotDoc(doc)</mark>
+        </pre>  
+        <p>
+            Com isso teremos mais segurança e mais organização. É claro que o método terá também vários métodos internos para organizar a ordem (seja alfabética ou não), verificar a localização, a pasta do usuário, etc. 
+        </p>  
+        <p>
+            Com esta alteração simplificamos bastante. Desta forma abstraímos muitas coisas, mas este era o intuito, para o programador que irá utilizar esta classe posteriormente é bem melhor. É claro que dentro do método teremos um cálculo que irá realizar a soma dos documentos. 
+        </p>    
+        <p>
+            Os métodos Setters são mais abstratos que os métodos Getters. 
+        </p>
+        <p>
+            Tecnicamente quando definimos os atributos da classe também temos os métodos Getters e Setters. Vamos usar exemplos simplificados para nosso exemplo. 
+        </p>
+ <table class="table-sem-fundo">
+            <tr>
+                <th >Caneta</th>
+            </tr>
+            <tr>
+                <td >
+                    + modelo<br>
+                    - ponta<br>
+
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    + getModelo()<br>
+                    + getModelo(m)<br>
+                    + setModelo()<br>
+                    + setModelo(p)<br>
+                </td>
+            </tr>
+        </table>
+        <div class="info-box important">
+            <strong>📌 Importante:</strong>
+            Neste caso todos os métodos tem a visibilidade pública e os Setters precisam receber parâmetros.
+        </div>
+
+        <!--
+        https://www.youtube.com/watch?v=g2x9oyBFSco&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY&index=9
+        
+        -->
+
+
+
+    </main>
+
+    <!-- SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <figure class="video-item">
+                    <a href="https://www.youtube.com/watch?v=g2x9oyBFSco&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY&index=8" target="_blank" class="video-thumb">
+                        <img src="https://img.youtube.com/vi/g2x9oyBFSco/mqdefault.jpg" alt="métodos especiais">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>Curso POO Teoria #04a - Métodos Especiais</figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+        <div class="extra-card">
+            <h4>📄 Material</h4>
+            <p>Plano de ensino da disciplina.</p>
+            <a href="#" class="btn-extra">Abrir</a>
+        </div>
+
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+
+            <ul class="links-list">
+                <li><a href="https://www.w3schools.com/java/" target="_blank">W3Schools - Java</a></li>
+                <li><a href="https://docs.oracle.com/javase/tutorial/" target="_blank">Oracle Java Docs</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos" target="_blank">POO - Wikipédia</a></li>
+                <li><a href="https://www.codelerity.com/netbeans/" target="_blank">Netbeans Apache</a></li>
+            </ul>
+        </div>
+
+    </aside>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

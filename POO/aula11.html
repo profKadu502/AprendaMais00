@@ -40,6 +40,7 @@
         <a href="aula09.html">Aula 09 - UML</a>
         <a href="aula10.html" >Aula 10 - Visibilidade</a>
         <a href="aula11.html" class="active">Aula 11 - Métodos Especiais</a>
+        <a href="aula12.html" >Aula 12 - Métodos Acessores</a>
         <a href="praticando.html">Praticando POO com Java</a>
 
         <a href="referencias.html">Referências</a>
@@ -53,15 +54,15 @@
         <p>
             Toda classe, independente de sua finalidade, possui dois métodos especiais que gerenciam o ciclo de vida do objeto: <strong>o construtor e o destrutor.</strong>
         </p>
-        <h4>Métodos Especiais Fundamentais</h4>
-        <h5>Método Construtor</h5>
+        <h3>Métodos Especiais Fundamentais</h3>
+        <h4>Método Construtor</h4>
         <p>
             O método construtor é o responsável direto pela instanciação (criação) de objetos a partir de uma classe. 
         </p>
         <p> 
             Tem como função alocar o objeto na memória (heap) e serve para prover valores iniciais (estado inicial) que o objeto deve possuir no momento de sua criação. Em linguagnes como Java e C#, deve obrigatoriamente ter o mesmo nome da classe e não possui tipo de retorno, omitindo inclusive a palavra void. É possível definir múltiplos construtores em uma classe através da sobrecarga, permitindo diferentes formas de inicialização. 
         </p>
-        <h5>Método Destrutor</h5>
+        <h4>Método Destrutor</h4>
         <p>
             O método Destrutor realiza a função inversa ao construtor, servindo para eliminar objetos da memórai quando não são mais necessários. 
         </p>
@@ -99,72 +100,7 @@
         <p>
             O uso indiscriminado desses métodos pode ferir o encapsulamento, agindo como uma "quebra de blindagem" do estado interno. Permitir que o estado seja alterado livremente de fora via <strong>set</strong> pode levar a comportamentos adversos e é comparado a programar de forma estruturada dentro da Orientação a Objetos.
         </p>
-        <h3>"Trocando em Miúdos"</h3>
-        <pre class="pseudo">
-            <code>
-                e = nova Estante
-            </code>
-        </pre>
-        <p>
-            De acordo com o que vimos anterioremente a linha de código acima está instanciando um objeto. Desta forma sabemos que já existe uma classe chamada Estante. 
-        </p>
-        <p>
-            A estante poderá ter vários atributos: 
-        </p>
-        <ul>
-            <li>tamanho</li>
-            <li>cor</li>
-            <li>quantidadeDePrateleiras</li>
-            <li>modelo</li>
-            <li>fabricante</li>
-            <li>modelo</li>
-        </ul>
-        <p>
-            Ela também poderá ter vários métodos:
-        </p>
-        <ul>
-            <li>colocarItem ()</li>
-            <li>retirarItem ()</li>
-        </ul>
-        <p>
-            Lembre-se, quando estamos aprendendo Programação Orientada a Objeto, é imprescindível um execercício: utilizar coisas que estão ao seu redor e tentar criar atributos e métodos para estas coisas. Isto fará com que possamos exercitar os conhecimentos sobre atributos e métodos e fazer com que possamos ter mais facilidade quando formos criar classes, objetos, atributos e métodos nas atividades propostas da disciplina.
-        </p>
-        <p>
-            Bem, voltando ao nosso objeto Estante vamos fazer um exercício mental: uma pessoa chegou perto da estante e vê que tem vários documentos e livros, esta pessoa quer saber quantos dos documentos desta estante são dela. Para isso vamos criar o atributo:
-        </p>
-        <pre class="pseudo">
-            <code>
-                e = nova Estante
-                <mark>t = e.totDoc</mark>
-            </code>
-        </pre>
-        <p>
-            Aqui no exemplo a pessoa usou o atributo <i>totDoc</i> e descobriu que tem 5 documentos dele. 
-        </p>
-        <p>
-            De maneira similar outra pessoa chega utiliza o atributo <i>totDoc</i> e descobre que tem 12 documentos. 
-        </p>
-        <figure>
-            <img src="../imagens/totDoc-exemplo.png" alt="exemplo-totDoc">
-            <figcaption>Exemplo do atributo todDoc</figcaption>
-        </figure>
-        <p>
-            Até aqui tudo bem, temos duas pessoas que estão acessando a Classe Estante. Estas pessoas utilizam o atributo todDoc para saber quantos documentos naquela estante são seus. Mas você já parou para pensar se na vida real isto estaria correto? Você daria acesso da estante uma pessoa sabendo que nem todos os documentos que estão alí são dela? Vamos pensar em uma estante que contenha documentos importantes e sigilodos. Qual seria sua resposta? 
-        </p>
-        <h4>O Exemplo da Conta no Banco</h4>
-        <p>
-            Vamos usar também outro exemplo. Pense no caixa de um banco, você quer depositar um valor na sua conta. O que você vai fazer? Você dá a volta no caixa, abre a gaveta e coloca o dinheiro lá dentro? É claro que não podemos fazer isso, alguém pode chegar alí em outro momento e roubar o dinheiro. Por isso podemos criar um mecanismo de proteção. 
-        </p>
-        <p>
-            Os métodos acessores fazem exatamente isso, eles são métodos que dão acesso a determinada coisa. Estes métodos também podem ser denominados Getters. Um método acessor Getter é aquele que <i>pega</i> alguma informação. Lembrando do exemplo do banco, se você quer saber quanto dinheiro 
-        </p>
-        <!--
-        https://www.youtube.com/watch?v=g2x9oyBFSco&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY&index=9
-        5:24
-        -->
-
-
-
+        
     </main>
 
     <!-- SIDEBAR DIREITA -->

@@ -159,6 +159,16 @@ h2 {
     color: #555;
 }
 
+.categoria {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 40px 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
 /* 14. FOOTER */
 footer {
     background: #1c1f26;
@@ -219,14 +229,14 @@ footer {
     display: flex;
     align-items: center;
     gap: 18px;
-    padding: 20px;
+    padding: 18px;
 }
 
 .card img.thumb {
-    width: 90px;        /* tamanho padronizado */
-    height: 90px;       /* tamanho padronizado */
-    object-fit: cover;  /* evita distorção */
-    border-radius: 10px;/* formato uniforme */
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
     flex-shrink: 0;
 }
 
@@ -235,10 +245,11 @@ footer {
     flex-direction: column;
 }
 
-.card h3 {
+.card-text h3 {
     margin: 0 0 6px 0;
 }
 
-.card p {
+.card-text p {
     margin: 0;
 }
+

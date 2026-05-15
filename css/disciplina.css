@@ -168,17 +168,18 @@ blockquote cite {
     margin-bottom: 8px;
 }
 
+
 /* 11. CÓDIGO */
 pre {
     background: #1e1e1e;
     color: #d4d4d4;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 5px;
     overflow-x: auto;
     font-family: 'Consolas', 'Monaco', monospace; /* Fonte mais moderna para código */
     font-size: 13px; /* Um pouco maior para melhor leitura */
     line-height: 1.5; /* Melhora o espaçamento entre linhas */
-    margin: 20px 0;
+    
     border: 1px solid #2d2d2d;
     white-space: pre; /* Preserva a formatação original */
 }
@@ -194,6 +195,8 @@ pre .comentario {
 pre + pre {
     margin-top: 30px;
 }
+
+
 
 /* 11.3 LABEL GERAL */
 pre::before {
@@ -219,6 +222,8 @@ pre.pseudo {
     border-left: 6px solid #6c757d;
 }
 pre.pseudo::before { content: "Pseudocódigo"; }
+
+
 /* 12. VIS CARDS */
 .vis-cards {
     display: flex;
@@ -280,6 +285,7 @@ pre.pseudo::before { content: "Pseudocódigo"; }
 table {
     width: auto;              /* 👈 não ocupa mais 100% */
     max-width: 600px;         /* 👈 limite opcional */
+    min-width: 200px;
     border-collapse: collapse;
     margin: 20px auto;        /* 👈 centraliza */
     font-size: 0.85rem;       /* 👈 texto menor */
@@ -313,6 +319,7 @@ tbody tr:nth-child(even) {
     border-collapse: collapse;
     margin: 20px auto;
     font-size: 0.85rem;
+    background-color: white;
 }
 
 .table-sem-fundo th,
