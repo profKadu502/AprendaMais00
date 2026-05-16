@@ -64,19 +64,25 @@
         Entendemos agora que, quando requisitamos que um comportamento de um método seja executado, passamos uma mensagem a este método. As mensagens podem ser trocadas entre os métodos dos objetos/classes. As trocas de mensagem ocorrem de forma livre e constante durante a execução de um sistema e assim os objetos/classes poderão executar suas tarefas. Se durante a execução de um sistema for detectado que certos métodos nunca terão mensagens passadas a eles, vale a pena refletir sobre a real necessidade de sua existência.
         </p>
 
-        <pre class="java">
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //Java
         Pessoa pessoa = new Pessoa();
         pessoa.falar();
         Pessoa.andar();
         </pre>
+        </div>
         
-        <pre class="csharp">
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //C#
         Pessoa pessoa = new Pessoa();
         pessoa.Falar();
         Pessoa.Andar();
         </pre>
+        </div>
 
         <p>
             Para métodos de instância colocamos o objeto. Neste exemplo usamos um objeto representado pela variável pessoa do tipo Pessoa e o método de instância falar ( ). 
@@ -147,7 +153,8 @@ No caso de métodos estáticos, coloca-se a classe. Usamos neste caso a classe P
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/code-format.js"></script>
 
 </body>
 </html>

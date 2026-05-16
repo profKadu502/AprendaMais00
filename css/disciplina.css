@@ -169,59 +169,88 @@ blockquote cite {
 }
 
 
-/* 11. CÓDIGO */
-pre {
+/* 11. CÓDIGOS */
+/* CONTAINER GERAL */
+.editor {
     background: #1e1e1e;
-    color: #d4d4d4;
-    padding: 16px;
-    border-radius: 5px;
-    overflow-x: auto;
-    font-family: 'Consolas', 'Monaco', monospace; /* Fonte mais moderna para código */
-    font-size: 13px; /* Um pouco maior para melhor leitura */
-    line-height: 1.5; /* Melhora o espaçamento entre linhas */
-    
     border: 1px solid #2d2d2d;
-    white-space: pre; /* Preserva a formatação original */
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
 }
 
-/* 11.1 ESTILIZAÇÃO INTERNA (O que você pediu) */
-pre .comentario {
-    color: #6a9955; /* Verde clássico de editores como VS Code */
-    font-style: italic;
-    font-family: monospace; /* Garante que o comentário mantenha o alinhamento */
+/* COLUNA DE LINHAS */
+.line-numbers {
+    background: #252526;
+    color: #858585;
+    padding: 10px 12px;
+    text-align: right;
+    user-select: none;
+    white-space: nowrap;
 }
 
-/* 11.2 SEPARAÇÃO */
-pre + pre {
-    margin-top: 30px;
+/* ÁREA DO CÓDIGO */
+.code {
+    margin: 0;
+    padding: 10px 15px;
+    color: #d4d4d4;
+    white-space: pre;
+    overflow-x: auto;
+    flex: 1;
+    line-height: 1.45;
 }
 
+/* GERAR LINHAS AUTOMÁTICAS */
+.editor {
+    counter-reset: line;
+}
 
-
-/* 11.3 LABEL GERAL */
-pre::before {
+.code {
     display: block;
-    font-size: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    color: #888;
-    letter-spacing: 1px;
 }
 
-/* 11.4 JAVA */
-pre.java { border-left: 6px solid #f89820; } /* Borda apenas na esquerda fica mais limpo */
-pre.java::before { content: "Java"; }
-
-/* 11.5 C# */
-pre.csharp { border-left: 6px solid #68217a; }
-pre.csharp::before { content: "C#"; }
-
-/* 11.6 PSEUDO */
-pre.pseudo {
-    border-left: 6px solid #6c757d;
+.code span {
+    display: block;
+    counter-increment: line;
 }
-pre.pseudo::before { content: "Pseudocódigo"; }
+
+.code span::before {
+    content: counter(line);
+    display: inline-block;
+    width: 30px;
+    margin-left: -45px;
+    margin-right: 15px;
+    text-align: right;
+    color: #858585;
+}
+
+/* DESTACAR COMENTÁRIOS (multi-linguagem) */
+.code .comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+/* DESTACAR PALAVRAS RESERVADAS */
+.code .keyword { color: #569cd6; }
+.code .type    { color: #4ec9b0; }
+.code .number  { color: #b5cea8; }
+.code .string  { color: #ce9178; }
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .editor {
+        font-size: 12px;
+    }
+    .code span::before {
+        width: 25px;
+        margin-left: -35px;
+        margin-right: 10px;
+    }
+}
+
 
 
 /* 12. VIS CARDS */
@@ -278,6 +307,11 @@ pre.pseudo::before { content: "Pseudocódigo"; }
 
     .content img {
         max-height: 250px;
+    }
+
+    .video-container {
+    border-radius: 8px;
+    margin: 20px 0;
     }
 }
 
@@ -339,4 +373,34 @@ tbody tr:nth-child(even) {
 .table-sem-fundo tbody tr:nth-child(odd),
 .table-sem-fundo tbody tr:nth-child(even) {
     background-color: transparent;
+}
+
+/* 17. VÍDEO */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 17.1 RESPONSIVIDADE */
+.video-container::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* proporção 16:9 */
+}
+
+/* 17.2 IFRAME */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
 }

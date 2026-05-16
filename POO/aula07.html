@@ -81,7 +81,9 @@
         Devido ao comportamento de pertencer à classe e não ao objeto, ele se comporta de forma oposta ao de instância: valores armazenados neles são iguais em todos os objetos criados a partir da classe.
         </p>
 
-        <pre class="java">
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //Java
         class Pessoa {
 
@@ -90,6 +92,7 @@
 
         }
         </pre>
+        </div>
 
         <p>
               Um atributo declarado com a palavra-chave static pertence à classe, não ao objeto. Isso significa que todos os objetos criados compartilham exatamente o mesmo valor. Se um objeto alterar esse valor, todos os outros serão afetados.
@@ -112,7 +115,9 @@
         Por natureza, o método não armazena valores e sim executa uma ação.
         </p>
         
-        <pre class="java">
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //Java
         class Pessoa {
 
@@ -124,11 +129,15 @@
         }
         }
         </pre>
+        </div>
         <p>
             Executado por um objeto específico. Pode acessar e modificar os atributos de instância daquele objeto. Requer que um objeto seja criado antes de ser chamado.
 
         </p>
-        <pre class="csharp">
+        
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //C#
         class Pessoa 
         {
@@ -141,6 +150,7 @@
             }
         }
         </pre>
+        </div>
 
         <h4>Executado pelo Objeto</h4>
         <p>
@@ -149,7 +159,10 @@
         <p>
             Para usá-lo, é necessário criar um objeto primeiro — sem instância, sem chamada.
         </p>
-        <pre >
+        
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
                         class Pessoa {
             String nome;
 
@@ -165,6 +178,7 @@
             p.falar();
             // Saída: "Olá, eu sou Ana"
         </pre>
+        </div>
 
         <h3>Método Estático</h3>
 
@@ -172,9 +186,11 @@
         O método estático pertence à classe e deve ser acessado diretamente através dela.
         </p>
 
-        <pre>
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //Java
-        class Pessoa {
+class Pessoa {
 
         String nome;
         static int quantidadeDeOlhos;
@@ -188,6 +204,7 @@
         }
         }
         </pre>
+        </div>
 
         <blockquote>
             Use membros estáticos com parcimônia.
@@ -205,14 +222,22 @@
         Um exemplo clássico disto é a classe Math, presente tanto em Java como em C#. Ela é uma classe utilitária que possui vários métodos de vários cálculos matemáticos, por exemplo, seno, cosseno, valor absoluto, entre outros. Todos os métodos dessa classe são estáticos. Não seria necessário criar um objeto dela, para, por exemplo, somente saber o seno de um ângulo através do método sin. Basta requisitar de forma livre passando o ângulo desejado.
         </p>
 
-        <pre class="java">
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //Java
         Math.sin(30);
         </pre>
-        <pre class="csharp">
+        </div>
+
+
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
         //C#
         Math.Sin(30);
         </pre>
+        </div>
 
        
 
@@ -307,7 +332,8 @@
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/code-format.js"></script>
 
 </body>
 </html>

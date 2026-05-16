@@ -105,22 +105,21 @@
             Abaixo está um exemplo simples de código para acionar o buzzer no Arduino:
         </p>
 
-        <pre class="code-block"><code>
-        // Define o pino do buzzer
-        int buzzer = 8;
+        <div class="editor">
+        <div class="line-numbers"></div>
+        <pre class="code">
+        int amarelo = 8;
+        int verde = 9;
+        int buzina = 12;
 
-        void setup() {
-            pinMode(buzzer, OUTPUT); // Configura o pino como saída
-        }
+        // Primeiro toque
+        digitalWrite(amarelo, HIGH);
+        digitalWrite(verde, HIGH);
+        tone(buzina, 400);
+        delay(500);
 
-        void loop() {
-            tone(buzzer, 1000); // Emite som de 1000 Hz
-            delay(1000);        // Aguarda 1 segundo
-
-            noTone(buzzer);     // Para o som
-            delay(1000);        // Aguarda 1 segundo
-        }
-        </code></pre>
+        </pre>
+        </div>
     
     <h3>Fazendo múscia com o Buzzer!</h3>
     
@@ -186,20 +185,23 @@
         Agora você irá usar o Arduino para tocar a cantiga infantil “Dó, Ré, Mi, Fá”. Utilize os valores mostrados na tabela abaixo para alterar as notas musicais e mãos à obra!
     </p>
     <p>
-        Use o link a seguir para ouvir a música <a href="https://www.youtube.com/watch?v=WqNEG-qqUnk">https://www.youtube.com/watch?v=WqNEG-qqUnk</a>
+        Ouça a música no Youtube.
     </p>
-    <p>
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/watch?v=WqNEG-qqUnk"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <pre>
         Dó, Ré, Mi, Fá, Fá, Fá
-    </p>
-    <p>
         Dó, Ré, Dó, Ré, Ré, Ré
-    </p>
-    <p>
         Dó, sol, Fá, Mi, Mi, Mi
-    </p>
-    <p>
         Dó, Ré, mi, Fá, Fá, Fá
-    </p>
+    </pre>
 
     <h3>Importância no Aprendizado</h3>
 
@@ -280,7 +282,9 @@
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/code-format.js"></script>
+
 
 </body>
 </html>

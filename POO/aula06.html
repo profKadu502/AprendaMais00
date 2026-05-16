@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/disciplina.css">
 <link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/components.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -65,29 +66,40 @@
 
         <h4>Adicionando atributos</h4>
 
-        <pre class="pseudo">
-c1 = nova Caneta
-c1.cor="Azul”
-c1.ponta=0.5
-c1.tampada=falso
-        </pre>
+        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code pseudo">
+        c1 = nova Caneta
+        c1.cor="Azul"
+        c1.ponta=0.5
+        c1.tampada=falso
+            </pre>
+        </div>
 
-        <p>C1 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
+        <div class="exp-auto">
+        C1 = NOME DO OBJETO
+        CANETA = NOME DA CLASSE
+        COR, PONTA, TAMPADA = ATRIBUTOS
+        </div>
+
 
         <h4>Chamando um método</h4>
 
-        <pre class="pseudo">
+        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code pseudo">
 c1 = nova Caneta
 c1.cor="Azul”
 c1.ponta=0.5
 c1.tampada=falso
 c1.rabiscar()
         </pre>
+        </div>
 
-        <p>C1 = NOME DO OBJETO</p>
-        <p>RABISCAR() = MÉTODO</p>
+        <div class="exp-auto">
+        C1 = NOME DO OBJETO
+        RABISCAR() = MÉTODO
+        </div>
 
         <p>
             Vamos continuar adicionando atributos no objeto
@@ -124,38 +136,43 @@ c1.rabiscar()
 
         <h4>Objeto c1 — Caneta Azul</h4>
 
-        <pre class="pseudo">
+                <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code pseudo">
 c1 = nova Caneta
 c1.cor="Azul”
 c1.ponta=0.5
 c1.tampada=falso
 c1.rabiscar()
         </pre>
+        </div>
 
-        <p>C1 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-        <p>RABISCAR() = MÉTODO</p>
+        <div class="exp-auto">
+        C1 = NOME DO OBJETO
+        CANETA = NOME DA CLASSE
+        COR, PONTA, TAMPADA = ATRIBUTOS
+        RABISCAR() = MÉTODO
+        </div>
 
         <h4>Objeto c2 — Caneta Vermelha</h4>
 
-        <pre>
+                <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code pseudo">
 c2 = nova Caneta
 c2.cor="Vermelho”
 c2.ponta=1.0
 c2.tampada=falso
 c2.tampar()
         </pre>
+        </div>
 
-        <p>C2 = NOME DO OBJETO</p>
-        <p>CANETA = NOME DA CLASSE</p>
-        <p>COR, PONTA, TAMPADA = ATRIBUTOS</p>
-        <p>TAMPAR() = MÉTODO</p>
-
-        <figure>
-            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="Vários códigos">
-            <figcaption>Múltiplos objetos coexistindo em um sistema</figcaption>
-        </figure>
+        <div class="exp-auto">
+        C2 = NOME DO OBJETO
+        CANETA = NOME DA CLASSE
+        COR, PONTA, TAMPADA = ATRIBUTOS
+        TAMPAR() = MÉTODO
+        </div>
 
         <h3>Resumo: Classe vs. Objeto</h3>
 
@@ -243,7 +260,10 @@ c2.tampar()
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/code-format.js"></script>
+<script src="../js/component.js"></script>
+
 
 </body>
 </html>

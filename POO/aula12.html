@@ -59,11 +59,12 @@
             O uso indiscriminado desses métodos pode ferir o encapsulamento, agindo como uma "quebra de blindagem" do estado interno. Permitir que o estado seja alterado livremente de fora via <strong>set</strong> pode levar a comportamentos adversos e é comparado a programar de forma estruturada dentro da Orientação a Objetos.
         </p>
         <h3>O Método Get</h3>
-        <pre class="pseudo">
-            <code>
+        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code pseudo">
                 e = nova Estante
-            </code>
         </pre>
+        </div>
         <p>
             De acordo com o que vimos anterioremente a linha de código acima está instanciando um objeto. Desta forma sabemos que já existe uma classe chamada Estante. 
         </p>
@@ -91,12 +92,13 @@
         <p>
             Bem, voltando ao nosso objeto Estante vamos fazer um exercício mental: uma pessoa chegou perto da estante e vê que tem vários documentos e livros, esta pessoa quer saber quantos dos documentos desta estante são dela. Para isso vamos criar o atributo:
         </p>
-        <pre class="pseudo">
-            <code>
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
                 e = nova Estante
-                <mark>t = e.totDoc</mark>
-            </code>
+                t = e.totDoc
         </pre>
+        </div>
         <p>
             Aqui no exemplo a pessoa usou o atributo <i>totDoc</i> e descobriu que tem 5 documentos dele. 
         </p>
@@ -140,19 +142,23 @@
             Desta forma não damos acesso direto ao atributo e isso garante uma segurança adicional. Se compararmos as duas formas de fazer percebemos podemos perceber uma coisa dentre as duas formas, a segunda não é mais difícil de fazer porém é bem mais segura já que a primeira permite acesso direto ao atributo.
         </p>
         <h4>Forma 1</h4>
-        <pre class="pseudo">
-            <code>
+<div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
                 e = nova Estante
                 t = e.TotDoc
-            </code>
+
         </pre>
+        </div>
+
         <h4>Forma 2</h4>
-        <pre class="pseudo">
-            <code>
+<div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
                 e = nova Estante
                 t = e.getTotDoc()
-            </code>
         </pre>
+        </div>
 
         <p>
             Sendo assim, chegamos à conclusão de que Métodos Acessores conseguem acessar determinado atributo mantendo a segurança de acesso à ele.
@@ -164,11 +170,13 @@
             Utilizando a mesma situação anterior, o mesmo exemplo onde temos a estatnte e uma das pessoas possui 5 documentos. Digamos que esta pessoa queira acrescentar um documento à estante.
         </p>
 
-        <pre class="pseudo">
-            <code>
+<div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
                 e = nova Estante
-                <mark>e.TotDoc = e.TotDoc + 1 </mark>
+                e.TotDoc = e.TotDoc + 1 
         </pre>
+        </div>
         <p>
             Pela lógica, poderíamos utilizar esta formula e ela seria funcional. Porém, quando pensamos que a outra pessoa poderá acessar a estante e insrir também novos documentos, tendo acesso direto à estante este processo não será de forma nenhuma seguro e nem organizado.
         </p>
@@ -177,11 +185,14 @@
             Faremos o seguinte,como no exemplo anterior, não iremos interagir diretamente com o objeto e o atributo. Teremos um intermediários e ao invés de passar o atributo diretamente para o objeto iremos passar para o método. 
         </p>
 
-        <pre class="pseudo">
-            <code>
+        <div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code pseudo">
                 e = nova Estante
-                <mark>e.setTotDoc(doc)</mark>
+                e.setTotDoc(doc)
         </pre>  
+        </div>
+
         <p>
             Com isso teremos mais segurança e mais organização. É claro que o método terá também vários métodos internos para organizar a ordem (seja alfabética ou não), verificar a localização, a pasta do usuário, etc. 
         </p>  
@@ -287,7 +298,8 @@
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/code-format.js"></script>
 
 </body>
 </html>

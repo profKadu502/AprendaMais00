@@ -71,18 +71,44 @@
 }
 
 
-/* 5. EXPLICAÇÃO (NEUTRO MODERNO) */
+/* 5. EXPLICAÇÃO (NEUTRO LIMPO, SEM ÍCONE E SEM BORDA) */
 .info-box.explicacao {
+    display: block;          /* remove alinhamento do ícone */
     background: #ffffff;
-    border: 1px solid #7a7676;
-    border-left: 5px solid #444;
     color: #222;
-    border-radius: 15px;
+
+    border: none;            /* remove borda externa */
+    border-left: none;       /* remove borda lateral */
+
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 18px 0;
+
     text-align: justify;
 }
 
-
-/* 5.1 ÍCONE */
+/* remove completamente o ícone */
 .info-box.explicacao::before {
-    content: "📘";
+    content: "";
+    display: none;
+}
+
+/* espaçamento entre linhas internas */
+.info-box.explicacao p {
+    margin: 4px 0;
+}
+
+
+/* 6. ESTILOS DAS EXPLICAÇÕES (CHAVE E DESCRIÇÃO) */
+.exp-key {
+    font-family: Consolas, Monaco, monospace;
+    background: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.exp-desc {
+    color: #444;
+    font-weight: 400;
 }

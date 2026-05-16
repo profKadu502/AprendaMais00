@@ -1,0 +1,148 @@
+/* 11. CÓDIGO */ primeira versao
+
+pre.java,
+pre.csharp,
+pre.pseudo {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 16px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    border: 1px solid #2d2d2d;
+    white-space: pre;
+}
+
+/* 11.1 ESTILIZAÇÃO INTERNA */
+pre.java .comentario,
+pre.csharp .comentario,
+pre.pseudo .comentario {
+    color: #6a9955;
+    font-style: italic;
+    font-family: monospace;
+}
+
+/* 11.2 SEPARAÇÃO */
+pre.java + pre.java,
+pre.csharp + pre.csharp,
+pre.pseudo + pre.pseudo {
+    margin-top: 30px;
+}
+
+/* 11.3 LABEL GERAL */
+pre.java::before,
+pre.csharp::before,
+pre.pseudo::before {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+/* 11.4 JAVA */
+pre.java {
+    border-left: 6px solid #f89820;
+}
+
+pre.java::before {
+    content: "Java";
+}
+
+/* 11.5 C# */
+pre.csharp {
+    border-left: 6px solid #68217a;
+}
+
+pre.csharp::before {
+    content: "C#";
+}
+
+/* 11.6 PSEUDOCÓDIGO */
+pre.pseudo {
+    border-left: 6px solid #6c757d;
+}
+
+pre.pseudo::before {
+    content: "Pseudocódigo";
+}
+
+
+/* CÓDIGOS  SEGUNDA VERSAO*/
+/* CONTAINER GERAL */
+.editor {
+    background: #1e1e1e;
+    border: 1px solid #2d2d2d;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+}
+
+/* COLUNA DE LINHAS */
+.line-numbers {
+    background: #252526;
+    color: #858585;
+    padding: 10px 12px;
+    text-align: right;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* ÁREA DO CÓDIGO */
+.code {
+    margin: 0;
+    padding: 10px 15px;
+    color: #d4d4d4;
+    white-space: pre;
+    overflow-x: auto;
+    flex: 1;
+    line-height: 1.45;
+}
+
+/* GERAR LINHAS AUTOMÁTICAS */
+.editor {
+    counter-reset: line;
+}
+
+.code {
+    display: block;
+}
+
+.code span {
+    display: block;
+    counter-increment: line;
+}
+
+.code span::before {
+    content: counter(line);
+    display: inline-block;
+    width: 30px;
+    margin-left: -45px;
+    margin-right: 15px;
+    text-align: right;
+    color: #858585;
+}
+
+/* DESTACAR COMENTÁRIOS (multi-linguagem) */
+.code .comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .editor {
+        font-size: 12px;
+    }
+    .code span::before {
+        width: 25px;
+        margin-left: -35px;
+        margin-right: 10px;
+    }
+}

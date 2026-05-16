@@ -157,7 +157,9 @@
         <p>
             Partimos agora para a criação da classe Java na IDE. Na verdade o que vamos fazer agora é criar a classe "Caneta" como vimos nas primeiras aulas com seus atributos e métodos que foram exemplificados nas aulas anteriores.
         </p>
-        <pre class="pseudo">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             Classe Caneta
                 modelo: caractere
                 cor: caractere
@@ -176,6 +178,7 @@
             FimClasse
 
         </pre>
+        </div>
         <p>Para isso vamos clicar com o botão direito no pacote e seguir os passos:</p>
         <ul>
             <li>Novo</li>
@@ -190,7 +193,10 @@
         </figure> 
         <p>Agora vamos criar os atributos e métodos da classe Caneta. Criamos os atributos lembrando de especificar o tipo de de dado cada um deles.</p>
         <p>Na criação dos métodos iniciamos com a palavra void (que significa sem retorno), lembrando de colocar parênteses para cada método criado.</p>
-        <pre class="java">
+
+                                <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package aula02;
             public class Caneta {
                 /* Atributos */
@@ -215,6 +221,7 @@
                 }
             }
         </pre>
+        </div>
         <p>
             A partir de agora já temos nossa classe Caneta e podemos utilizar ela dentro do pacote. 
         </p>
@@ -231,7 +238,9 @@
         <p> 
             Podemos usar a classe principal que foi criada automaticamente pelo Netbeans para, dentro dela instanciar um objeto (Caneta). 
         </p>
-        <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -239,6 +248,7 @@
                 }
             }
         </pre>
+        </div>
 
         <figure>
             <img src="../imagens/novoObjeto.png" alt="classe principal">
@@ -248,13 +258,18 @@
         <p>
             Instanciamos um objeto definindo que a classe recebe o objeto e o objeto é um novo objeto dentro da classe.
         </p>
-        <pre class="pseudo">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
         Caneta c1 = new Caneta();
         </pre>
+        </div>
         <p> 
             Em Java temos:
         </p>
-        <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -262,6 +277,7 @@
                 }
             }
         </pre>
+        </div>
         <p>
             Agora temos o objeto c1 que é um objeto caneta instanciado. 
         </p>
@@ -273,8 +289,9 @@
         <p> 
             Depois que o objeto é instanciado podemos dar valores aos atributos. No nosso exemplo temos a caneta com os atributos modelo, cor, ponta e tampada que recebe um valor booleano. Fazemos estas alterações também dentro da classe principal.
         </p>
-
-        <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -285,6 +302,7 @@
                 }
             }
         </pre>
+        </div>
 
         <p> 
             A estrutura de cada elemento é esta:
@@ -328,29 +346,37 @@
                 Esta foi a chamada para o método status. Uma característica que difere o método dos atributos são os parênteses que devem ser inseridos mesmo que o método não tenha nenhum parâmetro. Abaixo iremos incluir parâmetros para o método status. 
             </p>
 
-            <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
                 void status(){
                     System.out.print ("Uma caneta " + this.cor);
                 }
             </pre>
+            </div>
             <p>
                 O "this" é uma autoreferência. Desta forma, quem chamou o método status será substituído por "this". O "this" é o nome do objeto que chamou. Sempre que quiser modificar algum atributo dentro da própria classe utilize a palavra "this". 
             </p>
             <p> 
                 Vamos acrescentar mais detalhes de atributos do nosso objeto e executar novamente:
             </p>
-            <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
                 void status(){
                     System.out.print ("Uma caneta " + this.cor);
                     System.out.println (" está tampada? " + this.tampada);
                 }
             </pre>
+            </div>
             <figure>
                 <img src="../imagens/resultadodaExecucao.png" alt="executandoNovamente">
                 <figcaption>Executando novamente</figcaption>
             </figure> 
             <h4>Vamos acrescentar mais atributos?</h4>
-            <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
                 void status() {
                     System.out.println ("Modelo: " + this.modelo);
                     System.out.println ("Uma caneta " + this.cor);
@@ -359,11 +385,14 @@
                     System.out.println ("Está tampada? " this.tampada);
                 }
             </pre>
+            </div>
             <h4>Trabalhando com os métodos</h4>
             <p>
                 Agora vamos definir os parâmetros para os métodos tampar e destampar. Na classe Aula02 vamos alterar o atributo tampada para que ele se torne um método:
             </p>
-            <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
                 package Aula02;
                 public class Aula02 {
                     public static void main (String[] args){
@@ -375,7 +404,10 @@
                     }
                 }
             </pre>
-            <pre class="java">
+            </div>
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
                 void tampar(){
                     this.tampada = true;
                 }
@@ -384,13 +416,16 @@
                     this.tampada = false;
                 }
             </pre>
+            </div>
             <p>
                 Vamos definir alguns parâmetros para o método rabiscar e veremos agora algumas interações interessantes. 
             </p>
             <p>
                 Para rabiscar com uma caneta primeiro devemos observar se ela está destampada, senão você não poderá rabicar. Vamos então definir isto no nosso código. Lembre-se de chamar o método rabiscar() na classe principal.    
             </p>
-            <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
                 void rabiscar(){
                     if (this.tampada==true){
                         System.out.println("ERRO! Não posso rabiscar!");
@@ -399,6 +434,7 @@
                     }
                 }
             </pre>
+            </div>
             <p>
                 Quando executamos nosso código percebemos que ele retornou uma mensagem de erro. O motivo desta mensagem foi exatamente o que definimos anteriormente. Se a caneta estiver tampada a mensagem de erro será exibida. Senão a mensagem que será mostrada será a seguinte: "Estou rabiscando."
             </p>
@@ -408,7 +444,9 @@
             <p>
                 Vamos criar um novo objeto e fazer alguns testes com novos valores de atributos agora. Mantenha os valores atuais do objeto c1 e trabalhe apenas com os atributos do novo objeto.
             </p>
-            <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -425,6 +463,7 @@
                 }
             }
             </pre>
+            </div>
 
 
         <a href="#topo">⬆ Voltar ao topo</a>
@@ -445,7 +484,9 @@
             <img src="../imagens/pacote.png" alt="pacote">
             <figcaption>Exemplo</figcaption>
         </figure> 
-            <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -454,6 +495,7 @@
                 }
             }
             </pre>
+            </div>
         
         <p>
             Se executarmos o que temos agora veremos que será mostrada uma tela com os resultados todos zerados pois os valores dos atributos  foram todos apagados. 
@@ -485,8 +527,9 @@
                 </td>
             </tr>
         </table>
-
-            <pre class="pseudo">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             Classe Caneta
             publico modelo: Caractere
             publico cor: Caractere
@@ -501,6 +544,7 @@
                         FimMetodo
                 FimClasse
             </pre>
+            </div>
         
         <p>
             A partir daqui vamos definir o Netbeans a visibilidade dos nossos atributos e métodos dentro da classe Caneta. Como já temos os atributos e métodos definidos no arquivo da classe Caneta só é necessário inserir o tipo de visibilidade de cada um deles. 
@@ -519,7 +563,9 @@
         <p>
             Na nossa classe principal havíamos apagado o código que tínhamos anteriormente e deixamos apenas a criação do objeto Caneta e o método status(). Vamos tentar fazer uma alteraçao no atributo "modelo" que está com a visibilidade pública.
         </p>
-        <pre class="java">
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -529,14 +575,17 @@
                 }
             }
         </pre>
+        </div>
             <p>
                 Vamos agora testar se será possível fazer a alteração. Clique no botão executar e perceba que agora o modelo da caneta foi alterado. Isso acontece porque a visibilidade do atributo modelo foi definido como público.
             </p>
             <p>
                 Alteraremos agora o atributo "ponta".
             </p>
-        <pre class="java">
-            <code>
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
+
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -546,13 +595,16 @@
                     c1.status();
                 }
             }
-            </code>
+
         </pre>
+        </div>
         <p>
             Podemos perceber que o atributo cor também pode ser alterado sem nenhum problema. Vamos agora tentar alterar o atributo ponta.
         </p>
-        <pre class="java">
-            <code>
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
+
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -563,8 +615,9 @@
                     c1.status();
                 }
             }
-            </code>
+
         </pre>
+        </div>
         <p>
             Quando tentamos modificar o atributo ponta o próprio Netbeans já mostra uma mensagem de errro. Um ícone com uma lâmpada e uma exclamação em vermelho aparecem ao lado da linha do atributo. Isto acontece porque o atributo ponta possui acesso privado dentro da classe Caneta. Esta mensagem aparece ao lado do código quando posicionamos o cursor em cima do ícone. Mas se clicarmos em "Executar" o Netbeans irá mostrar outra mensagem de erro dizendo que: "Um ou mais projetos foram compilados com erros."
         </p>
@@ -572,8 +625,9 @@
             Vamos comentar a linha com o atributo ponta, já que deu erro e depois trabalhar com outros atributos: carga e tampada, os dois são protegidos. Quando chamamos estes atributos o programa mostra uma "chave" pois são protegidos, mas permite a utilização dos mesmos. 
         </p>
 
-        <pre class="java">
-            <code>
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -588,16 +642,19 @@
 
                 }
             }
-            </code>
+     
         </pre>
+                        </div>
         <p>
             Se observarmos bem, o método que estamos executando (o main) está dentro de uma classe que está utilizando a classe Caneta. Por isso é permitido alterar o atributo protegido. Salvando e executando veremos o resultado.
         </p>
         <p>
             Em resumo no método main não podemos alterar os atributos e métodos privados. Vamos fazer um outro teste alterando o método rabiscar.
         </p>
-        <pre class="java">
-            <code>
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
+
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -613,16 +670,18 @@
 
                 }
             }
-            </code>
+
         </pre>
+        </div>
         <p>
             Não poderemos trabalhar com o método rabiscar porque ele é privado, o Netbeans não permitirá utilizar um método privado fora da classe. Mas vamos alterar a visibilidade no código da classe para poder utilizar. Vamos alterar também a visibilidade dos métodos tampar e destampar.
         </p>
         <p>
             Após isto vamos chamar na classe main o método destampar:
         </p>
-        <pre class="java">
-            <code>
+                        <div class="editor">
+            <div class="line-numbers"></div>
+            <pre class="code">
             package Aula02;
             public class Aula02 {
                 public static void main (String[] args){
@@ -638,8 +697,9 @@
 
                 }
             }
-            </code>
+        
         </pre>
+        </div>
         <h4>Compreendendo as diferenças de visibilidade</h4>
         <p>
             Agora que testamos podemos ter uma compreensão melhor, ou não, das diferenças de visibilidade dos atributos e métodos. 
@@ -695,7 +755,8 @@
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/code-format.js"></script>
 
 </body>
 </html>
