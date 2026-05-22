@@ -1,0 +1,256 @@
+/* =========================================
+ARQUIVO: quiz.css
+CSS ESPECÍFICO PARA ATIVIDADES
+========================================= */
+
+/* 1. ÁREA DO QUIZ */
+.quiz-container{
+    margin-top: 30px;
+}
+
+/* 2. PROGRESSO */
+.quiz-progress{
+    margin-bottom: 25px;
+    padding: 12px 16px;
+
+    background: #f5f7fb;
+    border-left: 4px solid #0d6efd;
+    border-radius: 8px;
+
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* 3. CAIXA DA QUESTÃO */
+.question-box{
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.04);
+
+    margin-bottom: 30px;
+}
+
+/* 4. ENUNCIADO */
+.question{
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #111827;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+/* 5. ALTERNATIVAS */
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* 5.1 ALTERNATIVA */
+.option{
+    padding: 15px 18px;
+
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* 5.2 HOVER */
+.option:hover{
+    background: #f8fafc;
+    border-color: #0d6efd;
+
+    transform: translateY(-1px);
+}
+
+/* 5.3 CORRETA */
+.option.correct{
+    background: #dcfce7;
+    border-color: #22c55e;
+
+    color: #166534;
+    font-weight: 600;
+}
+
+/* 5.4 ERRADA */
+.option.wrong{
+    background: #fee2e2;
+    border-color: #ef4444;
+
+    color: #991b1b;
+    font-weight: 600;
+}
+
+/* 6. FEEDBACK */
+.feedback{
+    margin-top: 22px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* 6.1 TEXTO FEEDBACK */
+.feedback.correct{
+    color: #15803d;
+}
+
+.feedback.wrong{
+    color: #b91c1c;
+}
+
+/* 7. BOTÃO */
+.quiz-button{
+    margin-top: 25px;
+
+    background: #0d6efd;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 22px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* 7.1 HOVER BOTÃO */
+.quiz-button:hover{
+    background: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+/* 8. HIDDEN */
+.hidden{
+    display: none;
+}
+
+/* 9. RESULTADO */
+.result-box{
+    margin-top: 35px;
+}
+
+/* 9.1 NOTA */
+.score{
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #0d6efd;
+}
+
+/* 10. RESUMO */
+.summary{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 10.1 ITEM DO RESUMO */
+.summary li{
+    margin-bottom: 25px;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    line-height: 1.8;
+}
+
+/* 10.2 RESPOSTA CORRETA */
+.summary .correct-answer{
+    color: #15803d;
+    font-weight: 700;
+}
+
+/* 10.3 RESPOSTA ERRADA */
+.summary .wrong-answer{
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+/* 11. MOBILE */
+@media (max-width: 768px){
+
+    .question-box{
+        padding: 18px;
+    }
+
+    .question{
+        font-size: 18px;
+    }
+
+    .option{
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .score{
+        font-size: 24px;
+    }
+
+}
+
+/* BOTÃO VOLTAR */
+
+.top-actions{
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 25px auto 0 auto;
+
+    padding: 0 15px;
+}
+
+.btn-voltar{
+    display: inline-block;
+
+    background: #0d6efd;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-voltar:hover{
+    background: #0b5ed7;
+    transform: translateY(-1px);
+}

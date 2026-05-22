@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividade – Montar Tag HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/questoes.css">
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.quiz-container{
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.question-box{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.quiz-progress{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.question{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.drop-area{
+    min-height: 90px;
+    border: 3px dashed #0d6efd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f8fbff;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.tag-piece{
+    background: #0d6efd;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: grab;
+    user-select: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.tag-piece:hover{
+    transform: scale(1.05);
+}
+
+.pieces-container{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.quiz-button{
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.quiz-button:hover{
+    opacity: 0.9;
+}
+
+.feedback{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.correct{
+    color: green;
+}
+
+.wrong{
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+.top-actions{
+    margin: 20px;
+}
+
+.btn-voltar{
+    text-decoration: none;
+    background: #444;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Atividade Interativa</h1>
+    <p>Arraste as peças para montar a tag HTML</p>
+</header>
+
+<div class="top-actions">
+    <a href="html-aula01.html" class="btn-voltar">
+        ← Voltar para a aula
+    </a>
+</div>
+
+<div class="quiz-container">
+
+    <div class="quiz-progress" id="progressText">
+        Questão 1 de 20
+    </div>
+
+    <div class="question-box">
+
+        <div class="question" id="questionText">
+            Monte corretamente a tag: <strong>html</strong>
+        </div>
+
+        <div class="drop-area" id="dropArea"></div>
+
+        <div class="pieces-container" id="piecesContainer"></div>
+
+        <button class="quiz-button" onclick="checkAnswer()">
+            Verificar
+        </button>
+
+        <div class="feedback" id="feedback"></div>
+
+        <button
+            class="quiz-button hidden"
+            id="nextButton"
+            onclick="nextQuestion()">
+            Próxima questão →
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+// ==========================================
+// QUESTÕES
+// ==========================================
+const questions = [
+    "html",
+    "head",
+    "body",
+    "title",
+    "meta",
+    "link",
+    "script",
+    "header",
+    "footer",
+    "main",
+    "section",
+    "article",
+    "nav",
+    "div",
+    "span",
+    "h1",
+    "p",
+    "img",
+    "a",
+    "ul"
+];
+
+let current = 0;
+
+// ==========================================
+// CARREGAR QUESTÃO
+// ==========================================
+function loadQuestion(){
+
+    const tag = questions[current];
+
+    document.getElementById("questionText").innerHTML =
+        `Monte corretamente a tag: <strong>${tag}</strong>`;
+
+    document.getElementById("progressText").innerHTML =
+        `Questão ${current + 1} de ${questions.length}`;
+
+    const feedback = document.getElementById("feedback");
+    feedback.innerHTML = "";
+    feedback.className = "feedback";
+
+    document.getElementById("nextButton")
+        .classList.add("hidden");
+
+    const dropArea = document.getElementById("dropArea");
+    dropArea.innerHTML = "";
+
+    const piecesContainer =
+        document.getElementById("piecesContainer");
+
+    piecesContainer.innerHTML = "";
+
+    // peças da tag
+    const pieces = [
+        "&lt;",
+        tag,
+        "&gt;"
+    ];
+
+    // embaralhar
+    pieces.sort(() => Math.random() - 0.5);
+
+    pieces.forEach(text => {
+
+        const piece = document.createElement("div");
+
+        piece.classList.add("tag-piece");
+
+        piece.innerHTML = text;
+
+        piece.draggable = true;
+
+        piece.id =
+            "piece-" +
+            Math.random().toString(16).slice(2);
+
+        piece.addEventListener(
+            "dragstart",
+            dragStart
+        );
+
+        piecesContainer.appendChild(piece);
+    });
+}
+
+// ==========================================
+// DRAG
+// ==========================================
+function dragStart(event){
+
+    event.dataTransfer.setData(
+        "id",
+        event.target.id
+    );
+}
+
+// ==========================================
+// DROP AREA
+// ==========================================
+const dropArea = document.getElementById("dropArea");
+
+dropArea.addEventListener(
+    "dragover",
+    event => {
+        event.preventDefault();
+    }
+);
+
+dropArea.addEventListener(
+    "drop",
+    event => {
+
+        event.preventDefault();
+
+        const pieceId =
+            event.dataTransfer.getData("id");
+
+        const piece =
+            document.getElementById(pieceId);
+
+        dropArea.appendChild(piece);
+    }
+);
+
+// ==========================================
+// VERIFICAR
+// ==========================================
+function checkAnswer(){
+
+    const pieces =
+        dropArea.querySelectorAll(".tag-piece");
+
+    let result = "";
+
+    pieces.forEach(piece => {
+        result += piece.textContent;
+    });
+
+    const correct =
+        `<${questions[current]}>`;
+
+    const feedback =
+        document.getElementById("feedback");
+
+    if(result === correct){
+
+        feedback.innerHTML =
+            "✔ Parabéns! Você montou corretamente.";
+
+        feedback.className =
+            "feedback correct";
+
+        document.getElementById("nextButton")
+            .classList.remove("hidden");
+
+    }else{
+
+        feedback.innerHTML =
+            "✘ A ordem está incorreta.";
+
+        feedback.className =
+            "feedback wrong";
+    }
+}
+
+// ==========================================
+// PRÓXIMA QUESTÃO
+// ==========================================
+function nextQuestion(){
+
+    current++;
+
+    if(current >= questions.length){
+
+        alert("Atividade concluída!");
+
+        current = 0;
+
+        loadQuestion();
+
+        return;
+    }
+
+    loadQuestion();
+}
+
+// ==========================================
+// INICIAR
+// ==========================================
+loadQuestion();
+</script>
+
+</body>
+</html>

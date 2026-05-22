@@ -1,0 +1,351 @@
+<!-- ARQUIVO: atividade-processador.html  -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Atividades - O Processador</title>
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/questoes.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<header>
+    <h1>Atividades - Aula 04</h1>
+    <p>O Processador</p>
+</header>
+
+<div class="container">
+
+    <div id="quiz-container">
+
+        <div class="progress" id="progress"></div>
+
+        <div class="question-box">
+
+            <div class="question" id="question"></div>
+
+            <div class="options" id="options"></div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <button id="nextBtn" class="hidden">
+                Próxima questão
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="result-container" class="hidden result-box">
+
+        <h2>Resultado Final</h2>
+
+        <div class="score" id="score"></div>
+
+        <h3>Resumo das questões:</h3>
+
+        <ul class="summary" id="summary"></ul>
+
+    </div>
+
+</div>
+
+<script>
+
+const questions = [
+
+{
+    question: "1. Qual componente é conhecido como o 'cérebro do computador'?",
+    options: [
+        "Memória RAM",
+        "Processador",
+        "Placa de vídeo",
+        "HD"
+    ],
+    answer: 1
+},
+
+{
+    question: "2. O processador é instalado diretamente em qual componente?",
+    options: [
+        "Fonte",
+        "Gabinete",
+        "Placa-mãe",
+        "SSD"
+    ],
+    answer: 2
+},
+
+{
+    question: "3. Qual empresa fabrica os processadores Ryzen?",
+    options: [
+        "Intel",
+        "NVIDIA",
+        "AMD",
+        "Apple"
+    ],
+    answer: 2
+},
+
+{
+    question: "4. Processadores intermediários são recomendados principalmente para:",
+    options: [
+        "Somente navegação na internet",
+        "Jogos e edição de imagens",
+        "Apenas servidores",
+        "Uso exclusivo de escritório"
+    ],
+    answer: 1
+},
+
+{
+    question: "5. O que significa 'core' em um processador?",
+    options: [
+        "Cooler",
+        "Memória",
+        "Núcleo",
+        "Soquete"
+    ],
+    answer: 2
+},
+
+{
+    question: "6. Um processador quad-core possui quantos núcleos?",
+    options: [
+        "2",
+        "4",
+        "6",
+        "8"
+    ],
+    answer: 1
+},
+
+{
+    question: "7. O que o Hyper-Threading faz?",
+    options: [
+        "Aumenta a memória RAM",
+        "Diminui o clock",
+        "Simula núcleos adicionais",
+        "Desliga núcleos do processador"
+    ],
+    answer: 2
+},
+
+{
+    question: "8. O soquete é:",
+    options: [
+        "A velocidade do processador",
+        "O tipo de conexão física com a placa-mãe",
+        "Uma memória interna",
+        "O sistema operacional"
+    ],
+    answer: 1
+},
+
+{
+    question: "9. A memória cache do processador é:",
+    options: [
+        "Uma memória ultrarrápida",
+        "Uma placa de vídeo",
+        "Um cooler",
+        "Uma fonte de alimentação"
+    ],
+    answer: 0
+},
+
+{
+    question: "10. Atualmente, o termo correto para vídeo dentro do processador é:",
+    options: [
+        "Vídeo on-board",
+        "Placa de vídeo integrada",
+        "Vídeo integrado",
+        "GPU externa"
+    ],
+    answer: 2
+}
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+let answeredQuestions = [];
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const feedbackElement = document.getElementById("feedback");
+const nextBtn = document.getElementById("nextBtn");
+const progressElement = document.getElementById("progress");
+
+function loadQuestion(){
+
+    feedbackElement.innerHTML = "";
+    nextBtn.classList.add("hidden");
+
+    const q = questions[currentQuestion];
+
+    progressElement.innerHTML =
+        `Questão ${currentQuestion + 1} de ${questions.length}`;
+
+    questionElement.innerHTML = q.question;
+
+    optionsElement.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+
+        const div = document.createElement("div");
+
+        div.classList.add("option");
+
+        div.innerHTML = option;
+
+        div.addEventListener("click", () =>
+            checkAnswer(index, div)
+        );
+
+        optionsElement.appendChild(div);
+
+    });
+
+}
+
+function checkAnswer(selected, element){
+
+    const q = questions[currentQuestion];
+
+    const allOptions = document.querySelectorAll(".option");
+
+    allOptions.forEach(opt => {
+        opt.style.pointerEvents = "none";
+    });
+
+    const isCorrect = selected === q.answer;
+
+    if(isCorrect){
+
+        element.classList.add("correct");
+
+        feedbackElement.innerHTML =
+            "✅ Resposta correta!";
+
+        score++;
+
+    }else{
+
+        element.classList.add("wrong");
+
+        feedbackElement.innerHTML =
+            "❌ Resposta incorreta.";
+
+    }
+
+    answeredQuestions.push({
+
+        question: q.question,
+
+        selectedOption: q.options[selected],
+
+        correctOption: q.options[q.answer],
+
+        isCorrect: isCorrect
+
+    });
+
+    nextBtn.classList.remove("hidden");
+
+}
+
+nextBtn.addEventListener("click", () => {
+
+    currentQuestion++;
+
+    if(currentQuestion < questions.length){
+
+        loadQuestion();
+
+    }else{
+
+        showResults();
+
+    }
+
+});
+
+function showResults(){
+
+    document.getElementById("quiz-container")
+        .classList.add("hidden");
+
+    document.getElementById("result-container")
+        .classList.remove("hidden");
+
+    const finalScore =
+        ((score / questions.length) * 10).toFixed(1);
+
+    document.getElementById("score").innerHTML =
+        `Nota final: ${finalScore} / 10`;
+
+    const summary = document.getElementById("summary");
+
+    summary.innerHTML = "";
+
+    answeredQuestions.forEach((item, index) => {
+
+        const li = document.createElement("li");
+
+        li.style.marginBottom = "20px";
+
+        li.innerHTML = `
+
+            <strong>
+                Questão ${index + 1}:
+            </strong>
+            ${item.question}
+
+            <br><br>
+
+            <strong>Alternativa marcada:</strong>
+
+            <span style="
+                color:${item.isCorrect ? 'green' : 'red'};
+                font-weight:bold;
+            ">
+                ${item.selectedOption}
+            </span>
+
+        `;
+
+        summary.appendChild(li);
+
+    });
+
+}
+
+loadQuestion();
+
+</script>
+<div class="top-actions">
+
+    <a href="aula04.html" class="btn-voltar">
+        ← Voltar para a aula
+    </a>
+
+</div>
+</body>
+</html>

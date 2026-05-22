@@ -123,7 +123,7 @@ h2 {
 .card {
     background: white;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 5px;
     transition: 0.3s;
     border: 1px solid #eee;
     position: relative;
