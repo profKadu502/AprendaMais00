@@ -404,3 +404,58 @@ tbody tr:nth-child(even) {
 
     border: 0;
 }
+
+/* 18. ALGORITMO MINIMALISTA E COMPACTO */
+.algoritmo-minimal {
+    margin: 18px 0;
+    padding: 10px 0 10px 15px;
+    border-left: 2px solid #0d6efd; /* Linha fina guia lateral */
+    max-width: 650px; /* Largura mais contida para não espalhar na tela */
+}
+
+/* Título curto e discreto */
+.algoritmo-min-titulo {
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+}
+
+/* Lista limpa */
+.algoritmo-min-passos {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    counter-reset: passo-min;
+}
+
+/* Passos compactos */
+.algoritmo-min-passos li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 4px; /* Espaçamento vertical bem reduzido */
+    color: #333;
+    font-size: 14px; /* Fonte menor e mais elegante */
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+.algoritmo-min-passos li:last-child {
+    margin-bottom: 0;
+}
+
+/* Numeração minimalista (apenas o número com um ponto) */
+.algoritmo-min-passos li::before {
+    counter-increment: passo-min;
+    content: counter(passo-min) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    color: #0d6efd; /* Cor do número combinando com seu layout */
+    font-weight: 600;
+    font-size: 13px;
+    text-align: right;
+}

@@ -37,6 +37,8 @@
         <a href="aula01.html">Aula 01 - O que é lógica</a>
         <a href="aula02.html"  >Aula 02 - O que é algoritmo?</a>
         <a href="aula03.html"  class="active">Aula 03 - Por que construir algoritmos?</a>
+        <a href="aula04.html" >Aula 04 - Os algoritmos e a Inteligência Artificial</a>
+        <a href="aula05.html" >Aula 05 - Entendendo os algoritmos</a>
         <a href="referencia-logica.html">Referências</a>
     </aside>
 
@@ -45,9 +47,98 @@
 
         <h2>Aula 03 - Por que construir algoritmos?</h2>
 
-        <h3>...</h3>
+        <h3>A ponte entre o computador e o homem</h3>
         <p>
-            ..
+            Construir um algoritmo é fundamental porque ele atua como uma ponte entre um problema e sua solução, descrevendo detalhadamente os passos necessários para atingir um objetivo bem definido. Através dessa estrutura, é possível resolver o mesmo problema diversas vezes de maneira consistente e eficiente.
+        </p>
+        <p>
+            A lógica algorítmica permite a automatização de tarefas cotidianas e profissionais, possibilitando que sistemas executem funções sem a necessidade de intervenção humana constante. Isso garante que os processos sejam realizados na sequência correta, aumentando a eficácia organizacional.
+        </p>
+        <p>
+            Para que equipamentos tecnológicos e aplicativos funcionem, é preciso "ensiná-los" o que fazer. O algoritmo traduz a lógica humana para um formato que a máquina consiga processar e executar comandos específicos.
+        </p>
+        <figure>
+            <img src="../imagens/bebe-robo.png">
+            <figcaption>Ensinando a máquina</figcaption>
+        </figure>
+
+        <h3>Nem "Quase", Nem "Mais ou Menos": A Linha Tênue Entre o Comando e o Erro</h3>
+        <p>
+            Um algoritmo bem construído exige que cada instrução seja precisa e não ambígua. Isso garante que a ferramenta tecnológica funcione a contento, evitando falhas que poderiam ocorrer se os passos fossem seguidos de forma desordenada.
+        </p>
+        <h4>Exemplo Prático: A Receita de Bolo e a Ambiguidade</h4>
+        <p>
+            Para entender a importância da precisão, imagine que você está seguindo uma receita de bolo e se depara com a seguinte instrução:
+        </p>
+        <p>
+            "Adicione um copo de açúcar, coloque as duas xícaras de farinha, mexa um pouco e leve ao forno até ficar bom."
+        </p>
+        <p>
+            Para um ser humano, essa instrução já é confusa, mas para um algoritmo, ela é catastrófica. O que seria um "copo" (americano, de requeijão, de 200ml)? Quanto tempo significa "mexa um pouco"? E o pior: o que é um bolo "no ponto bom" para uma máquina que não sabe testar o palito ou olhar a cor da massa?
+        </p>
+
+
+        <div class="img-group">
+            <figure>
+                <img src="https://teamodoce.com.br/wp-content/uploads/2025/04/bolo-simples-de-liquidificador-bem-fofinho.webp">
+                <figcaption>Bolo</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://i.redd.it/hyswiyygs1241.jpg">
+                <figcaption>Bolo queimado</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhafU2l6azx0xhvA9UMxDNyZqmS0IMBo7BlHWdaHEqn1j5CUUpRQ4SO6ORbUQlyTDUGYEJ_3scrwXQ-yLMxI_UuYCzkP6tEaOXpssv4fci439izeUIKv2NKlNZCB9DMOm3xFy2Iui9W2v8/s562/copos%252520americanos.png">
+                <figcaption>Copos</figcaption>
+            </figure>
+        </div>
+
+
+        <p>
+            Se transformássemos essa instrução ambígua em um algoritmo preciso, ela seria escrita assim:
+        </p>
+        <ul>
+            <li>Adicione 200ml de açúcar refinado.</li>
+            <li>Adicione 240g de farinha de trigo.</li>
+            <li>Bata a massa em velocidade média por 3 minutos.</li>
+            <li>Asse em forno preaquecido a 180°C por 35 minutos.</li>
+        </ul>
+
+        <h4>Por que isso importa?</h4>
+        <p>
+            Enquanto os humanos usam o contexto e a intuição para preencher as lacunas de comandos vagos, o computador executa exatamente o que foi programado. Se a instrução for ambígua, o sistema simplesmente não saberá como prosseguir ou, pior, entregará um resultado completamente inesperado.
+        </p>
+        <h4>O exemplo da chave</h4>
+        <p>
+            Imagine a seguinte instrução dada a um robô doméstico:
+        </p>
+        <p>
+            "Pegue a chave que está na mesa da sala."
+        </p>
+        <p>
+            Se a sala tiver duas mesas (uma de centro e uma de jantar), ou se houver um molho de chaves e uma chave avulsa, o algoritmo entrará em colapso por falta de clareza.
+        </p>
+        <p>
+            Para que o algoritmo funcione sem falhas, a instrução precisa ser cirúrgica:
+        </p>
+        <p>
+            "Pegue a chave do carro que está em cima da mesa de centro da sala."
+        </p>
+       <figure>
+            <img src="../imagens/robo-e-a-chave.png" 
+                alt="o-robo-e-a-chave">
+            <figcaption>
+                Exemplo da chave
+            </figcaption>
+        </figure>
+        <h4>Conclusão</h4>
+        <p>
+            Nas duas situações temos a possibilidade de que algo saia errado. No exemplo do bolo, há grande probabilidade de termos ao final um bolo ruim. A indefinição na quantidade de ingredientes poderá alterar o gosto do bolo, o mesmo se aplica ao ponto do "bolo bom". Uma pessoa que nunca provou daquela receita nem poderá saber qual o resultado esperado e portanto, para ela a definição de "bolo bom" poderá não ser interpretada corretamente. No exemplo das chaves o robô poderia travar ou entregar um resultado difernete do esperado (entregar a chave errada).
+        </p>
+        <p>
+            No universo da tecnologia, a precisão não é apenas um detalhe, mas a engrenagem que move toda a inovação. Para funcionarem corretamente, os algoritmos devem ser claros e apresentar a definição exata do objetivo esperado. Diferente dos seres humanos, que utilizam o contexto, a vivência e a intuição para preencher lacunas em comandos vagos, as máquinas são puramente literais. Diante de uma instrução ambígua, um sistema inevitavelmente falhará ou entrará em colapso. Portanto, programar é, antes de tudo, exercitar a arte de traduzir a complexidade do mundo real em passos lógicos, cirúrgicos e absolutamente incontestáveis.
         </p>
 
 
