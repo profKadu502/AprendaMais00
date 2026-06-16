@@ -1,0 +1,405 @@
+<!-- 1. ARQUIVO: aula01.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aula 06 - Display de 7 seguimentos</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/disciplina.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/components.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Aprenda Mais</h1>
+    <div class="menu-toggle">☰</div>
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../disciplinas.html">Disciplinas</a>
+        <a href="../tutoriais/principal.html">Tutoriais</a>
+        <a href="../dicas/principal.html">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- 🔹 SIDEBAR -->
+    <aside class="sidebar">
+        <a href="robotica.html">Apresentação</a>
+        <a href="aula01.html">Aula 01 - O que é Robótica</a>
+        <a href="aula04.html" >Aula 04 - O Buzzer</a>
+        <a href="aula05.html">Aula 05 - O Comando Define</a>
+        <a href="aula06.html">Aula 06 - Display de 7 seguimentos</a>
+        <a href="aula07.html" class="active">Aula 07 - Botão</a>
+
+    </aside>
+
+    <!-- 🔹 CONTEÚDO -->
+    
+    <main class="content">
+
+
+<h1>Botão Digital (Push Button)</h1>
+
+<p>
+    Hoje vamos conhecer um novo componente digital: o <strong>botão digital</strong>,
+    também chamado de <strong>Push Button</strong>.
+</p>
+
+<p>
+    Existem diversos modelos de botões disponíveis no mercado. Embora possam ter
+    formatos, tamanhos e aparências diferentes, todos funcionam com o mesmo princípio
+    básico. Na maioria dos casos, a diferença entre eles está apenas na estética ou
+    na facilidade de utilização.
+</p>
+
+<h2>Como funciona um Push Button?</h2>
+
+<p>
+    O Push Button atua como um interruptor temporário. Quando pressionado, ele fecha
+    um circuito elétrico, permitindo a passagem da corrente elétrica. Quando solto,
+    o circuito é interrompido novamente.
+</p>
+
+<p>
+    Os modelos mais simples possuem <strong>duas pernas (terminais)</strong>:
+</p>
+
+<ul>
+    <li>Um terminal recebe a tensão elétrica (por exemplo, 5V);</li>
+    <li>O outro terminal conduz essa tensão para o restante do circuito quando o botão é pressionado.</li>
+</ul>
+
+<p>
+    Assim, ao apertar o botão, a corrente elétrica consegue circular pelo circuito.
+</p>
+
+<h2>Botões com Quatro Pernas</h2>
+
+<p>
+    Alguns Push Buttons possuem <strong>quatro pernas</strong>. Isso não significa
+    que eles tenham uma função diferente.
+</p>
+
+<p>
+    Na verdade, os terminais são ligados internamente em pares. Dessa forma, temos
+    dois terminais repetidos de cada lado, facilitando a montagem em protoboards e
+    outros circuitos.
+</p>
+
+<p>
+    O princípio de funcionamento continua exatamente o mesmo dos botões com duas pernas.
+</p>
+
+<h2>Módulo Botão</h2>
+
+<p>
+    Também existem módulos prontos que já incluem o botão e os componentes necessários
+    para seu funcionamento, como o resistor de proteção.
+</p>
+
+<p>
+    Nesses módulos encontramos normalmente três pinos:
+</p>
+
+<ul>
+    <li><strong>VCC</strong> → alimentação (5V);</li>
+    <li><strong>GND</strong> → terra;</li>
+    <li><strong>SINAL</strong> → pino utilizado para leitura do botão pelo Arduino.</li>
+</ul>
+
+<p>
+    Isso torna a montagem mais simples e organizada.
+</p>
+
+<h2>Importância do Resistor</h2>
+
+<p>
+    Ao utilizar um botão em seus projetos, é recomendável utilizar um resistor.
+</p>
+
+<p>
+    Além de garantir uma leitura mais estável do sinal, ele ajuda a limitar a corrente
+    elétrica que passa pelo circuito, aumentando a vida útil do botão e dos demais
+    componentes.
+</p>
+
+<hr>
+
+<h2>Montagem do Circuito</h2>
+
+    <figure>
+        <img src="../imagens/push-button(1).png" alt="MONTAGEM1">
+        <figcaption>Montagem do push-button</figcaption>
+    </figure>
+
+    <figure>
+        <img src="../imagens/push-button(2).png" alt="MONTAGEM2">
+        <figcaption>Montagem do push-button</figcaption>
+    </figure>
+
+<p>
+    Após montar o circuito, observamos que o LED está ligado ao Arduino da mesma forma
+    que já vimos anteriormente.
+</p>
+
+<p>
+    A novidade é o botão:
+</p>
+
+<ul>
+    <li>Um lado do botão está ligado ao pino <strong>5V</strong> do Arduino;</li>
+    <li>O outro lado está ligado ao <strong>pino digital 2</strong>;</li>
+    <li>Esse mesmo ponto também está conectado ao <strong>GND</strong> através de um resistor.</li>
+</ul>
+
+<p>
+    Dessa forma, quando o botão é pressionado, o pino 2 recebe o sinal elétrico e o
+    Arduino consegue identificar essa ação.
+</p>
+
+<hr>
+
+<h1>Estrutura Condicional IF / ELSE</h1>
+
+<p>
+    Antes de analisar o código, vamos aprender uma nova estrutura de programação:
+    <strong>IF / ELSE</strong>.
+</p>
+
+<p>
+    Ela permite que o Arduino tome decisões.
+</p>
+
+<h3>Sintaxe</h3>
+
+<pre><code>
+if (condicao) {
+    // instruções executadas se a condição for verdadeira
+}
+else {
+    // instruções executadas se a condição for falsa
+}
+</code></pre>
+
+<p>
+    O Arduino primeiro verifica a condição. Somente depois dessa verificação ele executa
+    o bloco de instruções correspondente.
+</p>
+
+<hr>
+
+<h1>Exemplo: Acendendo um LED com um Botão</h1>
+
+<pre><code>
+// Acendendo o LED com botão
+
+#define ledPin 10
+#define buttonPin 2
+
+void setup() {
+    pinMode(ledPin, OUTPUT);
+    pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+
+    int estado = digitalRead(buttonPin);
+
+    delay(150);
+
+    if (estado == HIGH) {
+        digitalWrite(ledPin, HIGH);
+    }
+    else {
+        digitalWrite(ledPin, LOW);
+    }
+}
+</code></pre>
+
+<hr>
+
+<h1>Explicação do Código</h1>
+
+<h3>1. Definição dos pinos</h3>
+
+<pre><code>
+#define ledPin 10
+#define buttonPin 2
+</code></pre>
+
+<p>
+    Utilizamos <code>#define</code> para associar nomes aos números dos pinos.
+    Isso torna o código mais fácil de entender.
+</p>
+
+<h3>2. Configuração dos pinos</h3>
+
+<pre><code>
+pinMode(ledPin, OUTPUT);
+pinMode(buttonPin, INPUT);
+</code></pre>
+
+<ul>
+    <li>O pino do LED é configurado como saída (<code>OUTPUT</code>);</li>
+    <li>O pino do botão é configurado como entrada (<code>INPUT</code>).</li>
+</ul>
+
+<h3>3. Leitura do botão</h3>
+
+<div class="editor">
+    <div class="line-numbers"></div>
+    <pre class="code cpp">
+// Acendendo o LED com botão
+
+#define ledPin 10
+#define buttonPin 2
+
+void setup() {
+    pinMode(ledPin, OUTPUT);
+    pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+
+    int estado = digitalRead(buttonPin);
+
+    delay(150);
+
+    if (estado == HIGH) {
+        digitalWrite(ledPin, HIGH);
+    }
+    else {
+        digitalWrite(ledPin, LOW);
+    }
+}
+    </pre>
+</div>
+
+<p>
+    O Arduino executa milhares de instruções por segundo. Esse pequeno atraso ajuda
+    a evitar leituras repetidas muito rápidas enquanto o botão está sendo pressionado
+    ou liberado.
+</p>
+
+<h3>5. Tomada de decisão</h3>
+
+<pre><code>
+if (estado == HIGH)
+</code></pre>
+
+<p>
+    Se o botão estiver pressionado, o valor lido será <code>HIGH</code>.
+</p>
+
+<p>
+    Nesse caso:
+</p>
+
+<pre><code>
+digitalWrite(ledPin, HIGH);
+</code></pre>
+
+<p>
+    O LED será aceso.
+</p>
+
+<p>
+    Caso contrário:
+</p>
+
+<pre><code>
+digitalWrite(ledPin, LOW);
+</code></pre>
+
+<p>
+    O LED permanecerá apagado.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>O Push Button é um componente de entrada digital.</li>
+    <li>Quando pressionado, ele permite a passagem da corrente elétrica.</li>
+    <li>O Arduino pode ler o estado do botão através de um pino digital.</li>
+    <li>Utilizamos <code>digitalRead()</code> para verificar se o botão foi pressionado.</li>
+    <li>A estrutura <code>if/else</code> permite que o Arduino tome decisões com base nessa leitura.</li>
+    <li>Quando o botão é pressionado, o LED acende; quando é solto, o LED apaga.</li>
+</ul>
+```
+
+
+    </main>
+
+    
+    <!-- 🔥 SIDEBAR DIREITA -->
+    <aside class="extras-sidebar">
+
+        <h3>Extras</h3>
+
+        <!-- 🎥 VÍDEOS -->
+        <div class="extra-card">
+            <h4>🎥 Vídeos</h4>
+
+            <div class="video-list">
+
+                <figure class="video-item">
+                    <a href="#" target="_blank" class="video-thumb">
+                        <img src="#">
+                        <span class="play-button">▶</span>
+                    </a>
+                    <figcaption>V</figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+        <!-- 🔗 LINKS -->
+        <div class="extra-card">
+            <h4>🔗 Links úteis</h4>
+            <ul class="links-list">
+                <li><a href="https://www.arduino.cc" target="_blank">Arduino Oficial</a></li>
+                <li><a href="https://www.tinkercad.com" target="_blank">Tinkercad</a></li>
+                <li><a href="https://education.lego.com" target="_blank">LEGO Education</a></li>
+            </ul>
+        </div>
+
+    </aside>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Aprenda Mais</h3>
+            <p>Projeto educacional com materiais complementares.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes</h3>
+            <p>Instagram</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026
+    </div>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/code-format.js"></script>
+<script src="../js/component.js"></script>
+
+
+</body>
+</html>
